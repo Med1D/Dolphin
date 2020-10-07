@@ -1,0 +1,11 @@
+{
+  "commitish" : "3.4.2",
+  "iOS" : [
+    {
+      "hash" : "1c89b861d778fbbb52df83318133d5f38550af6d5f470dbc96fa3eee505e467a",
+      "name" : "MessageKit",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+    }
+  ]
+}
