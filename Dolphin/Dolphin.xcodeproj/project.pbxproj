@@ -13,7 +13,29 @@
 		72A3A180252CB2EF0083F88F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A17E252CB2EF0083F88F /* Main.storyboard */; };
 		72A3A182252CB2F10083F88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A181252CB2F10083F88F /* Assets.xcassets */; };
 		72A3A185252CB2F10083F88F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A183252CB2F10083F88F /* LaunchScreen.storyboard */; };
+		72DB10A9252E58900043875E /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10A8252E58900043875E /* Starscream.framework */; };
+		72DB10AA252E58900043875E /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10A8252E58900043875E /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72DB10AD252E58940043875E /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AC252E58940043875E /* InputBarAccessoryView.framework */; };
+		72DB10AE252E58940043875E /* InputBarAccessoryView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AC252E58940043875E /* InputBarAccessoryView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72DB10B0252E58990043875E /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AF252E58990043875E /* MessageKit.framework */; };
+		72DB10B1252E58990043875E /* MessageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AF252E58990043875E /* MessageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		72DB10AB252E58900043875E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				72DB10AA252E58900043875E /* Starscream.framework in Embed Frameworks */,
+				72DB10B1252E58990043875E /* MessageKit.framework in Embed Frameworks */,
+				72DB10AE252E58940043875E /* InputBarAccessoryView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		72A3A175252CB2EF0083F88F /* Dolphin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dolphin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +46,9 @@
 		72A3A181252CB2F10083F88F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A3A184252CB2F10083F88F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A3A186252CB2F10083F88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72DB10A8252E58900043875E /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		72DB10AC252E58940043875E /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
+		72DB10AF252E58990043875E /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72DB10A9252E58900043875E /* Starscream.framework in Frameworks */,
+				72DB10B0252E58990043875E /* MessageKit.framework in Frameworks */,
+				72DB10AD252E58940043875E /* InputBarAccessoryView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +70,7 @@
 			children = (
 				72A3A177252CB2EF0083F88F /* Dolphin */,
 				72A3A176252CB2EF0083F88F /* Products */,
+				72DB10A7252E58900043875E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +96,16 @@
 			path = Dolphin;
 			sourceTree = "<group>";
 		};
+		72DB10A7252E58900043875E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72DB10AF252E58990043875E /* MessageKit.framework */,
+				72DB10AC252E58940043875E /* InputBarAccessoryView.framework */,
+				72DB10A8252E58900043875E /* Starscream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +117,8 @@
 				72A3A172252CB2EF0083F88F /* Frameworks */,
 				72A3A173252CB2EF0083F88F /* Resources */,
 				72A3A18D252CBF9B0083F88F /* ShellScript */,
+				72DB10AB252E58900043875E /* Embed Frameworks */,
+				72DB10B2252E58B90043875E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -150,6 +191,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		72DB10B2252E58B90043875E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Starscream.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/InputBarAccessoryView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MessageKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -309,6 +370,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72DN37DPYX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Dolphin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -328,6 +393,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72DN37DPYX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Dolphin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
