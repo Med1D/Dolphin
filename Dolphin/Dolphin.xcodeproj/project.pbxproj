@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721A0FB32530F74D00234071 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB22530F74D00234071 /* AuthViewController.swift */; };
+		721A0FB52530F77000234071 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB42530F77000234071 /* AuthInteractor.swift */; };
+		721A0FB72530F78500234071 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB62530F78500234071 /* AuthPresenter.swift */; };
+		721A0FB92530F7A800234071 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB82530F7A800234071 /* User.swift */; };
+		721A0FBB2530F7DB00234071 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBA2530F7DB00234071 /* AuthRouter.swift */; };
+		721A0FBD2530F7F100234071 /* IAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBC2530F7F100234071 /* IAuthRouter.swift */; };
+		721A0FBF2530F89000234071 /* IAuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBE2530F89000234071 /* IAuthPresenter.swift */; };
+		721A0FC12530F8A800234071 /* IAuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FC02530F8A800234071 /* IAuthInteractor.swift */; };
+		721A0FC32530F8C500234071 /* IAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FC22530F8C500234071 /* IAuthViewController.swift */; };
 		72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A178252CB2EF0083F88F /* AppDelegate.swift */; };
 		72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A17A252CB2EF0083F88F /* SceneDelegate.swift */; };
 		72A3A182252CB2F10083F88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A181252CB2F10083F88F /* Assets.xcassets */; };
@@ -37,6 +46,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		721A0FB22530F74D00234071 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		721A0FB42530F77000234071 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		721A0FB62530F78500234071 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		721A0FB82530F7A800234071 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		721A0FBA2530F7DB00234071 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		721A0FBC2530F7F100234071 /* IAuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthRouter.swift; sourceTree = "<group>"; };
+		721A0FBE2530F89000234071 /* IAuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthPresenter.swift; sourceTree = "<group>"; };
+		721A0FC02530F8A800234071 /* IAuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthInteractor.swift; sourceTree = "<group>"; };
+		721A0FC22530F8C500234071 /* IAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthViewController.swift; sourceTree = "<group>"; };
 		72A3A175252CB2EF0083F88F /* Dolphin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dolphin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A3A178252CB2EF0083F88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72A3A17A252CB2EF0083F88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +81,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		721A0FAB2530F6A400234071 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				721A0FAC2530F6AA00234071 /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		721A0FAC2530F6AA00234071 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				721A0FAE2530F6E400234071 /* View */,
+				721A0FB02530F6F500234071 /* Interactor */,
+				721A0FAF2530F6F100234071 /* Presenter */,
+				721A0FAD2530F6D100234071 /* Entity */,
+				721A0FB12530F6FF00234071 /* Router */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		721A0FAD2530F6D100234071 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				721A0FB82530F7A800234071 /* User.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		721A0FAE2530F6E400234071 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				721A0FC22530F8C500234071 /* IAuthViewController.swift */,
+				721A0FB22530F74D00234071 /* AuthViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		721A0FAF2530F6F100234071 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				721A0FBE2530F89000234071 /* IAuthPresenter.swift */,
+				721A0FB62530F78500234071 /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		721A0FB02530F6F500234071 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				721A0FC02530F8A800234071 /* IAuthInteractor.swift */,
+				721A0FB42530F77000234071 /* AuthInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		721A0FB12530F6FF00234071 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				721A0FBC2530F7F100234071 /* IAuthRouter.swift */,
+				721A0FBA2530F7DB00234071 /* AuthRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		72A3A16C252CB2EF0083F88F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +165,7 @@
 		72A3A177252CB2EF0083F88F /* Dolphin */ = {
 			isa = PBXGroup;
 			children = (
+				721A0FAB2530F6A400234071 /* Modules */,
 				72F586E72530A0FB00504B37 /* Factory */,
 				72F586E625309FC800504B37 /* UI */,
 				72F586E525309FAC00504B37 /* Assets */,
@@ -255,9 +338,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				721A0FB32530F74D00234071 /* AuthViewController.swift in Sources */,
+				721A0FB52530F77000234071 /* AuthInteractor.swift in Sources */,
+				721A0FC12530F8A800234071 /* IAuthInteractor.swift in Sources */,
 				72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */,
 				72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */,
+				721A0FB72530F78500234071 /* AuthPresenter.swift in Sources */,
+				721A0FC32530F8C500234071 /* IAuthViewController.swift in Sources */,
+				721A0FBD2530F7F100234071 /* IAuthRouter.swift in Sources */,
+				721A0FBF2530F89000234071 /* IAuthPresenter.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
+				721A0FBB2530F7DB00234071 /* AuthRouter.swift in Sources */,
+				721A0FB92530F7A800234071 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
