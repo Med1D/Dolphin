@@ -9,4 +9,7 @@ import UIKit
 
 protocol IAuthPresenter: AnyObject
 {
+	func touchLoginButton()
+	func touchForgotPasswordButton()
+	func touchSignUpButton()
 }

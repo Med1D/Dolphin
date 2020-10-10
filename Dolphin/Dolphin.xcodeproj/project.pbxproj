@@ -24,6 +24,7 @@
 		72D8C7B92531E6F4008E44DC /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7B72531E6F4008E44DC /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72D8C7BB2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */; };
 		72D8C7BC2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D8C7BE2531FC2F008E44DC /* AuthConstants.swift */; };
 		72DB10A9252E58900043875E /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10A8252E58900043875E /* Starscream.framework */; };
 		72DB10AA252E58900043875E /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10A8252E58900043875E /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72DB10AD252E58940043875E /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AC252E58940043875E /* InputBarAccessoryView.framework */; };
@@ -69,6 +70,7 @@
 		72A3A186252CB2F10083F88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72D8C7B72531E6F4008E44DC /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkyFloatingLabelTextField.framework; path = Carthage/Build/iOS/SkyFloatingLabelTextField.framework; sourceTree = "<group>"; };
+		72D8C7BE2531FC2F008E44DC /* AuthConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConstants.swift; sourceTree = "<group>"; };
 		72DB10A8252E58900043875E /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		72DB10AC252E58940043875E /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
 		72DB10AF252E58990043875E /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		721A0FAC2530F6AA00234071 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				72D8C7BD2531FC21008E44DC /* Constants */,
 				721A0FAE2530F6E400234071 /* View */,
 				721A0FB02530F6F500234071 /* Interactor */,
 				721A0FAF2530F6F100234071 /* Presenter */,
@@ -184,6 +187,14 @@
 				72A3A186252CB2F10083F88F /* Info.plist */,
 			);
 			path = Dolphin;
+			sourceTree = "<group>";
+		};
+		72D8C7BD2531FC21008E44DC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				72D8C7BE2531FC2F008E44DC /* AuthConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		72DB10A7252E58900043875E /* Frameworks */ = {
@@ -359,6 +370,7 @@
 				72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */,
 				721A0FB72530F78500234071 /* AuthPresenter.swift in Sources */,
 				721A0FC32530F8C500234071 /* IAuthViewController.swift in Sources */,
+				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
 				721A0FBD2530F7F100234071 /* IAuthRouter.swift in Sources */,
 				721A0FBF2530F89000234071 /* IAuthPresenter.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
