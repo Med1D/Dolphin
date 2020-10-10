@@ -20,6 +20,10 @@
 		72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A17A252CB2EF0083F88F /* SceneDelegate.swift */; };
 		72A3A182252CB2F10083F88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A181252CB2F10083F88F /* Assets.xcassets */; };
 		72A3A185252CB2F10083F88F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A183252CB2F10083F88F /* LaunchScreen.storyboard */; };
+		72D8C7B82531E6F4008E44DC /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7B72531E6F4008E44DC /* SnapKit.framework */; };
+		72D8C7B92531E6F4008E44DC /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7B72531E6F4008E44DC /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72D8C7BB2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */; };
+		72D8C7BC2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72DB10A9252E58900043875E /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10A8252E58900043875E /* Starscream.framework */; };
 		72DB10AA252E58900043875E /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10A8252E58900043875E /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72DB10AD252E58940043875E /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AC252E58940043875E /* InputBarAccessoryView.framework */; };
@@ -38,7 +42,9 @@
 			files = (
 				72DB10AA252E58900043875E /* Starscream.framework in Embed Frameworks */,
 				72DB10B1252E58990043875E /* MessageKit.framework in Embed Frameworks */,
+				72D8C7BC2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Embed Frameworks */,
 				72DB10AE252E58940043875E /* InputBarAccessoryView.framework in Embed Frameworks */,
+				72D8C7B92531E6F4008E44DC /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +67,8 @@
 		72A3A181252CB2F10083F88F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A3A184252CB2F10083F88F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A3A186252CB2F10083F88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72D8C7B72531E6F4008E44DC /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkyFloatingLabelTextField.framework; path = Carthage/Build/iOS/SkyFloatingLabelTextField.framework; sourceTree = "<group>"; };
 		72DB10A8252E58900043875E /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		72DB10AC252E58940043875E /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
 		72DB10AF252E58990043875E /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
@@ -74,7 +82,9 @@
 			files = (
 				72DB10A9252E58900043875E /* Starscream.framework in Frameworks */,
 				72DB10B0252E58990043875E /* MessageKit.framework in Frameworks */,
+				72D8C7BB2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Frameworks */,
 				72DB10AD252E58940043875E /* InputBarAccessoryView.framework in Frameworks */,
+				72D8C7B82531E6F4008E44DC /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +189,8 @@
 		72DB10A7252E58900043875E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */,
+				72D8C7B72531E6F4008E44DC /* SnapKit.framework */,
 				72DB10AF252E58990043875E /* MessageKit.framework */,
 				72DB10AC252E58940043875E /* InputBarAccessoryView.framework */,
 				72DB10A8252E58900043875E /* Starscream.framework */,
@@ -322,6 +334,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Starscream.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/InputBarAccessoryView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MessageKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SkyFloatingLabelTextField.framework",
 			);
 			outputFileListPaths = (
 			);
