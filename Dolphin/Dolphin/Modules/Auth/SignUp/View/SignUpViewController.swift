@@ -49,6 +49,7 @@ final class SignUpViewController: UIViewController
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.view.backgroundColor = AuthConstants.backgroundColor
+		self.title = "Sign Up"
 		self.setupNameTextField()
 		self.setupLoginTextField()
 		self.setupPasswordTextField()

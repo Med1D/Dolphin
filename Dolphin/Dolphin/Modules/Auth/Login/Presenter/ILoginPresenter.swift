@@ -11,5 +11,5 @@ protocol ILoginPresenter: AnyObject
 {
 	func touchLoginButton()
 	func touchForgotPasswordButton()
-	func touchSignUpButton()
+	func touchSignUpButton(closure: @escaping (UIViewController) -> Void)
 }

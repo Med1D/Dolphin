@@ -9,4 +9,5 @@ import UIKit
 
 protocol ILoginRouter: AnyObject
 {
+	func touchSignUpButton(closure: (UIViewController) -> Void)
 }

@@ -21,4 +21,8 @@ final class LoginRouter
 // MARK: - ILoginRouter
 extension LoginRouter: ILoginRouter
 {
+	func touchSignUpButton(closure: (UIViewController) -> Void) {
+		let signUpModule = factory.createSignUpModule()
+		closure(signUpModule)
+	}
 }
