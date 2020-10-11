@@ -1,5 +1,5 @@
 //
-//  AuthRouter.swift
+//  LoginRouter.swift
 //  Dolphin
 //
 //  Created by Иван Медведев on 09.10.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AuthRouter
+final class LoginRouter
 {
 // MARK: - Properties
 	private let factory: Factory
@@ -19,6 +19,6 @@ final class AuthRouter
 }
 
 // MARK: - IAuthRouter
-extension AuthRouter: IAuthRouter
+extension LoginRouter: ILoginRouter
 {
 }

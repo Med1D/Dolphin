@@ -1,5 +1,5 @@
 //
-//  AuthPresenter.swift
+//  LoginPresenter.swift
 //  Dolphin
 //
 //  Created by Иван Медведев on 09.10.2020.
@@ -7,27 +7,27 @@
 
 import UIKit
 
-final class AuthPresenter
+final class LoginPresenter
 {
 // MARK: - Properties
-	private weak var viewController: IAuthViewController?
-	private let interactor: IAuthInteractor
-	private let router: IAuthRouter
+	private weak var viewController: ILoginViewController?
+	private let interactor: ILoginInteractor
+	private let router: ILoginRouter
 
 // MARK: - Init
-	init(router: IAuthRouter, interactor: IAuthInteractor) {
+	init(router: ILoginRouter, interactor: ILoginInteractor) {
 		self.router = router
 		self.interactor = interactor
 	}
 
 // MARK: - Inject
-	func inject(viewController: IAuthViewController) {
+	func inject(viewController: ILoginViewController) {
 		self.viewController = viewController
 	}
 }
 
 // MARK: - IAuthPresenter
-extension AuthPresenter: IAuthPresenter
+extension LoginPresenter: ILoginPresenter
 {
 	func touchLoginButton() {
 		print(#function)

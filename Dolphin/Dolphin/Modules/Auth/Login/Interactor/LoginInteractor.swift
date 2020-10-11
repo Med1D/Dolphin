@@ -1,5 +1,5 @@
 //
-//  AuthInteractor.swift
+//  LoginInteractor.swift
 //  Dolphin
 //
 //  Created by Иван Медведев on 09.10.2020.
@@ -7,22 +7,22 @@
 
 import Foundation
 
-final class AuthInteractor
+final class LoginInteractor
 {
 // MARK: - Properties
-	private weak var presenter: IAuthPresenter?
+	private weak var presenter: ILoginPresenter?
 
 // MARK: - Init
 	init() {
 	}
 
 // MARK: - Inject
-	func inject(presenter: IAuthPresenter) {
+	func inject(presenter: ILoginPresenter) {
 		self.presenter = presenter
 	}
 }
 
 // MARK: - IAuthInteractor
-extension AuthInteractor: IAuthInteractor
+extension LoginInteractor: ILoginInteractor
 {
 }
