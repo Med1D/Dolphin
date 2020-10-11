@@ -95,7 +95,7 @@ private extension LoginViewController
 	}
 
 	func setupLoginButton() {
-		self.loginButton.backgroundColor = AuthConstants.loginButtonColor
+		self.loginButton.backgroundColor = AuthConstants.buttonColor
 		self.loginButton.setTitle("LOGIN", for: .normal)
 		self.loginButton.tintColor = AuthConstants.backgroundColor
 		if let font = AuthConstants.helveticaBold16 {
@@ -230,7 +230,7 @@ extension LoginViewController: UITextFieldDelegate
 		return true
 	}
 }
-// MARK: - IAuthViewController
+// MARK: - ILoginViewController
 extension LoginViewController: ILoginViewController
 {
 }

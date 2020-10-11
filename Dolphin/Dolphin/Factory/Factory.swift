@@ -27,4 +27,14 @@ final class Factory
 		interactor.inject(presenter: presenter)
 		return viewController
 	}
+
+	func createSignUpModule() -> UIViewController {
+		let router = SignUpRouter(factory: self)
+		let interactor = SignUpInteractor()
+		let presenter = SignUpPresenter(router: router, interactor: interactor)
+		let viewController = SignUpViewController(presenter: presenter)
+		presenter.inject(viewController: viewController)
+		interactor.inject(presenter: presenter)
+		return viewController
+	}
 }

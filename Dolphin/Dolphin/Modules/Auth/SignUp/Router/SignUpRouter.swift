@@ -1,13 +1,13 @@
 //
-//  LoginRouter.swift
+//  SignUpRouter.swift
 //  Dolphin
 //
-//  Created by Иван Медведев on 09.10.2020.
+//  Created by Иван Медведев on 11.10.2020.
 //
 
 import UIKit
 
-final class LoginRouter
+final class SignUpRouter
 {
 // MARK: - Properties
 	private let factory: Factory
@@ -18,7 +18,7 @@ final class LoginRouter
 	}
 }
 
-// MARK: - ILoginRouter
-extension LoginRouter: ILoginRouter
+// MARK: - ISignUpRouter
+extension SignUpRouter: ISignUpRouter
 {
 }

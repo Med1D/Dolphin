@@ -1,5 +1,5 @@
 //
-//  AuthTextFieldType.swift
+//  ISignUpInteractor.swift
 //  Dolphin
 //
 //  Created by Иван Медведев on 11.10.2020.
@@ -7,7 +7,6 @@
 
 import Foundation
 
-enum AuthTextFieldType
+protocol ISignUpInteractor: AnyObject
 {
-	case email, password, name
 }
