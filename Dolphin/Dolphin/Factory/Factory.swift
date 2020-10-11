@@ -13,16 +13,16 @@ final class Factory
 	}
 
 	func createNavigationController() -> UINavigationController {
-		let authModule = createAuthModule()
-		let navigationController = UINavigationController(rootViewController: authModule)
+		let loginModule = createLoginModule()
+		let navigationController = UINavigationController(rootViewController: loginModule)
 		return navigationController
 	}
 
-	func createAuthModule() -> UIViewController {
-		let router = AuthRouter(factory: self)
-		let interactor = AuthInteractor()
-		let presenter = AuthPresenter(router: router, interactor: interactor)
-		let viewController = AuthViewController(presenter: presenter)
+	func createLoginModule() -> UIViewController {
+		let router = LoginRouter(factory: self)
+		let interactor = LoginInteractor()
+		let presenter = LoginPresenter(router: router, interactor: interactor)
+		let viewController = LoginViewController(presenter: presenter)
 		presenter.inject(viewController: viewController)
 		interactor.inject(presenter: presenter)
 		return viewController

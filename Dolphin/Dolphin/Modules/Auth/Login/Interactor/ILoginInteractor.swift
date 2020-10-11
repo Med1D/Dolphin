@@ -1,12 +1,12 @@
 //
-//  IAuthViewController.swift
+//  ILoginInteractor.swift
 //  Dolphin
 //
 //  Created by Иван Медведев on 09.10.2020.
 //
 
-import UIKit
+import Foundation
 
-protocol IAuthViewController: AnyObject
+protocol ILoginInteractor: AnyObject
 {
 }

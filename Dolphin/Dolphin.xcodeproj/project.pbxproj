@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		721A0FB32530F74D00234071 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB22530F74D00234071 /* AuthViewController.swift */; };
-		721A0FB52530F77000234071 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB42530F77000234071 /* AuthInteractor.swift */; };
-		721A0FB72530F78500234071 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB62530F78500234071 /* AuthPresenter.swift */; };
-		721A0FB92530F7A800234071 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB82530F7A800234071 /* User.swift */; };
-		721A0FBB2530F7DB00234071 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBA2530F7DB00234071 /* AuthRouter.swift */; };
-		721A0FBD2530F7F100234071 /* IAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBC2530F7F100234071 /* IAuthRouter.swift */; };
-		721A0FBF2530F89000234071 /* IAuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBE2530F89000234071 /* IAuthPresenter.swift */; };
-		721A0FC12530F8A800234071 /* IAuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FC02530F8A800234071 /* IAuthInteractor.swift */; };
-		721A0FC32530F8C500234071 /* IAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FC22530F8C500234071 /* IAuthViewController.swift */; };
+		721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB22530F74D00234071 /* LoginViewController.swift */; };
+		721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB42530F77000234071 /* LoginInteractor.swift */; };
+		721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB62530F78500234071 /* LoginPresenter.swift */; };
+		721A0FBB2530F7DB00234071 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBA2530F7DB00234071 /* LoginRouter.swift */; };
+		721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBC2530F7F100234071 /* ILoginRouter.swift */; };
+		721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBE2530F89000234071 /* ILoginPresenter.swift */; };
+		721A0FC12530F8A800234071 /* ILoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FC02530F8A800234071 /* ILoginInteractor.swift */; };
+		721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FC22530F8C500234071 /* ILoginViewController.swift */; };
+		729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0929253339600055E50C /* AuthTextFieldType.swift */; };
+		729B092C253339860055E50C /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B092B253339860055E50C /* AuthTextField.swift */; };
 		72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A178252CB2EF0083F88F /* AppDelegate.swift */; };
 		72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A17A252CB2EF0083F88F /* SceneDelegate.swift */; };
 		72A3A182252CB2F10083F88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A181252CB2F10083F88F /* Assets.xcassets */; };
@@ -53,15 +54,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		721A0FB22530F74D00234071 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		721A0FB42530F77000234071 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
-		721A0FB62530F78500234071 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
-		721A0FB82530F7A800234071 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		721A0FBA2530F7DB00234071 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
-		721A0FBC2530F7F100234071 /* IAuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthRouter.swift; sourceTree = "<group>"; };
-		721A0FBE2530F89000234071 /* IAuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthPresenter.swift; sourceTree = "<group>"; };
-		721A0FC02530F8A800234071 /* IAuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthInteractor.swift; sourceTree = "<group>"; };
-		721A0FC22530F8C500234071 /* IAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthViewController.swift; sourceTree = "<group>"; };
+		721A0FB22530F74D00234071 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		721A0FB42530F77000234071 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		721A0FB62530F78500234071 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		721A0FBA2530F7DB00234071 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		721A0FBC2530F7F100234071 /* ILoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginRouter.swift; sourceTree = "<group>"; };
+		721A0FBE2530F89000234071 /* ILoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginPresenter.swift; sourceTree = "<group>"; };
+		721A0FC02530F8A800234071 /* ILoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginInteractor.swift; sourceTree = "<group>"; };
+		721A0FC22530F8C500234071 /* ILoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginViewController.swift; sourceTree = "<group>"; };
+		729B0929253339600055E50C /* AuthTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextFieldType.swift; sourceTree = "<group>"; };
+		729B092B253339860055E50C /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		72A3A175252CB2EF0083F88F /* Dolphin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dolphin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A3A178252CB2EF0083F88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72A3A17A252CB2EF0083F88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72123AF12533423E00DE67EC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				72123AF32533426300DE67EC /* View */,
+				72123AF42533426700DE67EC /* Interactor */,
+				72123AF52533426F00DE67EC /* Presenter */,
+				72123AF62533427300DE67EC /* Router */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		72123AF22533424300DE67EC /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		72123AF32533426300DE67EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72123AF42533426700DE67EC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		72123AF52533426F00DE67EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		72123AF62533427300DE67EC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		721A0FAB2530F6A400234071 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,29 +152,20 @@
 		721A0FAC2530F6AA00234071 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				729B0927253338450055E50C /* Login */,
+				72123AF12533423E00DE67EC /* SignUp */,
+				72123AF22533424300DE67EC /* ForgotPassword */,
 				72D8C7BD2531FC21008E44DC /* Constants */,
-				721A0FAE2530F6E400234071 /* View */,
-				721A0FB02530F6F500234071 /* Interactor */,
-				721A0FAF2530F6F100234071 /* Presenter */,
-				721A0FAD2530F6D100234071 /* Entity */,
-				721A0FB12530F6FF00234071 /* Router */,
+				729B0928253339040055E50C /* CommonViews */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		721A0FAD2530F6D100234071 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				721A0FB82530F7A800234071 /* User.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		721A0FAE2530F6E400234071 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				721A0FC22530F8C500234071 /* IAuthViewController.swift */,
-				721A0FB22530F74D00234071 /* AuthViewController.swift */,
+				721A0FC22530F8C500234071 /* ILoginViewController.swift */,
+				721A0FB22530F74D00234071 /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,8 +173,8 @@
 		721A0FAF2530F6F100234071 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				721A0FBE2530F89000234071 /* IAuthPresenter.swift */,
-				721A0FB62530F78500234071 /* AuthPresenter.swift */,
+				721A0FBE2530F89000234071 /* ILoginPresenter.swift */,
+				721A0FB62530F78500234071 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -143,8 +182,8 @@
 		721A0FB02530F6F500234071 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				721A0FC02530F8A800234071 /* IAuthInteractor.swift */,
-				721A0FB42530F77000234071 /* AuthInteractor.swift */,
+				721A0FC02530F8A800234071 /* ILoginInteractor.swift */,
+				721A0FB42530F77000234071 /* LoginInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -152,10 +191,30 @@
 		721A0FB12530F6FF00234071 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				721A0FBC2530F7F100234071 /* IAuthRouter.swift */,
-				721A0FBA2530F7DB00234071 /* AuthRouter.swift */,
+				721A0FBC2530F7F100234071 /* ILoginRouter.swift */,
+				721A0FBA2530F7DB00234071 /* LoginRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		729B0927253338450055E50C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				721A0FAE2530F6E400234071 /* View */,
+				721A0FB02530F6F500234071 /* Interactor */,
+				721A0FAF2530F6F100234071 /* Presenter */,
+				721A0FB12530F6FF00234071 /* Router */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		729B0928253339040055E50C /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				729B0929253339600055E50C /* AuthTextFieldType.swift */,
+				729B092B253339860055E50C /* AuthTextField.swift */,
+			);
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 		72A3A16C252CB2EF0083F88F = {
@@ -363,19 +422,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				721A0FB32530F74D00234071 /* AuthViewController.swift in Sources */,
-				721A0FB52530F77000234071 /* AuthInteractor.swift in Sources */,
-				721A0FC12530F8A800234071 /* IAuthInteractor.swift in Sources */,
+				721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */,
+				721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */,
+				721A0FC12530F8A800234071 /* ILoginInteractor.swift in Sources */,
 				72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */,
 				72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */,
-				721A0FB72530F78500234071 /* AuthPresenter.swift in Sources */,
-				721A0FC32530F8C500234071 /* IAuthViewController.swift in Sources */,
+				721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */,
+				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
+				721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */,
+				729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */,
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
-				721A0FBD2530F7F100234071 /* IAuthRouter.swift in Sources */,
-				721A0FBF2530F89000234071 /* IAuthPresenter.swift in Sources */,
+				721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */,
+				721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
-				721A0FBB2530F7DB00234071 /* AuthRouter.swift in Sources */,
-				721A0FB92530F7A800234071 /* User.swift in Sources */,
+				721A0FBB2530F7DB00234071 /* LoginRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,12 +1,12 @@
 //
-//  IAuthInteractor.swift
+//  ILoginRouter.swift
 //  Dolphin
 //
 //  Created by Иван Медведев on 09.10.2020.
 //
 
-import Foundation
+import UIKit
 
-protocol IAuthInteractor: AnyObject
+protocol ILoginRouter: AnyObject
 {
 }

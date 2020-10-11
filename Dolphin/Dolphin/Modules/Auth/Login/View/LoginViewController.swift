@@ -1,5 +1,5 @@
 //
-//  AuthViewController.swift
+//  LoginViewController.swift
 //  Dolphin
 //
 //  Created by Иван Медведев on 09.10.2020.
@@ -9,24 +9,30 @@ import UIKit
 import SkyFloatingLabelTextField
 import SnapKit
 
-final class AuthViewController: UIViewController
+final class LoginViewController: UIViewController
 {
 // MARK: - Properties
-	private let presenter: IAuthPresenter
+	private let presenter: ILoginPresenter
 
 // MARK: - UI properties
 	private let imageView = UIImageView()
 	private let vStackView = UIStackView()
 	private let hStackView = UIStackView()
-	private let loginTextField = SkyFloatingLabelTextFieldWithIcon()
-	private let passwordTextField = SkyFloatingLabelTextFieldWithIcon()
+	private let loginTextField = AuthTextField(type: .email,
+											   placeholder: "Email",
+											   title: "Email address",
+											   imageName: AuthConstants.loginTextFieldImageName)
+	private let passwordTextField = AuthTextField(type: .password,
+												  placeholder: "Password",
+												  title: "Password",
+												  imageName: AuthConstants.passwordTextFieldImageName)
 	private let loginButton = UIButton(type: .system)
 	private let forgotPasswordButton = UIButton(type: .system)
 	private let signUpLabel = UILabel()
 	private let signUpButton = UIButton(type: .system)
 
 // MARK: - Init
-	init(presenter: IAuthPresenter) {
+	init(presenter: ILoginPresenter) {
 		self.presenter = presenter
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -60,7 +66,7 @@ final class AuthViewController: UIViewController
 }
 
 // MARK: - Private methods (Setup UI)
-private extension AuthViewController
+private extension LoginViewController
 {
 	func setupNavigationController() {
 		if let navController = self.navigationController {
@@ -80,17 +86,12 @@ private extension AuthViewController
 	}
 
 	func setupLoginTextField() {
-		self.setupTextField(textField: self.loginTextField,
-							placeholder: "Email",
-							title: "Email address",
-							imageName: AuthConstants.loginTextFieldImageName)
+		self.loginTextField.delegate = self
+		self.loginTextField.returnKeyType = .next
 	}
 
 	func setupPasswordTextField() {
-		self.setupTextField(textField: self.passwordTextField,
-							placeholder: "Password",
-							title: "Password",
-							imageName: AuthConstants.passwordTextFieldImageName)
+		self.passwordTextField.delegate = self
 	}
 
 	func setupLoginButton() {
@@ -198,45 +199,10 @@ private extension AuthViewController
 			make.trailing.equalToSuperview()
 		}
 	}
-
-	func setupTextField(textField: SkyFloatingLabelTextFieldWithIcon,
-						placeholder: String,
-						title: String,
-						imageName: String) {
-		if placeholder == "Email" {
-			textField.textContentType = .emailAddress
-			textField.autocorrectionType = .no
-			textField.returnKeyType = .next
-		}
-		if placeholder == "Password" {
-			textField.isSecureTextEntry = true
-			textField.textContentType = .password
-		}
-		textField.placeholder = placeholder
-		textField.placeholderColor = AuthConstants.placeholderColor
-		textField.title = title
-		textField.titleColor = AuthConstants.textColor
-		textField.selectedTitleColor = AuthConstants.textColor
-		textField.textColor = AuthConstants.textColor
-		textField.tintColor = AuthConstants.textColor
-		textField.iconType = .image
-		textField.iconImage = UIImage(systemName: imageName)
-		textField.iconColor = AuthConstants.iconColor
-		textField.selectedIconColor = AuthConstants.iconColor
-		textField.iconMarginBottom = AuthConstants.iconMarginBottom
-		textField.iconMarginLeft = AuthConstants.iconMarginLeft
-		textField.lineHeight = AuthConstants.lineHeight
-		textField.selectedLineHeight = AuthConstants.lineHeight
-		textField.lineColor = AuthConstants.lineColor
-		textField.selectedLineColor = AuthConstants.lineColor
-		textField.translatesAutoresizingMaskIntoConstraints = false
-		textField.autocapitalizationType = .none
-		textField.delegate = self
-	}
 }
 
 // MARK: - Private methods
-private extension AuthViewController
+private extension LoginViewController
 {
 	@objc func touchLoginButton() {
 		presenter.touchLoginButton()
@@ -252,7 +218,7 @@ private extension AuthViewController
 }
 
 // MARK: - UITextFieldDelegate
-extension AuthViewController: UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate
 {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		if textField == self.loginTextField {
@@ -265,6 +231,6 @@ extension AuthViewController: UITextFieldDelegate
 	}
 }
 // MARK: - IAuthViewController
-extension AuthViewController: IAuthViewController
+extension LoginViewController: ILoginViewController
 {
 }
