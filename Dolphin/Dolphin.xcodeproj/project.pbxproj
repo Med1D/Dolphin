@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72123AF72533441700DE67EC /* SignUpViewController.swift */; };
+		72123AFA2533442500DE67EC /* ISignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72123AF92533442500DE67EC /* ISignUpViewController.swift */; };
+		72123AFC253346BB00DE67EC /* ISignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72123AFB253346BB00DE67EC /* ISignUpInteractor.swift */; };
+		72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72123AFD253346C800DE67EC /* SignUpInteractor.swift */; };
+		72123B002533478700DE67EC /* ISignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72123AFF2533478700DE67EC /* ISignUpPresenter.swift */; };
+		72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72123B012533479400DE67EC /* SignUpPresenter.swift */; };
+		72123B042533486200DE67EC /* ISignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72123B032533486200DE67EC /* ISignUpRouter.swift */; };
+		72123B062533486A00DE67EC /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72123B052533486A00DE67EC /* SignUpRouter.swift */; };
 		721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB22530F74D00234071 /* LoginViewController.swift */; };
 		721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB42530F77000234071 /* LoginInteractor.swift */; };
 		721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FB62530F78500234071 /* LoginPresenter.swift */; };
@@ -54,6 +62,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		72123AF72533441700DE67EC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		72123AF92533442500DE67EC /* ISignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISignUpViewController.swift; sourceTree = "<group>"; };
+		72123AFB253346BB00DE67EC /* ISignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISignUpInteractor.swift; sourceTree = "<group>"; };
+		72123AFD253346C800DE67EC /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		72123AFF2533478700DE67EC /* ISignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISignUpPresenter.swift; sourceTree = "<group>"; };
+		72123B012533479400DE67EC /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		72123B032533486200DE67EC /* ISignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISignUpRouter.swift; sourceTree = "<group>"; };
+		72123B052533486A00DE67EC /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		721A0FB22530F74D00234071 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		721A0FB42530F77000234071 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		721A0FB62530F78500234071 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -116,6 +132,8 @@
 		72123AF32533426300DE67EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				72123AF92533442500DE67EC /* ISignUpViewController.swift */,
+				72123AF72533441700DE67EC /* SignUpViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +141,8 @@
 		72123AF42533426700DE67EC /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				72123AFB253346BB00DE67EC /* ISignUpInteractor.swift */,
+				72123AFD253346C800DE67EC /* SignUpInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -130,6 +150,8 @@
 		72123AF52533426F00DE67EC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				72123AFF2533478700DE67EC /* ISignUpPresenter.swift */,
+				72123B012533479400DE67EC /* SignUpPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -137,6 +159,8 @@
 		72123AF62533427300DE67EC /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				72123B032533486200DE67EC /* ISignUpRouter.swift */,
+				72123B052533486A00DE67EC /* SignUpRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -424,17 +448,25 @@
 			files = (
 				721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */,
 				721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */,
+				72123B042533486200DE67EC /* ISignUpRouter.swift in Sources */,
 				721A0FC12530F8A800234071 /* ILoginInteractor.swift in Sources */,
 				72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */,
+				72123AFA2533442500DE67EC /* ISignUpViewController.swift in Sources */,
 				72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */,
 				721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */,
 				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
 				721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */,
 				729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */,
+				72123B002533478700DE67EC /* ISignUpPresenter.swift in Sources */,
+				72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */,
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
 				721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */,
 				721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */,
+				72123B062533486A00DE67EC /* SignUpRouter.swift in Sources */,
+				72123AFC253346BB00DE67EC /* ISignUpInteractor.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
+				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
+				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,
 				721A0FBB2530F7DB00234071 /* LoginRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

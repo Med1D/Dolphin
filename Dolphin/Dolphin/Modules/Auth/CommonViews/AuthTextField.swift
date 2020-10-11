@@ -15,10 +15,16 @@ final class AuthTextField: SkyFloatingLabelTextFieldWithIcon
 		switch type {
 		case .email:
 			self.textContentType = .emailAddress
+			self.autocapitalizationType = .none
 			self.autocorrectionType = .no
 		case .password:
-			self.isSecureTextEntry = true
 			self.textContentType = .password
+			self.isSecureTextEntry = true
+			self.autocapitalizationType = .none
+		case .name:
+			self.textContentType = .name
+			self.autocapitalizationType = .words
+			self.autocorrectionType = .no
 		}
 		self.placeholder = placeholder
 		self.placeholderColor = AuthConstants.placeholderColor
@@ -37,6 +43,5 @@ final class AuthTextField: SkyFloatingLabelTextFieldWithIcon
 		self.selectedLineHeight = AuthConstants.lineHeight
 		self.lineColor = AuthConstants.lineColor
 		self.selectedLineColor = AuthConstants.lineColor
-		self.autocapitalizationType = .none
 	}
 }

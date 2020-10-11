@@ -26,7 +26,7 @@ final class LoginPresenter
 	}
 }
 
-// MARK: - IAuthPresenter
+// MARK: - ILoginPresenter
 extension LoginPresenter: ILoginPresenter
 {
 	func touchLoginButton() {

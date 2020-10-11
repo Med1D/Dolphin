@@ -22,7 +22,7 @@ final class LoginInteractor
 	}
 }
 
-// MARK: - IAuthInteractor
+// MARK: - ILoginInteractor
 extension LoginInteractor: ILoginInteractor
 {
 }
