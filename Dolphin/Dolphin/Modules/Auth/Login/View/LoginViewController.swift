@@ -75,6 +75,12 @@ private extension LoginViewController
 			navController.navigationBar.isTranslucent = true
 			navController.navigationBar.setBackgroundImage(UIImage(), for: .default)
 			navController.navigationBar.shadowImage = UIImage()
+			navController.navigationBar.tintColor = .white
+			navController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AuthConstants.textColor]
+			navController.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "",
+																					 style: .plain,
+																					 target: nil,
+																					 action: nil)
 		}
 	}
 
@@ -213,7 +219,9 @@ private extension LoginViewController
 	}
 
 	@objc func touchSignUpButton() {
-		presenter.touchSignUpButton()
+		presenter.touchSignUpButton { viewController in
+			self.navigationController?.pushViewController(viewController, animated: true)
+		}
 	}
 }
 

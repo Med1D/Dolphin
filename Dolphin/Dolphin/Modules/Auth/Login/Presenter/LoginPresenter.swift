@@ -37,7 +37,9 @@ extension LoginPresenter: ILoginPresenter
 		print(#function)
 	}
 
-	func touchSignUpButton() {
-		print(#function)
+	func touchSignUpButton(closure: @escaping (UIViewController) -> Void) {
+		self.router.touchSignUpButton { viewController in
+			closure(viewController)
+		}
 	}
 }
