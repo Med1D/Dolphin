@@ -64,6 +64,7 @@ final class LoginViewController: UIViewController
 		super.viewWillAppear(animated)
 		self.loginTextField.text = ""
 		self.passwordTextField.text = ""
+		self.loginButton.isEnabled = false
 	}
 
 // MARK: - touchesBegan
