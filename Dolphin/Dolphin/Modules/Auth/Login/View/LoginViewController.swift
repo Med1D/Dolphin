@@ -59,6 +59,13 @@ final class LoginViewController: UIViewController
 		self.setupConstraints()
 	}
 
+// MARK: - viewWillAppear
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.loginTextField.text = ""
+		self.passwordTextField.text = ""
+	}
+
 // MARK: - touchesBegan
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		self.view.endEditing(true)
@@ -94,13 +101,17 @@ private extension LoginViewController
 	func setupLoginTextField() {
 		self.loginTextField.delegate = self
 		self.loginTextField.returnKeyType = .next
+		self.loginTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 	}
 
 	func setupPasswordTextField() {
 		self.passwordTextField.delegate = self
+		self.passwordTextField.isSecureTextEntry = true
+		self.passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 	}
 
 	func setupLoginButton() {
+		self.loginButton.isEnabled = false
 		self.loginButton.backgroundColor = AuthConstants.buttonColor
 		self.loginButton.setTitle("LOGIN", for: .normal)
 		self.loginButton.tintColor = AuthConstants.backgroundColor
@@ -210,6 +221,15 @@ private extension LoginViewController
 // MARK: - Private methods
 private extension LoginViewController
 {
+	@objc func textFieldDidChange(_ textField: AuthTextField) {
+		guard self.loginTextField.text?.isEmpty == false,
+			  self.passwordTextField.text?.isEmpty == false else {
+			self.loginButton.isEnabled = false
+			return
+		}
+		self.loginButton.isEnabled = true
+	}
+
 	@objc func touchLoginButton() {
 		presenter.touchLoginButton()
 	}

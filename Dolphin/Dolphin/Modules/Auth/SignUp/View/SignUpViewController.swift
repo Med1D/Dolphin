@@ -89,6 +89,7 @@ private extension SignUpViewController
 
 	func setupConfirmPasswordTextField() {
 		self.confirmPasswordTextField.delegate = self
+		self.confirmPasswordTextField.errorColor = AuthConstants.errorColor
 		self.confirmPasswordTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
 	}
 
