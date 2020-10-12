@@ -10,6 +10,6 @@ import UIKit
 protocol ILoginPresenter: AnyObject
 {
 	func touchLoginButton()
-	func touchForgotPasswordButton()
+	func touchForgotPasswordButton(closure: @escaping (UIViewController) -> Void)
 	func touchSignUpButton(closure: @escaping (UIViewController) -> Void)
 }

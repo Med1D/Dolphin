@@ -15,7 +15,6 @@ final class AuthTextField: SkyFloatingLabelTextFieldWithIcon
 		switch type {
 		case .email:
 			self.autocapitalizationType = .none
-			self.autocorrectionType = .no
 		case .password:
 			self.autocapitalizationType = .none
 		case .name:

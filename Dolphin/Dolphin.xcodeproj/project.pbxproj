@@ -23,6 +23,14 @@
 		721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FBE2530F89000234071 /* ILoginPresenter.swift */; };
 		721A0FC12530F8A800234071 /* ILoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FC02530F8A800234071 /* ILoginInteractor.swift */; };
 		721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A0FC22530F8C500234071 /* ILoginViewController.swift */; };
+		727BFDBD25347FF900507F50 /* IForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDBC25347FF900507F50 /* IForgotPasswordViewController.swift */; };
+		727BFDBF2534800700507F50 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDBE2534800700507F50 /* ForgotPasswordViewController.swift */; };
+		727BFDC1253480A500507F50 /* IForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC0253480A500507F50 /* IForgotPasswordInteractor.swift */; };
+		727BFDC3253480CB00507F50 /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC2253480CB00507F50 /* ForgotPasswordInteractor.swift */; };
+		727BFDC52534810B00507F50 /* IForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC42534810B00507F50 /* IForgotPasswordPresenter.swift */; };
+		727BFDC72534811E00507F50 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC62534811E00507F50 /* ForgotPasswordPresenter.swift */; };
+		727BFDC92534818200507F50 /* IForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC82534818200507F50 /* IForgotPasswordRouter.swift */; };
+		727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDCA253481AE00507F50 /* ForgotPasswordRouter.swift */; };
 		729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0929253339600055E50C /* AuthTextFieldType.swift */; };
 		729B092C253339860055E50C /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B092B253339860055E50C /* AuthTextField.swift */; };
 		72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A178252CB2EF0083F88F /* AppDelegate.swift */; };
@@ -78,6 +86,14 @@
 		721A0FBE2530F89000234071 /* ILoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginPresenter.swift; sourceTree = "<group>"; };
 		721A0FC02530F8A800234071 /* ILoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginInteractor.swift; sourceTree = "<group>"; };
 		721A0FC22530F8C500234071 /* ILoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginViewController.swift; sourceTree = "<group>"; };
+		727BFDBC25347FF900507F50 /* IForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		727BFDBE2534800700507F50 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		727BFDC0253480A500507F50 /* IForgotPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordInteractor.swift; sourceTree = "<group>"; };
+		727BFDC2253480CB00507F50 /* ForgotPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordInteractor.swift; sourceTree = "<group>"; };
+		727BFDC42534810B00507F50 /* IForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		727BFDC62534811E00507F50 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		727BFDC82534818200507F50 /* IForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordRouter.swift; sourceTree = "<group>"; };
+		727BFDCA253481AE00507F50 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
 		729B0929253339600055E50C /* AuthTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextFieldType.swift; sourceTree = "<group>"; };
 		729B092B253339860055E50C /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		72A3A175252CB2EF0083F88F /* Dolphin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dolphin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +141,10 @@
 		72123AF22533424300DE67EC /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				727BFDB825347FC300507F50 /* View */,
+				727BFDB925347FC800507F50 /* Interactor */,
+				727BFDBA25347FCF00507F50 /* Presenter */,
+				727BFDBB25347FD300507F50 /* Router */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -217,6 +237,42 @@
 			children = (
 				721A0FBC2530F7F100234071 /* ILoginRouter.swift */,
 				721A0FBA2530F7DB00234071 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		727BFDB825347FC300507F50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				727BFDBC25347FF900507F50 /* IForgotPasswordViewController.swift */,
+				727BFDBE2534800700507F50 /* ForgotPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		727BFDB925347FC800507F50 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				727BFDC0253480A500507F50 /* IForgotPasswordInteractor.swift */,
+				727BFDC2253480CB00507F50 /* ForgotPasswordInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		727BFDBA25347FCF00507F50 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				727BFDC42534810B00507F50 /* IForgotPasswordPresenter.swift */,
+				727BFDC62534811E00507F50 /* ForgotPasswordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		727BFDBB25347FD300507F50 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				727BFDC82534818200507F50 /* IForgotPasswordRouter.swift */,
+				727BFDCA253481AE00507F50 /* ForgotPasswordRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -448,12 +504,16 @@
 			files = (
 				721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */,
 				721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */,
+				727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */,
 				72123B042533486200DE67EC /* ISignUpRouter.swift in Sources */,
 				721A0FC12530F8A800234071 /* ILoginInteractor.swift in Sources */,
+				727BFDC92534818200507F50 /* IForgotPasswordRouter.swift in Sources */,
 				72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */,
 				72123AFA2533442500DE67EC /* ISignUpViewController.swift in Sources */,
 				72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */,
 				721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */,
+				727BFDC3253480CB00507F50 /* ForgotPasswordInteractor.swift in Sources */,
+				727BFDBF2534800700507F50 /* ForgotPasswordViewController.swift in Sources */,
 				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
 				721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */,
 				729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */,
@@ -467,6 +527,10 @@
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
 				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
 				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,
+				727BFDC52534810B00507F50 /* IForgotPasswordPresenter.swift in Sources */,
+				727BFDC72534811E00507F50 /* ForgotPasswordPresenter.swift in Sources */,
+				727BFDC1253480A500507F50 /* IForgotPasswordInteractor.swift in Sources */,
+				727BFDBD25347FF900507F50 /* IForgotPasswordViewController.swift in Sources */,
 				721A0FBB2530F7DB00234071 /* LoginRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
