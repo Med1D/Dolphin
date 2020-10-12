@@ -33,8 +33,10 @@ extension LoginPresenter: ILoginPresenter
 		print(#function)
 	}
 
-	func touchForgotPasswordButton() {
-		print(#function)
+	func touchForgotPasswordButton(closure: @escaping (UIViewController) -> Void) {
+		self.router.touchForgotPasswordButton { viewController in
+			closure(viewController)
+		}
 	}
 
 	func touchSignUpButton(closure: @escaping (UIViewController) -> Void) {

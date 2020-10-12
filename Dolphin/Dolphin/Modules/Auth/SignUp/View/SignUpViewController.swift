@@ -213,6 +213,7 @@ extension SignUpViewController: UITextFieldDelegate
 		return true
 	}
 }
+
 // MARK: - ISignUpViewController
 extension SignUpViewController: ISignUpViewController
 {

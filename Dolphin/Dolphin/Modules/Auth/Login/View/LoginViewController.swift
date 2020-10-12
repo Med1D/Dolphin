@@ -236,7 +236,9 @@ private extension LoginViewController
 	}
 
 	@objc func touchForgotPasswordButton() {
-		presenter.touchForgotPasswordButton()
+		presenter.touchForgotPasswordButton { viewController in
+			self.navigationController?.pushViewController(viewController, animated: true)
+		}
 	}
 
 	@objc func touchSignUpButton() {
@@ -259,6 +261,7 @@ extension LoginViewController: UITextFieldDelegate
 		return true
 	}
 }
+
 // MARK: - ILoginViewController
 extension LoginViewController: ILoginViewController
 {

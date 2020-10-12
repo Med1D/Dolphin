@@ -37,4 +37,14 @@ final class Factory
 		interactor.inject(presenter: presenter)
 		return viewController
 	}
+
+	func createForgotPasswordModule() -> UIViewController {
+		let router = ForgotPasswordRouter(factory: self)
+		let interactor = ForgotPasswordInteractor()
+		let presenter = ForgotPasswordPresenter(router: router, interactor: interactor)
+		let viewController = ForgotPasswordViewController(presenter: presenter)
+		presenter.inject(viewController: viewController)
+		interactor.inject(presenter: presenter)
+		return viewController
+	}
 }
