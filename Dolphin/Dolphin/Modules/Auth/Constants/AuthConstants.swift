@@ -25,5 +25,5 @@ enum AuthConstants
 	static let helveticaBold16 = UIFont(name: "Helvetica-Bold", size: 16)
 	static let helvetica14 = UIFont(name: "Helvetica", size: 14)
 	static let helvetica16 = UIFont(name: "Helvetica", size: 16)
-	static let imageSize: CGFloat = 150
+	static let imageSize: CGFloat = 200
 }

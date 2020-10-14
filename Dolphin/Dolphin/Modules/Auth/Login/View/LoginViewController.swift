@@ -96,7 +96,6 @@ private extension LoginViewController
 		self.view.addSubview(self.imageView)
 		self.imageView.contentMode = .scaleAspectFit
 		self.imageView.image = UIImage(named: "Dolphin")
-		self.imageView.tintColor = AuthConstants.textColor
 	}
 
 	func setupLoginTextField() {
