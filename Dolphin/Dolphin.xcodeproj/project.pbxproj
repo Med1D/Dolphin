@@ -48,6 +48,11 @@
 		72DB10AE252E58940043875E /* InputBarAccessoryView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AC252E58940043875E /* InputBarAccessoryView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72DB10B0252E58990043875E /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AF252E58990043875E /* MessageKit.framework */; };
 		72DB10B1252E58990043875E /* MessageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AF252E58990043875E /* MessageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCDC2537290900DAA664 /* AuthNetworkService.swift */; };
+		72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCDE2537292000DAA664 /* IAuthNetworkService.swift */; };
+		72E1CCE225372BB800DAA664 /* DolphinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCE125372BB800DAA664 /* DolphinAPI.swift */; };
+		72E1CCE525372CED00DAA664 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCE425372CED00DAA664 /* User.swift */; };
+		72E1CCE725372E0700DAA664 /* AuthNetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCE625372E0700DAA664 /* AuthNetworkErrors.swift */; };
 		72F586E92530A10900504B37 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F586E82530A10900504B37 /* Factory.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +113,11 @@
 		72DB10A8252E58900043875E /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		72DB10AC252E58940043875E /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
 		72DB10AF252E58990043875E /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
+		72E1CCDC2537290900DAA664 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
+		72E1CCDE2537292000DAA664 /* IAuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthNetworkService.swift; sourceTree = "<group>"; };
+		72E1CCE125372BB800DAA664 /* DolphinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolphinAPI.swift; sourceTree = "<group>"; };
+		72E1CCE425372CED00DAA664 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		72E1CCE625372E0700DAA664 /* AuthNetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkErrors.swift; sourceTree = "<group>"; };
 		72F586E82530A10900504B37 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,9 +206,11 @@
 		721A0FAC2530F6AA00234071 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				72E1CCE325372CE400DAA664 /* Entity */,
 				729B0927253338450055E50C /* Login */,
 				72123AF12533423E00DE67EC /* SignUp */,
 				72123AF22533424300DE67EC /* ForgotPassword */,
+				72E1CCDB253728F500DAA664 /* AuthNetworkService */,
 				72D8C7BD2531FC21008E44DC /* Constants */,
 				729B0928253339040055E50C /* CommonViews */,
 			);
@@ -346,6 +358,33 @@
 				72DB10A8252E58900043875E /* Starscream.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72E1CCDB253728F500DAA664 /* AuthNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				72E1CCE025372BAC00DAA664 /* DolphinAPI */,
+				72E1CCDE2537292000DAA664 /* IAuthNetworkService.swift */,
+				72E1CCDC2537290900DAA664 /* AuthNetworkService.swift */,
+				72E1CCE625372E0700DAA664 /* AuthNetworkErrors.swift */,
+			);
+			path = AuthNetworkService;
+			sourceTree = "<group>";
+		};
+		72E1CCE025372BAC00DAA664 /* DolphinAPI */ = {
+			isa = PBXGroup;
+			children = (
+				72E1CCE125372BB800DAA664 /* DolphinAPI.swift */,
+			);
+			path = DolphinAPI;
+			sourceTree = "<group>";
+		};
+		72E1CCE325372CE400DAA664 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				72E1CCE425372CED00DAA664 /* User.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		72F586E325309F7E00504B37 /* AppDelegate */ = {
@@ -504,6 +543,7 @@
 			files = (
 				721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */,
 				721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */,
+				72E1CCE225372BB800DAA664 /* DolphinAPI.swift in Sources */,
 				727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */,
 				72123B042533486200DE67EC /* ISignUpRouter.swift in Sources */,
 				721A0FC12530F8A800234071 /* ILoginInteractor.swift in Sources */,
@@ -511,7 +551,9 @@
 				72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */,
 				72123AFA2533442500DE67EC /* ISignUpViewController.swift in Sources */,
 				72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */,
+				72E1CCE725372E0700DAA664 /* AuthNetworkErrors.swift in Sources */,
 				721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */,
+				72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */,
 				727BFDC3253480CB00507F50 /* ForgotPasswordInteractor.swift in Sources */,
 				727BFDBF2534800700507F50 /* ForgotPasswordViewController.swift in Sources */,
 				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
@@ -524,6 +566,8 @@
 				721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */,
 				72123B062533486A00DE67EC /* SignUpRouter.swift in Sources */,
 				72123AFC253346BB00DE67EC /* ISignUpInteractor.swift in Sources */,
+				72E1CCE525372CED00DAA664 /* User.swift in Sources */,
+				72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
 				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
 				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,
