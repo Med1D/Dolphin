@@ -9,4 +9,5 @@ import Foundation
 
 protocol ISignUpInteractor: AnyObject
 {
+	func touchSignUpButton(user: User, completion: @escaping (RegisterResult) -> Void)
 }

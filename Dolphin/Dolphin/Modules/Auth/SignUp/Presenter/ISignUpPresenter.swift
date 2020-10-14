@@ -9,5 +9,5 @@ import UIKit
 
 protocol ISignUpPresenter: AnyObject
 {
-	func touchSignUpButton()
+	func touchSignUpButton(user: User, completion: @escaping (RegisterResult) -> Void)
 }

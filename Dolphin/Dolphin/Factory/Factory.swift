@@ -19,8 +19,9 @@ final class Factory
 	}
 
 	func createLoginModule() -> UIViewController {
+		let authNetworkService: IAuthNetworkService = AuthNetworkService()
 		let router = LoginRouter(factory: self)
-		let interactor = LoginInteractor()
+		let interactor = LoginInteractor(authNetworkService: authNetworkService)
 		let presenter = LoginPresenter(router: router, interactor: interactor)
 		let viewController = LoginViewController(presenter: presenter)
 		presenter.inject(viewController: viewController)
@@ -29,8 +30,9 @@ final class Factory
 	}
 
 	func createSignUpModule() -> UIViewController {
+		let authNetworkService: IAuthNetworkService = AuthNetworkService()
 		let router = SignUpRouter(factory: self)
-		let interactor = SignUpInteractor()
+		let interactor = SignUpInteractor(authNetworkService: authNetworkService)
 		let presenter = SignUpPresenter(router: router, interactor: interactor)
 		let viewController = SignUpViewController(presenter: presenter)
 		presenter.inject(viewController: viewController)
@@ -39,8 +41,9 @@ final class Factory
 	}
 
 	func createForgotPasswordModule() -> UIViewController {
+		let authNetworkService: IAuthNetworkService = AuthNetworkService()
 		let router = ForgotPasswordRouter(factory: self)
-		let interactor = ForgotPasswordInteractor()
+		let interactor = ForgotPasswordInteractor(authNetworkService: authNetworkService)
 		let presenter = ForgotPasswordPresenter(router: router, interactor: interactor)
 		let viewController = ForgotPasswordViewController(presenter: presenter)
 		presenter.inject(viewController: viewController)

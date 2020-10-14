@@ -155,7 +155,30 @@ private extension SignUpViewController
 private extension SignUpViewController
 {
 	@objc func touchSignUpButton() {
-		presenter.touchSignUpButton()
+		guard let name = self.nameTextField.text,
+			  let email = self.loginTextField.text,
+			  let password = self.passwordTextField.text else {
+			return
+		}
+		let user = User(login: name, email: email, password: password)
+		presenter.touchSignUpButton(user: user) { result in
+			switch result {
+			case .success: break
+				// create success alert
+			case .failure(let error):
+				guard let error = error as? AuthNetworkErrors else {
+					return
+				}
+				switch error {
+				case .dataTaskError, .noConnection: break
+					// create "no connection alert"
+				case .badResponse: break
+					// create "This email \"\(email)\" is already registered" alert
+				default: break
+					// create error alert
+				}
+			}
+		}
 	}
 
 	@objc func textFieldDidChange(_ textField: AuthTextField) {

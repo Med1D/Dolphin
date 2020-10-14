@@ -11,9 +11,11 @@ final class ForgotPasswordInteractor
 {
 // MARK: - Properties
 	private weak var presenter: IForgotPasswordPresenter?
+	private let authNetworkService: IAuthNetworkService
 
 // MARK: - Init
-	init() {
+	init(authNetworkService: IAuthNetworkService) {
+		self.authNetworkService = authNetworkService
 	}
 
 // MARK: - Inject

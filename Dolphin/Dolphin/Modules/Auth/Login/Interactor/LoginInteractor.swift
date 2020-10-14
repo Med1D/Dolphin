@@ -11,9 +11,11 @@ final class LoginInteractor
 {
 // MARK: - Properties
 	private weak var presenter: ILoginPresenter?
+	private let authNetworkService: IAuthNetworkService
 
 // MARK: - Init
-	init() {
+	init(authNetworkService: IAuthNetworkService) {
+		self.authNetworkService = authNetworkService
 	}
 
 // MARK: - Inject

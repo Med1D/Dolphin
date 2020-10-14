@@ -29,7 +29,14 @@ final class SignUpPresenter
 // MARK: - ISignUpPresenter
 extension SignUpPresenter: ISignUpPresenter
 {
-	func touchSignUpButton() {
-		print(#function)
+	func touchSignUpButton(user: User, completion: @escaping (RegisterResult) -> Void) {
+		self.interactor.touchSignUpButton(user: user) { result in
+			switch result {
+			case .success(let string):
+				completion(.success(string))
+			case .failure(let error):
+				completion(.failure(error))
+			}
+		}
 	}
 }
