@@ -33,6 +33,8 @@ final class SignUpViewController: UIViewController
 														 title: "Confirm password",
 														 imageName: AuthConstants.passwordTextFieldImageName)
 	private let signUpButton = UIButton(type: .system)
+	private let activityIndicator = UIActivityIndicatorView(style: .medium)
+	private let activityView = UIView()
 
 // MARK: - Init
 	init(presenter: ISignUpPresenter) {
@@ -56,6 +58,7 @@ final class SignUpViewController: UIViewController
 		self.setupConfirmPasswordTextField()
 		self.setupSignUpButton()
 		self.setupVStackView()
+		self.setupActivityIndicatorAndActivityView()
 		self.setupConstraints()
 	}
 
@@ -116,6 +119,17 @@ private extension SignUpViewController
 		self.vStackView.addArrangedSubview(self.signUpButton)
 	}
 
+	func setupActivityIndicatorAndActivityView() {
+		self.view.addSubview(self.activityView)
+		self.activityView.addSubview(self.activityIndicator)
+		self.activityView.frame = self.view.bounds
+		self.activityView.backgroundColor = AuthConstants.activityViewColor
+		self.activityView.isHidden = true
+		self.activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+		self.activityIndicator.color = .white
+		self.activityIndicator.isHidden = true
+	}
+
 	func setupConstraints() {
 		self.vStackView.snp.makeConstraints { make in
 			make.centerX.equalToSuperview()
@@ -148,6 +162,35 @@ private extension SignUpViewController
 			make.height.equalTo(50)
 			make.leading.bottom.trailing.equalToSuperview()
 		}
+
+		self.activityIndicator.snp.makeConstraints { make in
+			make.center.equalToSuperview()
+		}
+	}
+
+	func createAlertController(title: String, message: String, handler: ((UIAlertAction) -> Void)?) {
+		DispatchQueue.main.async {
+			let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+			let action = UIAlertAction(title: "OK", style: .default, handler: handler)
+			alert.addAction(action)
+			self.present(alert, animated: true)
+		}
+	}
+
+	func startActivityIndicator() {
+		self.navigationController?.view.isUserInteractionEnabled = false
+		self.activityView.isHidden = false
+		self.activityIndicator.startAnimating()
+		self.activityIndicator.isHidden = false
+	}
+
+	func stopActivityIndicator() {
+		DispatchQueue.main.async {
+			self.navigationController?.view.isUserInteractionEnabled = true
+			self.activityView.isHidden = true
+			self.activityIndicator.stopAnimating()
+			self.activityIndicator.isHidden = true
+		}
 	}
 }
 
@@ -155,6 +198,7 @@ private extension SignUpViewController
 private extension SignUpViewController
 {
 	@objc func touchSignUpButton() {
+		self.startActivityIndicator()
 		guard let name = self.nameTextField.text,
 			  let email = self.loginTextField.text,
 			  let password = self.passwordTextField.text else {
@@ -163,19 +207,30 @@ private extension SignUpViewController
 		let user = User(login: name, email: email, password: password)
 		presenter.touchSignUpButton(user: user) { result in
 			switch result {
-			case .success: break
-				// create success alert
+			case .success:
+				self.stopActivityIndicator()
+				self.createAlertController(title: "Registration Complete",
+										   message: "New account was successfully registered.") { _ in
+					self.navigationController?.popViewController(animated: true)
+				}
 			case .failure(let error):
+				self.stopActivityIndicator()
 				guard let error = error as? AuthNetworkErrors else {
 					return
 				}
 				switch error {
-				case .dataTaskError, .noConnection: break
-					// create "no connection alert"
-				case .badResponse: break
-					// create "This email \"\(email)\" is already registered" alert
-				default: break
-					// create error alert
+				case .dataTaskError, .noConnection:
+					self.createAlertController(title: "No Connection",
+											   message: "Failed to access the service.",
+											   handler: nil)
+				case .badResponse:
+					self.createAlertController(title: "Sign Up Failed",
+											   message: "Email is already in use.",
+											   handler: nil)
+				default:
+					self.createAlertController(title: "Sign Up Failed",
+											   message: "Failed to access the service.",
+											   handler: nil)
 				}
 			}
 		}

@@ -26,4 +26,5 @@ enum AuthConstants
 	static let helvetica14 = UIFont(name: "Helvetica", size: 14)
 	static let helvetica16 = UIFont(name: "Helvetica", size: 16)
 	static let imageSize: CGFloat = 200
+	static let activityViewColor = UIColor(red: 52 / 255, green: 70 / 255, blue: 93 / 255, alpha: 0.9)
 }
