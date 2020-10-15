@@ -253,6 +253,14 @@ private extension SignUpViewController
 				textField.errorMessage = "Passwords don't match"
 			}
 		}
+		if textField == self.passwordTextField {
+			if textField.text == self.confirmPasswordTextField.text {
+				self.confirmPasswordTextField.errorMessage = ""
+			}
+			else {
+				self.confirmPasswordTextField.errorMessage = "Passwords don't match"
+			}
+		}
 
 		guard self.nameTextField.text?.isEmpty == false,
 			  self.loginTextField.text?.isEmpty == false,
