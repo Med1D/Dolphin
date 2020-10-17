@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import KeychainSwift
 
 final class LoginInteractor
 {
 // MARK: - Properties
 	private weak var presenter: ILoginPresenter?
 	private let authNetworkService: IAuthNetworkService
+	private let keychainSwift = KeychainSwift()
 
 // MARK: - Init
 	init(authNetworkService: IAuthNetworkService) {
@@ -31,6 +33,7 @@ extension LoginInteractor: ILoginInteractor
 		self.authNetworkService.auth(user: user) { result in
 			switch result {
 			case .success(let string):
+				self.keychainSwift.set(string, forKey: "token")
 				completion(.success(string))
 			case .failure(let error):
 				completion(.failure(error))
