@@ -282,9 +282,8 @@ private extension LoginViewController
 		let user = User(username: nil, email: email, password: password)
 		presenter.touchLoginButton(user: user) { result in
 			switch result {
-			case .success(let string):
+			case .success:
 				self.stopActivityIndicator()
-				print(string)
 			case .failure(let error):
 				self.stopActivityIndicator()
 				guard let error = error as? AuthNetworkErrors else {
