@@ -48,6 +48,7 @@
 		72DB10AE252E58940043875E /* InputBarAccessoryView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AC252E58940043875E /* InputBarAccessoryView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72DB10B0252E58990043875E /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AF252E58990043875E /* MessageKit.framework */; };
 		72DB10B1252E58990043875E /* MessageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AF252E58990043875E /* MessageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72DBC64F253B841500F91A09 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DBC64E253B841500F91A09 /* AuthResponse.swift */; };
 		72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCDC2537290900DAA664 /* AuthNetworkService.swift */; };
 		72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCDE2537292000DAA664 /* IAuthNetworkService.swift */; };
 		72E1CCE225372BB800DAA664 /* DolphinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCE125372BB800DAA664 /* DolphinAPI.swift */; };
@@ -113,6 +114,7 @@
 		72DB10A8252E58900043875E /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		72DB10AC252E58940043875E /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
 		72DB10AF252E58990043875E /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
+		72DBC64E253B841500F91A09 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		72E1CCDC2537290900DAA664 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		72E1CCDE2537292000DAA664 /* IAuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthNetworkService.swift; sourceTree = "<group>"; };
 		72E1CCE125372BB800DAA664 /* DolphinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolphinAPI.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				72E1CCE425372CED00DAA664 /* User.swift */,
+				72DBC64E253B841500F91A09 /* AuthResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */,
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
 				721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */,
+				72DBC64F253B841500F91A09 /* AuthResponse.swift in Sources */,
 				721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */,
 				72123B062533486A00DE67EC /* SignUpRouter.swift in Sources */,
 				72123AFC253346BB00DE67EC /* ISignUpInteractor.swift in Sources */,

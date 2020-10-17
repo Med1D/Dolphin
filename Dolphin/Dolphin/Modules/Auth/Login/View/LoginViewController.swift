@@ -30,6 +30,8 @@ final class LoginViewController: UIViewController
 	private let forgotPasswordButton = UIButton(type: .system)
 	private let signUpLabel = UILabel()
 	private let signUpButton = UIButton(type: .system)
+	private let activityIndicator = UIActivityIndicatorView(style: .medium)
+	private let activityView = UIView()
 
 // MARK: - Init
 	init(presenter: ILoginPresenter) {
@@ -56,6 +58,7 @@ final class LoginViewController: UIViewController
 		self.setupSignUpButton()
 		self.setupVStackView()
 		self.setupHStackView()
+		self.setupActivityIndicatorAndActivityView()
 		self.setupConstraints()
 	}
 
@@ -168,6 +171,17 @@ private extension LoginViewController
 		self.hStackView.addArrangedSubview(self.signUpButton)
 	}
 
+	func setupActivityIndicatorAndActivityView() {
+		self.view.addSubview(self.activityView)
+		self.activityView.addSubview(self.activityIndicator)
+		self.activityView.frame = self.view.bounds
+		self.activityView.backgroundColor = AuthConstants.activityViewColor
+		self.activityView.isHidden = true
+		self.activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+		self.activityIndicator.color = .white
+		self.activityIndicator.isHidden = true
+	}
+
 	func setupConstraints() {
 		self.vStackView.snp.makeConstraints { make in
 			make.centerX.equalToSuperview()
@@ -215,6 +229,35 @@ private extension LoginViewController
 		self.signUpButton.snp.makeConstraints { make in
 			make.trailing.equalToSuperview()
 		}
+
+		self.activityIndicator.snp.makeConstraints { make in
+			make.center.equalToSuperview()
+		}
+	}
+
+	func createAlertController(title: String, message: String, handler: ((UIAlertAction) -> Void)?) {
+		DispatchQueue.main.async {
+			let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+			let action = UIAlertAction(title: "OK", style: .default, handler: handler)
+			alert.addAction(action)
+			self.present(alert, animated: true)
+		}
+	}
+
+	func startActivityIndicator() {
+		self.navigationController?.view.isUserInteractionEnabled = false
+		self.activityView.isHidden = false
+		self.activityIndicator.startAnimating()
+		self.activityIndicator.isHidden = false
+	}
+
+	func stopActivityIndicator() {
+		DispatchQueue.main.async {
+			self.navigationController?.view.isUserInteractionEnabled = true
+			self.activityView.isHidden = true
+			self.activityIndicator.stopAnimating()
+			self.activityIndicator.isHidden = true
+		}
 	}
 }
 
@@ -231,7 +274,38 @@ private extension LoginViewController
 	}
 
 	@objc func touchLoginButton() {
-		presenter.touchLoginButton()
+		self.startActivityIndicator()
+		guard let email = self.loginTextField.text,
+			  let password = self.passwordTextField.text else {
+			return
+		}
+		let user = User(username: nil, email: email, password: password)
+		presenter.touchLoginButton(user: user) { result in
+			switch result {
+			case .success(let string):
+				self.stopActivityIndicator()
+				print(string)
+			case .failure(let error):
+				self.stopActivityIndicator()
+				guard let error = error as? AuthNetworkErrors else {
+					return
+				}
+				switch error {
+				case .dataTaskError, .noConnection:
+					self.createAlertController(title: "No Connection",
+											   message: "Failed to access the service.",
+											   handler: nil)
+				case .badResponse:
+					self.createAlertController(title: "Sign In Failed",
+											   message: "Incorrect email or password.",
+											   handler: nil)
+				default:
+					self.createAlertController(title: "Sign In Failed",
+											   message: "Failed to access the service.",
+											   handler: nil)
+				}
+			}
+		}
 	}
 
 	@objc func touchForgotPasswordButton() {

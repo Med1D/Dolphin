@@ -46,4 +46,20 @@ extension AuthNetworkService: IAuthNetworkService
 			completion(.failure(AuthNetworkErrors.noConnection))
 		}
 	}
+
+	func auth(user: User, completion: @escaping (AuthResult) -> Void) {
+		if connection {
+			self.dolphinAPI.auth(user: user) { result in
+				switch result {
+				case .success(let string):
+					completion(.success(string))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(AuthNetworkErrors.noConnection))
+		}
+	}
 }

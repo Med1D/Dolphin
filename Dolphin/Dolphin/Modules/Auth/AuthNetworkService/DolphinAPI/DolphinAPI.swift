@@ -6,6 +6,7 @@
 //
 
 typealias RegisterResult = Result<String, Error>
+typealias AuthResult = Result<String, Error>
 
 import Foundation
 
@@ -47,6 +48,51 @@ final class DolphinAPI
 				switch response.statusCode {
 				case 200:
 					completion(.success("Success"))
+				default:
+					completion(.failure(AuthNetworkErrors.badResponse))
+				}
+			}
+		}
+		task?.resume()
+	}
+
+	func auth(user: User, completion: @escaping (AuthResult) -> Void) {
+		guard let components = URLComponents(string: DolphinAPIConstants.baseURL + DolphinAPIConstants.authURL) else {
+			completion(.failure(AuthNetworkErrors.wrongURL))
+			return
+		}
+		guard let url = components.url else {
+			completion(.failure(AuthNetworkErrors.wrongURL))
+			return
+		}
+		var request = URLRequest(url: url)
+		request.httpMethod = "POST"
+		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+		do {
+			let userData = try JSONEncoder().encode(user)
+			request.httpBody = userData
+		}
+		catch {
+			completion(.failure(AuthNetworkErrors.badUserData))
+		}
+		task = URLSession.shared.dataTask(with: request) { data, response, error in
+			if error != nil {
+				completion(.failure(AuthNetworkErrors.dataTaskError))
+			}
+			guard let data = data else {
+				completion(.failure(AuthNetworkErrors.dataTaskError))
+				return
+			}
+			if let response = response as? HTTPURLResponse {
+				switch response.statusCode {
+				case 200:
+					do {
+						let dataJSON = try JSONDecoder().decode(AuthResponse.self, from: data)
+						completion(.success(dataJSON.token))
+					}
+					catch {
+						completion(.failure(AuthNetworkErrors.dataTaskError))
+					}
 				default:
 					completion(.failure(AuthNetworkErrors.badResponse))
 				}

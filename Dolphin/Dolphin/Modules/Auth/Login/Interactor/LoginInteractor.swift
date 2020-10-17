@@ -27,4 +27,14 @@ final class LoginInteractor
 // MARK: - ILoginInteractor
 extension LoginInteractor: ILoginInteractor
 {
+	func auth(user: User, completion: @escaping (AuthResult) -> Void) {
+		self.authNetworkService.auth(user: user) { result in
+			switch result {
+			case .success(let string):
+				completion(.success(string))
+			case .failure(let error):
+				completion(.failure(error))
+			}
+		}
+	}
 }

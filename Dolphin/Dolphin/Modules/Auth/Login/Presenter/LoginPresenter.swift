@@ -29,8 +29,15 @@ final class LoginPresenter
 // MARK: - ILoginPresenter
 extension LoginPresenter: ILoginPresenter
 {
-	func touchLoginButton() {
-		print(#function)
+	func touchLoginButton(user: User, completion: @escaping (AuthResult) -> Void) {
+		self.interactor.auth(user: user) { result in
+			switch result {
+			case .success(let string):
+				completion(.success(string))
+			case .failure(let error):
+				completion(.failure(error))
+			}
+		}
 	}
 
 	func touchForgotPasswordButton(closure: @escaping (UIViewController) -> Void) {

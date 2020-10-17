@@ -10,4 +10,5 @@ import Foundation
 protocol IAuthNetworkService
 {
 	func register(user: User, completion: @escaping (RegisterResult) -> Void)
+	func auth(user: User, completion: @escaping (AuthResult) -> Void)
 }
