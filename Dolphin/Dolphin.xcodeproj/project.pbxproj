@@ -49,6 +49,8 @@
 		72DB10B0252E58990043875E /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AF252E58990043875E /* MessageKit.framework */; };
 		72DB10B1252E58990043875E /* MessageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AF252E58990043875E /* MessageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72DBC64F253B841500F91A09 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DBC64E253B841500F91A09 /* AuthResponse.swift */; };
+		72DBC654253BA2B500F91A09 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DBC653253BA2B500F91A09 /* KeychainSwift.framework */; };
+		72DBC655253BA2B500F91A09 /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DBC653253BA2B500F91A09 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCDC2537290900DAA664 /* AuthNetworkService.swift */; };
 		72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCDE2537292000DAA664 /* IAuthNetworkService.swift */; };
 		72E1CCE225372BB800DAA664 /* DolphinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCE125372BB800DAA664 /* DolphinAPI.swift */; };
@@ -64,6 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				72DBC655253BA2B500F91A09 /* KeychainSwift.framework in Embed Frameworks */,
 				72DB10AA252E58900043875E /* Starscream.framework in Embed Frameworks */,
 				72DB10B1252E58990043875E /* MessageKit.framework in Embed Frameworks */,
 				72D8C7BC2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Embed Frameworks */,
@@ -115,6 +118,7 @@
 		72DB10AC252E58940043875E /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
 		72DB10AF252E58990043875E /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
 		72DBC64E253B841500F91A09 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		72DBC653253BA2B500F91A09 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
 		72E1CCDC2537290900DAA664 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		72E1CCDE2537292000DAA664 /* IAuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAuthNetworkService.swift; sourceTree = "<group>"; };
 		72E1CCE125372BB800DAA664 /* DolphinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolphinAPI.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72DBC654253BA2B500F91A09 /* KeychainSwift.framework in Frameworks */,
 				72DB10A9252E58900043875E /* Starscream.framework in Frameworks */,
 				72DB10B0252E58990043875E /* MessageKit.framework in Frameworks */,
 				72D8C7BB2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Frameworks */,
@@ -353,6 +358,7 @@
 		72DB10A7252E58900043875E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72DBC653253BA2B500F91A09 /* KeychainSwift.framework */,
 				72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */,
 				72D8C7B72531E6F4008E44DC /* SnapKit.framework */,
 				72DB10AF252E58990043875E /* MessageKit.framework */,
@@ -528,6 +534,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/MessageKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SkyFloatingLabelTextField.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
 			);
 			outputFileListPaths = (
 			);

@@ -2,7 +2,7 @@
   "commitish" : "3.8.0",
   "iOS" : [
     {
-      "hash" : "a09087c06b63ed92b26a16a88f03632f9deefff29fcbe9a6b0d3f18a48fa087f",
+      "hash" : "b6f3182f8445ee11a88121416b73e83b65abdc970d31fa694d854a9c008db17a",
       "name" : "SkyFloatingLabelTextField",
       "linking" : "dynamic",
       "swiftToolchainVersion" : "5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
