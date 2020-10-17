@@ -204,7 +204,7 @@ private extension SignUpViewController
 			  let password = self.passwordTextField.text else {
 			return
 		}
-		let user = User(login: name, email: email, password: password)
+		let user = User(username: name, email: email, password: password)
 		presenter.touchSignUpButton(user: user) { result in
 			switch result {
 			case .success:

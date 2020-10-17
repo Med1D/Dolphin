@@ -9,4 +9,5 @@ import Foundation
 
 protocol ILoginInteractor: AnyObject
 {
+	func auth(user: User, completion: @escaping (AuthResult) -> Void)
 }
