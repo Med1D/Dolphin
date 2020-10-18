@@ -67,6 +67,9 @@
 		72E1CCE525372CED00DAA664 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCE425372CED00DAA664 /* User.swift */; };
 		72E1CCE725372E0700DAA664 /* AuthNetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1CCE625372E0700DAA664 /* AuthNetworkErrors.swift */; };
 		72F586E92530A10900504B37 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F586E82530A10900504B37 /* Factory.swift */; };
+		72FB227E253CA79D00E61D59 /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB227D253CA79D00E61D59 /* ChatRoomCell.swift */; };
+		72FB2281253CAC2500E61D59 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB2280253CAC2500E61D59 /* MainConstants.swift */; };
+		72FB2284253CADD100E61D59 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB2283253CADD100E61D59 /* ChatRoom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -145,6 +148,9 @@
 		72E1CCE425372CED00DAA664 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72E1CCE625372E0700DAA664 /* AuthNetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkErrors.swift; sourceTree = "<group>"; };
 		72F586E82530A10900504B37 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		72FB227D253CA79D00E61D59 /* ChatRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
+		72FB2280253CAC2500E61D59 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
+		72FB2283253CADD100E61D59 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +326,8 @@
 		728AB970253C55E8003294EC /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				72FB2282253CADC400E61D59 /* Entity */,
+				72FB227F253CABFA00E61D59 /* Constants */,
 				728AB971253C5609003294EC /* ChatList */,
 				728AB986253C5CEC003294EC /* ChatNetworkService */,
 			);
@@ -367,6 +375,7 @@
 		728AB975253C5653003294EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				72FB227C253CA77300E61D59 /* CustomViews */,
 				728AB978253C5697003294EC /* IChatListViewController.swift */,
 				728AB976253C568A003294EC /* ChatListViewController.swift */,
 			);
@@ -522,6 +531,30 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		72FB227C253CA77300E61D59 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				72FB227D253CA79D00E61D59 /* ChatRoomCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		72FB227F253CABFA00E61D59 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				72FB2280253CAC2500E61D59 /* MainConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		72FB2282253CADC400E61D59 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				72FB2283253CADD100E61D59 /* ChatRoom.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -637,6 +670,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FB2281253CAC2500E61D59 /* MainConstants.swift in Sources */,
+				72FB227E253CA79D00E61D59 /* ChatRoomCell.swift in Sources */,
 				721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */,
 				721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */,
 				728AB97B253C56DF003294EC /* IChatListInteractor.swift in Sources */,
@@ -674,6 +709,7 @@
 				72E1CCE525372CED00DAA664 /* User.swift in Sources */,
 				72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
+				72FB2284253CADD100E61D59 /* ChatRoom.swift in Sources */,
 				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
 				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,
 				727BFDC52534810B00507F50 /* IForgotPasswordPresenter.swift in Sources */,
