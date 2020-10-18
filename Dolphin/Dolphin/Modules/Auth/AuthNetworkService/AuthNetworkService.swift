@@ -51,8 +51,8 @@ extension AuthNetworkService: IAuthNetworkService
 		if connection {
 			self.dolphinAPI.auth(user: user) { result in
 				switch result {
-				case .success(let string):
-					completion(.success(string))
+				case .success((let token, let userId)):
+					completion(.success((token, userId)))
 				case .failure(let error):
 					completion(.failure(error))
 				}

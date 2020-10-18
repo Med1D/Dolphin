@@ -32,8 +32,11 @@ extension LoginPresenter: ILoginPresenter
 	func touchLoginButton(user: User, completion: @escaping (AuthResult) -> Void) {
 		self.interactor.auth(user: user) { result in
 			switch result {
-			case .success(let string):
-				completion(.success(string))
+			case .success((let token, let userId)):
+				completion(.success((token, userId)))
+				DispatchQueue.main.async {
+					self.router.touchLoginButton()
+				}
 			case .failure(let error):
 				completion(.failure(error))
 			}

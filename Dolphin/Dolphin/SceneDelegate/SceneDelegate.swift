@@ -16,10 +16,11 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate
 			   options connectionOptions: UIScene.ConnectionOptions) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-		window?.windowScene = windowScene
-		let factory = Factory()
-		window?.rootViewController = factory.createNavigationController()
-		window?.makeKeyAndVisible()
+		guard let window = window else { return }
+		window.windowScene = windowScene
+		let factory = Factory(window: window)
+		factory.createAuthNavigationController()
+		window.makeKeyAndVisible()
 	}
 
 	func sceneDidDisconnect(_ scene: UIScene) {

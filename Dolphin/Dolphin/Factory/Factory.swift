@@ -9,13 +9,33 @@ import UIKit
 
 final class Factory
 {
-	init() {
+	private let window: UIWindow
+
+	init(window: UIWindow) {
+		self.window = window
 	}
 
-	func createNavigationController() -> UINavigationController {
+	func createAuthNavigationController() {
 		let loginModule = createLoginModule()
 		let navigationController = UINavigationController(rootViewController: loginModule)
-		return navigationController
+		self.changeRootViewController(viewController: navigationController)
+	}
+
+	func createChatTabBarController() {
+		let chatListModule = self.createChatListModule()
+		let navigationController = UINavigationController(rootViewController: chatListModule)
+		let tabBarController = UITabBarController()
+		tabBarController.viewControllers = [navigationController]
+		self.changeRootViewController(viewController: tabBarController)
+	}
+
+	func changeRootViewController(viewController: UIViewController) {
+		self.window.rootViewController = viewController
+		UIView.transition(with: self.window,
+						  duration: 0.25,
+						  options: [.transitionCrossDissolve],
+						  animations: nil,
+						  completion: nil)
 	}
 
 	func createLoginModule() -> UIViewController {
@@ -46,6 +66,17 @@ final class Factory
 		let interactor = ForgotPasswordInteractor(authNetworkService: authNetworkService)
 		let presenter = ForgotPasswordPresenter(router: router, interactor: interactor)
 		let viewController = ForgotPasswordViewController(presenter: presenter)
+		presenter.inject(viewController: viewController)
+		interactor.inject(presenter: presenter)
+		return viewController
+	}
+
+	func createChatListModule() -> UIViewController {
+		let chatNetworkService: IChatNetworkService = ChatNetworkService()
+		let router = ChatListRouter(factory: self)
+		let interactor = ChatListInteractor(chatNetworkService: chatNetworkService)
+		let presenter = ChatListPresenter(router: router, interactor: interactor)
+		let viewController = ChatListViewController(presenter: presenter)
 		presenter.inject(viewController: viewController)
 		interactor.inject(presenter: presenter)
 		return viewController

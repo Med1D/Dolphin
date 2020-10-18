@@ -21,6 +21,10 @@ final class LoginRouter
 // MARK: - ILoginRouter
 extension LoginRouter: ILoginRouter
 {
+	func touchLoginButton() {
+		self.factory.createChatTabBarController()
+	}
+
 	func touchForgotPasswordButton(closure: (UIViewController) -> Void) {
 		let forgotPasswordModule = self.factory.createForgotPasswordModule()
 		closure(forgotPasswordModule)
