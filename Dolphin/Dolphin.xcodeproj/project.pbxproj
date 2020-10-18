@@ -31,6 +31,16 @@
 		727BFDC72534811E00507F50 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC62534811E00507F50 /* ForgotPasswordPresenter.swift */; };
 		727BFDC92534818200507F50 /* IForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC82534818200507F50 /* IForgotPasswordRouter.swift */; };
 		727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDCA253481AE00507F50 /* ForgotPasswordRouter.swift */; };
+		728AB977253C568A003294EC /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB976253C568A003294EC /* ChatListViewController.swift */; };
+		728AB979253C5697003294EC /* IChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB978253C5697003294EC /* IChatListViewController.swift */; };
+		728AB97B253C56DF003294EC /* IChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB97A253C56DF003294EC /* IChatListInteractor.swift */; };
+		728AB97D253C56ED003294EC /* ChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB97C253C56ED003294EC /* ChatListInteractor.swift */; };
+		728AB97F253C571F003294EC /* IChatListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB97E253C571F003294EC /* IChatListPresenter.swift */; };
+		728AB981253C5728003294EC /* ChatListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB980253C5728003294EC /* ChatListPresenter.swift */; };
+		728AB983253C5770003294EC /* IChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB982253C5770003294EC /* IChatListRouter.swift */; };
+		728AB985253C5791003294EC /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB984253C5791003294EC /* ChatListRouter.swift */; };
+		728AB988253C5D02003294EC /* ChatNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB987253C5D02003294EC /* ChatNetworkService.swift */; };
+		728AB98A253C5D0C003294EC /* IChatNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB989253C5D0C003294EC /* IChatNetworkService.swift */; };
 		729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0929253339600055E50C /* AuthTextFieldType.swift */; };
 		729B092C253339860055E50C /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B092B253339860055E50C /* AuthTextField.swift */; };
 		72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A178252CB2EF0083F88F /* AppDelegate.swift */; };
@@ -103,6 +113,16 @@
 		727BFDC62534811E00507F50 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		727BFDC82534818200507F50 /* IForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordRouter.swift; sourceTree = "<group>"; };
 		727BFDCA253481AE00507F50 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
+		728AB976253C568A003294EC /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		728AB978253C5697003294EC /* IChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListViewController.swift; sourceTree = "<group>"; };
+		728AB97A253C56DF003294EC /* IChatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListInteractor.swift; sourceTree = "<group>"; };
+		728AB97C253C56ED003294EC /* ChatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListInteractor.swift; sourceTree = "<group>"; };
+		728AB97E253C571F003294EC /* IChatListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListPresenter.swift; sourceTree = "<group>"; };
+		728AB980253C5728003294EC /* ChatListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListPresenter.swift; sourceTree = "<group>"; };
+		728AB982253C5770003294EC /* IChatListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListRouter.swift; sourceTree = "<group>"; };
+		728AB984253C5791003294EC /* ChatListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
+		728AB987253C5D02003294EC /* ChatNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNetworkService.swift; sourceTree = "<group>"; };
+		728AB989253C5D0C003294EC /* IChatNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatNetworkService.swift; sourceTree = "<group>"; };
 		729B0929253339600055E50C /* AuthTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextFieldType.swift; sourceTree = "<group>"; };
 		729B092B253339860055E50C /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		72A3A175252CB2EF0083F88F /* Dolphin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dolphin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				721A0FAC2530F6AA00234071 /* Auth */,
+				728AB970253C55E8003294EC /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -294,6 +315,71 @@
 				727BFDCA253481AE00507F50 /* ForgotPasswordRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		728AB970253C55E8003294EC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				728AB971253C5609003294EC /* ChatList */,
+				728AB986253C5CEC003294EC /* ChatNetworkService */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		728AB971253C5609003294EC /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				728AB975253C5653003294EC /* View */,
+				728AB974253C564E003294EC /* Interactor */,
+				728AB973253C5643003294EC /* Presenter */,
+				728AB972253C563A003294EC /* Router */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		728AB972253C563A003294EC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				728AB982253C5770003294EC /* IChatListRouter.swift */,
+				728AB984253C5791003294EC /* ChatListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		728AB973253C5643003294EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				728AB97E253C571F003294EC /* IChatListPresenter.swift */,
+				728AB980253C5728003294EC /* ChatListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		728AB974253C564E003294EC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				728AB97A253C56DF003294EC /* IChatListInteractor.swift */,
+				728AB97C253C56ED003294EC /* ChatListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		728AB975253C5653003294EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				728AB978253C5697003294EC /* IChatListViewController.swift */,
+				728AB976253C568A003294EC /* ChatListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		728AB986253C5CEC003294EC /* ChatNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				728AB989253C5D0C003294EC /* IChatNetworkService.swift */,
+				728AB987253C5D02003294EC /* ChatNetworkService.swift */,
+			);
+			path = ChatNetworkService;
 			sourceTree = "<group>";
 		};
 		729B0927253338450055E50C /* Login */ = {
@@ -553,6 +639,9 @@
 			files = (
 				721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */,
 				721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */,
+				728AB97B253C56DF003294EC /* IChatListInteractor.swift in Sources */,
+				728AB983253C5770003294EC /* IChatListRouter.swift in Sources */,
+				728AB98A253C5D0C003294EC /* IChatNetworkService.swift in Sources */,
 				72E1CCE225372BB800DAA664 /* DolphinAPI.swift in Sources */,
 				727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */,
 				72123B042533486200DE67EC /* ISignUpRouter.swift in Sources */,
@@ -560,11 +649,15 @@
 				727BFDC92534818200507F50 /* IForgotPasswordRouter.swift in Sources */,
 				72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */,
 				72123AFA2533442500DE67EC /* ISignUpViewController.swift in Sources */,
+				728AB97D253C56ED003294EC /* ChatListInteractor.swift in Sources */,
+				728AB977253C568A003294EC /* ChatListViewController.swift in Sources */,
 				72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */,
 				72E1CCE725372E0700DAA664 /* AuthNetworkErrors.swift in Sources */,
 				721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */,
 				72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */,
+				728AB979253C5697003294EC /* IChatListViewController.swift in Sources */,
 				727BFDC3253480CB00507F50 /* ForgotPasswordInteractor.swift in Sources */,
+				728AB981253C5728003294EC /* ChatListPresenter.swift in Sources */,
 				727BFDBF2534800700507F50 /* ForgotPasswordViewController.swift in Sources */,
 				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
 				721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */,
@@ -572,6 +665,7 @@
 				72123B002533478700DE67EC /* ISignUpPresenter.swift in Sources */,
 				72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */,
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
+				728AB97F253C571F003294EC /* IChatListPresenter.swift in Sources */,
 				721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */,
 				72DBC64F253B841500F91A09 /* AuthResponse.swift in Sources */,
 				721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */,
@@ -584,6 +678,8 @@
 				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,
 				727BFDC52534810B00507F50 /* IForgotPasswordPresenter.swift in Sources */,
 				727BFDC72534811E00507F50 /* ForgotPasswordPresenter.swift in Sources */,
+				728AB988253C5D02003294EC /* ChatNetworkService.swift in Sources */,
+				728AB985253C5791003294EC /* ChatListRouter.swift in Sources */,
 				727BFDC1253480A500507F50 /* IForgotPasswordInteractor.swift in Sources */,
 				727BFDBD25347FF900507F50 /* IForgotPasswordViewController.swift in Sources */,
 				721A0FBB2530F7DB00234071 /* LoginRouter.swift in Sources */,

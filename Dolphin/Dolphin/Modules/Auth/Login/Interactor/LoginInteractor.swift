@@ -32,9 +32,10 @@ extension LoginInteractor: ILoginInteractor
 	func auth(user: User, completion: @escaping (AuthResult) -> Void) {
 		self.authNetworkService.auth(user: user) { result in
 			switch result {
-			case .success(let string):
-				self.keychainSwift.set(string, forKey: "token")
-				completion(.success(string))
+			case .success((let token, let userId)):
+				self.keychainSwift.set(token, forKey: "token")
+				self.keychainSwift.set("\(userId)", forKey: "userId")
+				completion(.success((token, userId)))
 			case .failure(let error):
 				completion(.failure(error))
 			}

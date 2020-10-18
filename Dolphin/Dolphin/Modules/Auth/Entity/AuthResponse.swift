@@ -9,5 +9,6 @@ import Foundation
 
 struct AuthResponse: Codable
 {
+	let userId: Int
 	let token: String
 }
