@@ -57,6 +57,14 @@
 		72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A17A252CB2EF0083F88F /* SceneDelegate.swift */; };
 		72A3A182252CB2F10083F88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A181252CB2F10083F88F /* Assets.xcassets */; };
 		72A3A185252CB2F10083F88F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A3A183252CB2F10083F88F /* LaunchScreen.storyboard */; };
+		72C12816254389730090F182 /* IChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C12815254389730090F182 /* IChatViewController.swift */; };
+		72C12818254389840090F182 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C12817254389840090F182 /* ChatViewController.swift */; };
+		72C1281A2543898F0090F182 /* IChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C128192543898F0090F182 /* IChatInteractor.swift */; };
+		72C1281C254389980090F182 /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1281B254389980090F182 /* ChatInteractor.swift */; };
+		72C1281E254389A60090F182 /* IChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1281D254389A60090F182 /* IChatPresenter.swift */; };
+		72C12820254389AE0090F182 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1281F254389AE0090F182 /* ChatPresenter.swift */; };
+		72C12822254389C30090F182 /* IChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C12821254389C30090F182 /* IChatRouter.swift */; };
+		72C12824254389CE0090F182 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C12823254389CE0090F182 /* ChatRouter.swift */; };
 		72D8C7B82531E6F4008E44DC /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7B72531E6F4008E44DC /* SnapKit.framework */; };
 		72D8C7B92531E6F4008E44DC /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7B72531E6F4008E44DC /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72D8C7BB2531E6F7008E44DC /* SkyFloatingLabelTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */; };
@@ -154,6 +162,14 @@
 		72A3A181252CB2F10083F88F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A3A184252CB2F10083F88F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A3A186252CB2F10083F88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72C12815254389730090F182 /* IChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatViewController.swift; sourceTree = "<group>"; };
+		72C12817254389840090F182 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		72C128192543898F0090F182 /* IChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatInteractor.swift; sourceTree = "<group>"; };
+		72C1281B254389980090F182 /* ChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
+		72C1281D254389A60090F182 /* IChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatPresenter.swift; sourceTree = "<group>"; };
+		72C1281F254389AE0090F182 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		72C12821254389C30090F182 /* IChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatRouter.swift; sourceTree = "<group>"; };
+		72C12823254389CE0090F182 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
 		72D8C7B72531E6F4008E44DC /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		72D8C7BA2531E6F7008E44DC /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkyFloatingLabelTextField.framework; path = Carthage/Build/iOS/SkyFloatingLabelTextField.framework; sourceTree = "<group>"; };
 		72D8C7BE2531FC2F008E44DC /* AuthConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConstants.swift; sourceTree = "<group>"; };
@@ -349,6 +365,7 @@
 				72FB2282253CADC400E61D59 /* Entity */,
 				72FB227F253CABFA00E61D59 /* Constants */,
 				728AB971253C5609003294EC /* ChatList */,
+				72C12810254389370090F182 /* Chat */,
 				7291AEB32543798500919840 /* Settings */,
 				728AB986253C5CEC003294EC /* ChatNetworkService */,
 				7291AEC825437E1A00919840 /* SettingsNetworkService */,
@@ -518,6 +535,53 @@
 				72A3A186252CB2F10083F88F /* Info.plist */,
 			);
 			path = Dolphin;
+			sourceTree = "<group>";
+		};
+		72C12810254389370090F182 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				72C12814254389640090F182 /* View */,
+				72C128132543895E0090F182 /* Interactor */,
+				72C12812254389560090F182 /* Presenter */,
+				72C12811254389510090F182 /* Router */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		72C12811254389510090F182 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				72C12821254389C30090F182 /* IChatRouter.swift */,
+				72C12823254389CE0090F182 /* ChatRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		72C12812254389560090F182 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				72C1281D254389A60090F182 /* IChatPresenter.swift */,
+				72C1281F254389AE0090F182 /* ChatPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		72C128132543895E0090F182 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				72C128192543898F0090F182 /* IChatInteractor.swift */,
+				72C1281B254389980090F182 /* ChatInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		72C12814254389640090F182 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72C12815254389730090F182 /* IChatViewController.swift */,
+				72C12817254389840090F182 /* ChatViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		72D8C7BD2531FC21008E44DC /* Constants */ = {
@@ -770,20 +834,26 @@
 				721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */,
 				72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */,
 				7291AEC725437DAF00919840 /* SettingsRouter.swift in Sources */,
+				72C1281A2543898F0090F182 /* IChatInteractor.swift in Sources */,
 				728AB979253C5697003294EC /* IChatListViewController.swift in Sources */,
 				727BFDC3253480CB00507F50 /* ForgotPasswordInteractor.swift in Sources */,
 				728AB981253C5728003294EC /* ChatListPresenter.swift in Sources */,
 				7291AEB925437A3100919840 /* ISettingsViewController.swift in Sources */,
+				72C1281C254389980090F182 /* ChatInteractor.swift in Sources */,
 				727BFDBF2534800700507F50 /* ForgotPasswordViewController.swift in Sources */,
 				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
 				7291AEC525437D5200919840 /* ISettingsRouter.swift in Sources */,
 				721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */,
 				729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */,
 				7291AEC325437CD700919840 /* SettingsPresenter.swift in Sources */,
+				72C12818254389840090F182 /* ChatViewController.swift in Sources */,
 				72123B002533478700DE67EC /* ISignUpPresenter.swift in Sources */,
 				7291AECC25437E4D00919840 /* SettingsNetworkService.swift in Sources */,
+				72C12824254389CE0090F182 /* ChatRouter.swift in Sources */,
 				7291AEBB25437A6300919840 /* SettingsViewController.swift in Sources */,
 				72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */,
+				72C12816254389730090F182 /* IChatViewController.swift in Sources */,
+				72C12822254389C30090F182 /* IChatRouter.swift in Sources */,
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
 				728AB97F253C571F003294EC /* IChatListPresenter.swift in Sources */,
 				721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */,
@@ -792,10 +862,12 @@
 				72123B062533486A00DE67EC /* SignUpRouter.swift in Sources */,
 				72123AFC253346BB00DE67EC /* ISignUpInteractor.swift in Sources */,
 				72E1CCE525372CED00DAA664 /* User.swift in Sources */,
+				72C1281E254389A60090F182 /* IChatPresenter.swift in Sources */,
 				72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
 				72FB2284253CADD100E61D59 /* ChatRoom.swift in Sources */,
 				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
+				72C12820254389AE0090F182 /* ChatPresenter.swift in Sources */,
 				7291AEBF25437BA200919840 /* SettingsInteractor.swift in Sources */,
 				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,
 				727BFDC52534810B00507F50 /* IForgotPasswordPresenter.swift in Sources */,

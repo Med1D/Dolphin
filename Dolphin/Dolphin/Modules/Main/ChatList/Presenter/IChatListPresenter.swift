@@ -9,4 +9,5 @@ import UIKit
 
 protocol IChatListPresenter: AnyObject
 {
+	func selectChatRoom(closure: (UIViewController) -> Void)
 }

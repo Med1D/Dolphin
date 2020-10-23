@@ -29,4 +29,9 @@ final class ChatListPresenter
 // MARK: - IChatListPresenter
 extension ChatListPresenter: IChatListPresenter
 {
+	func selectChatRoom(closure: (UIViewController) -> Void) {
+		self.router.selectChatRoom { viewController in
+			closure(viewController)
+		}
+	}
 }

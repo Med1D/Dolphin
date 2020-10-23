@@ -21,4 +21,8 @@ final class ChatListRouter
 // MARK: - IChatListRouter
 extension ChatListRouter: IChatListRouter
 {
+	func selectChatRoom(closure: (UIViewController) -> Void) {
+		let chatModule = self.factory.createChatModule()
+		closure(chatModule)
+	}
 }
