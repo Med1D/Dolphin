@@ -41,6 +41,16 @@
 		728AB985253C5791003294EC /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB984253C5791003294EC /* ChatListRouter.swift */; };
 		728AB988253C5D02003294EC /* ChatNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB987253C5D02003294EC /* ChatNetworkService.swift */; };
 		728AB98A253C5D0C003294EC /* IChatNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB989253C5D0C003294EC /* IChatNetworkService.swift */; };
+		7291AEB925437A3100919840 /* ISettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEB825437A3100919840 /* ISettingsViewController.swift */; };
+		7291AEBB25437A6300919840 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEBA25437A6300919840 /* SettingsViewController.swift */; };
+		7291AEBD25437B7A00919840 /* ISettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEBC25437B7A00919840 /* ISettingsInteractor.swift */; };
+		7291AEBF25437BA200919840 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEBE25437BA200919840 /* SettingsInteractor.swift */; };
+		7291AEC125437CB500919840 /* ISettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEC025437CB500919840 /* ISettingsPresenter.swift */; };
+		7291AEC325437CD700919840 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEC225437CD700919840 /* SettingsPresenter.swift */; };
+		7291AEC525437D5200919840 /* ISettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEC425437D5200919840 /* ISettingsRouter.swift */; };
+		7291AEC725437DAF00919840 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEC625437DAF00919840 /* SettingsRouter.swift */; };
+		7291AECA25437E3000919840 /* ISettingsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AEC925437E3000919840 /* ISettingsNetworkService.swift */; };
+		7291AECC25437E4D00919840 /* SettingsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291AECB25437E4D00919840 /* SettingsNetworkService.swift */; };
 		729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0929253339600055E50C /* AuthTextFieldType.swift */; };
 		729B092C253339860055E50C /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B092B253339860055E50C /* AuthTextField.swift */; };
 		72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A3A178252CB2EF0083F88F /* AppDelegate.swift */; };
@@ -126,6 +136,16 @@
 		728AB984253C5791003294EC /* ChatListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
 		728AB987253C5D02003294EC /* ChatNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNetworkService.swift; sourceTree = "<group>"; };
 		728AB989253C5D0C003294EC /* IChatNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatNetworkService.swift; sourceTree = "<group>"; };
+		7291AEB825437A3100919840 /* ISettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISettingsViewController.swift; sourceTree = "<group>"; };
+		7291AEBA25437A6300919840 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7291AEBC25437B7A00919840 /* ISettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISettingsInteractor.swift; sourceTree = "<group>"; };
+		7291AEBE25437BA200919840 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		7291AEC025437CB500919840 /* ISettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISettingsPresenter.swift; sourceTree = "<group>"; };
+		7291AEC225437CD700919840 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		7291AEC425437D5200919840 /* ISettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISettingsRouter.swift; sourceTree = "<group>"; };
+		7291AEC625437DAF00919840 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		7291AEC925437E3000919840 /* ISettingsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISettingsNetworkService.swift; sourceTree = "<group>"; };
+		7291AECB25437E4D00919840 /* SettingsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNetworkService.swift; sourceTree = "<group>"; };
 		729B0929253339600055E50C /* AuthTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextFieldType.swift; sourceTree = "<group>"; };
 		729B092B253339860055E50C /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		72A3A175252CB2EF0083F88F /* Dolphin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dolphin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,12 +261,12 @@
 			isa = PBXGroup;
 			children = (
 				72E1CCE325372CE400DAA664 /* Entity */,
+				72D8C7BD2531FC21008E44DC /* Constants */,
+				729B0928253339040055E50C /* CommonViews */,
 				729B0927253338450055E50C /* Login */,
 				72123AF12533423E00DE67EC /* SignUp */,
 				72123AF22533424300DE67EC /* ForgotPassword */,
 				72E1CCDB253728F500DAA664 /* AuthNetworkService */,
-				72D8C7BD2531FC21008E44DC /* Constants */,
-				729B0928253339040055E50C /* CommonViews */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -329,7 +349,9 @@
 				72FB2282253CADC400E61D59 /* Entity */,
 				72FB227F253CABFA00E61D59 /* Constants */,
 				728AB971253C5609003294EC /* ChatList */,
+				7291AEB32543798500919840 /* Settings */,
 				728AB986253C5CEC003294EC /* ChatNetworkService */,
+				7291AEC825437E1A00919840 /* SettingsNetworkService */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -389,6 +411,62 @@
 				728AB987253C5D02003294EC /* ChatNetworkService.swift */,
 			);
 			path = ChatNetworkService;
+			sourceTree = "<group>";
+		};
+		7291AEB32543798500919840 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7291AEB7254379D200919840 /* View */,
+				7291AEB6254379BE00919840 /* Interactor */,
+				7291AEB5254379B500919840 /* Presenter */,
+				7291AEB4254379B000919840 /* Router */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7291AEB4254379B000919840 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7291AEC425437D5200919840 /* ISettingsRouter.swift */,
+				7291AEC625437DAF00919840 /* SettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7291AEB5254379B500919840 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7291AEC025437CB500919840 /* ISettingsPresenter.swift */,
+				7291AEC225437CD700919840 /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7291AEB6254379BE00919840 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7291AEBC25437B7A00919840 /* ISettingsInteractor.swift */,
+				7291AEBE25437BA200919840 /* SettingsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7291AEB7254379D200919840 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7291AEB825437A3100919840 /* ISettingsViewController.swift */,
+				7291AEBA25437A6300919840 /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7291AEC825437E1A00919840 /* SettingsNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				7291AEC925437E3000919840 /* ISettingsNetworkService.swift */,
+				7291AECB25437E4D00919840 /* SettingsNetworkService.swift */,
+			);
+			path = SettingsNetworkService;
 			sourceTree = "<group>";
 		};
 		729B0927253338450055E50C /* Login */ = {
@@ -675,6 +753,7 @@
 				721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */,
 				721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */,
 				728AB97B253C56DF003294EC /* IChatListInteractor.swift in Sources */,
+				7291AEC125437CB500919840 /* ISettingsPresenter.swift in Sources */,
 				728AB983253C5770003294EC /* IChatListRouter.swift in Sources */,
 				728AB98A253C5D0C003294EC /* IChatNetworkService.swift in Sources */,
 				72E1CCE225372BB800DAA664 /* DolphinAPI.swift in Sources */,
@@ -690,14 +769,20 @@
 				72E1CCE725372E0700DAA664 /* AuthNetworkErrors.swift in Sources */,
 				721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */,
 				72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */,
+				7291AEC725437DAF00919840 /* SettingsRouter.swift in Sources */,
 				728AB979253C5697003294EC /* IChatListViewController.swift in Sources */,
 				727BFDC3253480CB00507F50 /* ForgotPasswordInteractor.swift in Sources */,
 				728AB981253C5728003294EC /* ChatListPresenter.swift in Sources */,
+				7291AEB925437A3100919840 /* ISettingsViewController.swift in Sources */,
 				727BFDBF2534800700507F50 /* ForgotPasswordViewController.swift in Sources */,
 				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
+				7291AEC525437D5200919840 /* ISettingsRouter.swift in Sources */,
 				721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */,
 				729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */,
+				7291AEC325437CD700919840 /* SettingsPresenter.swift in Sources */,
 				72123B002533478700DE67EC /* ISignUpPresenter.swift in Sources */,
+				7291AECC25437E4D00919840 /* SettingsNetworkService.swift in Sources */,
+				7291AEBB25437A6300919840 /* SettingsViewController.swift in Sources */,
 				72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */,
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
 				728AB97F253C571F003294EC /* IChatListPresenter.swift in Sources */,
@@ -711,12 +796,15 @@
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
 				72FB2284253CADD100E61D59 /* ChatRoom.swift in Sources */,
 				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
+				7291AEBF25437BA200919840 /* SettingsInteractor.swift in Sources */,
 				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,
 				727BFDC52534810B00507F50 /* IForgotPasswordPresenter.swift in Sources */,
 				727BFDC72534811E00507F50 /* ForgotPasswordPresenter.swift in Sources */,
 				728AB988253C5D02003294EC /* ChatNetworkService.swift in Sources */,
 				728AB985253C5791003294EC /* ChatListRouter.swift in Sources */,
 				727BFDC1253480A500507F50 /* IForgotPasswordInteractor.swift in Sources */,
+				7291AEBD25437B7A00919840 /* ISettingsInteractor.swift in Sources */,
+				7291AECA25437E3000919840 /* ISettingsNetworkService.swift in Sources */,
 				727BFDBD25347FF900507F50 /* IForgotPasswordViewController.swift in Sources */,
 				721A0FBB2530F7DB00234071 /* LoginRouter.swift in Sources */,
 			);

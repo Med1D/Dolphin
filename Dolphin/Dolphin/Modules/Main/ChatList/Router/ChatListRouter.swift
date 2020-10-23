@@ -5,7 +5,7 @@
 //  Created by Иван Медведев on 18.10.2020.
 //
 
-import Foundation
+import UIKit
 
 final class ChatListRouter
 {
