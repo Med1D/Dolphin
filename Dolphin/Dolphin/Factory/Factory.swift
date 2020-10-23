@@ -90,6 +90,17 @@ final class Factory
 		return viewController
 	}
 
+	func createChatModule() -> UIViewController {
+		let chatNetworkService: IChatNetworkService = ChatNetworkService()
+		let router = ChatRouter(factory: self)
+		let interactor = ChatInteractor(chatNetworkService: chatNetworkService)
+		let presenter = ChatPresenter(router: router, interactor: interactor)
+		let viewController = ChatViewController(presenter: presenter)
+		presenter.inject(viewController: viewController)
+		interactor.inject(presenter: presenter)
+		return viewController
+	}
+
 	func createSettingsModule() -> UIViewController {
 		let settingsNetworkService: ISettingsNetworkService = SettingsNetworkService()
 		let router = SettingsRouter(factory: self)

@@ -30,12 +30,19 @@ final class SettingsViewController: UIViewController
 		super.viewDidLoad()
 		self.view.backgroundColor = .systemGroupedBackground
 		self.title = "Settings"
+		self.setupNavigationController()
 	}
 }
 
 // MARK: - Private methods (Setup UI)
 private extension SettingsViewController
 {
+	func setupNavigationController() {
+		navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "",
+																						 style: .plain,
+																						 target: nil,
+																						 action: nil)
+	}
 }
 
 // MARK: - Private methods

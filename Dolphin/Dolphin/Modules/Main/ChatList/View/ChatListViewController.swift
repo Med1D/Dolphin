@@ -31,6 +31,7 @@ final class ChatListViewController: UIViewController
 		super.viewDidLoad()
 		self.view.backgroundColor = .systemGroupedBackground
 		self.title = "Chat rooms"
+		self.setupNavigationController()
 		self.setupTableView()
 	}
 
@@ -47,6 +48,13 @@ final class ChatListViewController: UIViewController
 // MARK: - Private methods (Setup UI)
 private extension ChatListViewController
 {
+	func setupNavigationController() {
+		navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "",
+																						 style: .plain,
+																						 target: nil,
+																						 action: nil)
+	}
+
 	func setupTableView() {
 		self.view.addSubview(self.tableView)
 		self.tableView.frame = self.view.bounds
@@ -94,6 +102,9 @@ extension ChatListViewController: UITableViewDelegate
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let selectedCell = self.tableView.cellForRow(at: indexPath) as? ChatRoomCell
 		selectedCell?.setHighlighted(is: true)
+		self.presenter.selectChatRoom { viewController in
+			self.navigationController?.pushViewController(viewController, animated: true)
+		}
 	}
 
 	func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
