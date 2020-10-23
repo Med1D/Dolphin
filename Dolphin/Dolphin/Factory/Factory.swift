@@ -23,9 +23,17 @@ final class Factory
 
 	func createChatTabBarController() {
 		let chatListModule = self.createChatListModule()
-		let navigationController = UINavigationController(rootViewController: chatListModule)
+		let settingsModule = self.createSettingsModule()
+		let chatNavigationController = UINavigationController(rootViewController: chatListModule)
+		chatNavigationController.tabBarItem = UITabBarItem(title: "Chat rooms",
+															 image: UIImage(systemName: "bubble.left.and.bubble.right"),
+															 tag: 0)
+		let settingsNavigationController = UINavigationController(rootViewController: settingsModule)
+		settingsNavigationController.tabBarItem = UITabBarItem(title: "Settings",
+															 image: UIImage(systemName: "gear"),
+															 tag: 0)
 		let tabBarController = UITabBarController()
-		tabBarController.viewControllers = [navigationController]
+		tabBarController.viewControllers = [chatNavigationController, settingsNavigationController]
 		self.changeRootViewController(viewController: tabBarController)
 	}
 
@@ -77,6 +85,17 @@ final class Factory
 		let interactor = ChatListInteractor(chatNetworkService: chatNetworkService)
 		let presenter = ChatListPresenter(router: router, interactor: interactor)
 		let viewController = ChatListViewController(presenter: presenter)
+		presenter.inject(viewController: viewController)
+		interactor.inject(presenter: presenter)
+		return viewController
+	}
+
+	func createSettingsModule() -> UIViewController {
+		let settingsNetworkService: ISettingsNetworkService = SettingsNetworkService()
+		let router = SettingsRouter(factory: self)
+		let interactor = SettingsInteractor(settingsNetworkService: settingsNetworkService)
+		let presenter = SettingsPresenter(router: router, interactor: interactor)
+		let viewController = SettingsViewController(presenter: presenter)
 		presenter.inject(viewController: viewController)
 		interactor.inject(presenter: presenter)
 		return viewController

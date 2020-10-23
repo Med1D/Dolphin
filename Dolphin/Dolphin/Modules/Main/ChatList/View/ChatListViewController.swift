@@ -31,7 +31,6 @@ final class ChatListViewController: UIViewController
 		super.viewDidLoad()
 		self.view.backgroundColor = .systemGroupedBackground
 		self.title = "Chat rooms"
-		self.setupNavigationController()
 		self.setupTableView()
 	}
 
@@ -48,12 +47,6 @@ final class ChatListViewController: UIViewController
 // MARK: - Private methods (Setup UI)
 private extension ChatListViewController
 {
-	func setupNavigationController() {
-		self.navigationController?.tabBarItem = UITabBarItem(title: "Chat",
-															 image: UIImage(systemName: "bubble.left.and.bubble.right"),
-															 tag: 0)
-	}
-
 	func setupTableView() {
 		self.view.addSubview(self.tableView)
 		self.tableView.frame = self.view.bounds
