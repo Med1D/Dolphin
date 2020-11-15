@@ -21,4 +21,7 @@ final class SettingsRouter
 // MARK: - ISettingsRouter
 extension SettingsRouter: ISettingsRouter
 {
+	func touchLogoutButton() {
+		self.factory.createAuthNavigationController()
+	}
 }

@@ -9,4 +9,5 @@ import Foundation
 
 protocol ISettingsInteractor: AnyObject
 {
+	func touchLogoutButton(completion: @escaping (LogoutResult) -> Void)
 }

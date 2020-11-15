@@ -9,4 +9,5 @@ import Foundation
 
 protocol ISettingsNetworkService
 {
+	func logout(token: String, completion: @escaping (LogoutResult) -> Void)
 }

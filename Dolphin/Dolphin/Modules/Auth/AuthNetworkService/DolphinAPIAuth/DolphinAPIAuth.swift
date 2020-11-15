@@ -1,5 +1,5 @@
 //
-//  DolphinAPI.swift
+//  DolphinAPIAuth.swift
 //  Dolphin
 //
 //  Created by Иван Медведев on 14.10.2020.
@@ -10,19 +10,20 @@ typealias AuthResult = Result<(token: String, userId: Int), Error>
 
 import Foundation
 
-enum DolphinAPIConstants
+enum DolphinAPIConstantsAuth
 {
 	static let baseURL = "https://dolphin-chat-backend.herokuapp.com/"
 	static let registerURL = "register"
 	static let authURL = "auth"
 }
 
-final class DolphinAPI
+final class DolphinAPIAuth
 {
 	private var task: URLSessionDataTask?
 
 	func register(user: User, completion: @escaping (RegisterResult) -> Void) {
-		guard let components = URLComponents(string: DolphinAPIConstants.baseURL + DolphinAPIConstants.registerURL) else {
+		guard let components = URLComponents(string: DolphinAPIConstantsAuth.baseURL +
+												DolphinAPIConstantsAuth.registerURL) else {
 			completion(.failure(AuthNetworkErrors.wrongURL))
 			return
 		}
@@ -57,7 +58,8 @@ final class DolphinAPI
 	}
 
 	func auth(user: User, completion: @escaping (AuthResult) -> Void) {
-		guard let components = URLComponents(string: DolphinAPIConstants.baseURL + DolphinAPIConstants.authURL) else {
+		guard let components = URLComponents(string: DolphinAPIConstantsAuth.baseURL +
+												DolphinAPIConstantsAuth.authURL) else {
 			completion(.failure(AuthNetworkErrors.wrongURL))
 			return
 		}
