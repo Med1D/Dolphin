@@ -9,4 +9,5 @@ import UIKit
 
 protocol ISettingsPresenter: AnyObject
 {
+	func touchLogoutButton(completion: @escaping (LogoutResult) -> Void)
 }

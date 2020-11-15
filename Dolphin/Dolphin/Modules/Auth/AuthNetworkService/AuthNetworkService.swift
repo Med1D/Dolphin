@@ -10,7 +10,7 @@ import Network
 
 final class AuthNetworkService
 {
-	private let dolphinAPI = DolphinAPI()
+	private let dolphinAPIAuth = DolphinAPIAuth()
 	private let queue = DispatchQueue(label: "Monitor")
 	private let monitor = NWPathMonitor()
 	private var connection = false
@@ -33,7 +33,7 @@ extension AuthNetworkService: IAuthNetworkService
 {
 	func register(user: User, completion: @escaping (RegisterResult) -> Void) {
 		if connection {
-			self.dolphinAPI.register(user: user) { result in
+			self.dolphinAPIAuth.register(user: user) { result in
 				switch result {
 				case .success(let string):
 					completion(.success(string))
@@ -49,7 +49,7 @@ extension AuthNetworkService: IAuthNetworkService
 
 	func auth(user: User, completion: @escaping (AuthResult) -> Void) {
 		if connection {
-			self.dolphinAPI.auth(user: user) { result in
+			self.dolphinAPIAuth.auth(user: user) { result in
 				switch result {
 				case .success((let token, let userId)):
 					completion(.success((token, userId)))

@@ -2,10 +2,10 @@
   "commitish" : "5.2.1",
   "iOS" : [
     {
-      "hash" : "db7b26ee62924e4f0e4056416fce1517168ce59a38bf12d9ba340c45ddefb021",
+      "hash" : "214ac9b8765674ac34349df0ec2a7c8914582e8f24424c9f8f155651071ca0c0",
       "name" : "InputBarAccessoryView",
       "linking" : "dynamic",
-      "swiftToolchainVersion" : "5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+      "swiftToolchainVersion" : "5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
     }
   ]
 }

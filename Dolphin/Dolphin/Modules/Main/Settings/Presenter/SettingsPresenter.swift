@@ -29,4 +29,17 @@ final class SettingsPresenter
 // MARK: - ISettingsPresenter
 extension SettingsPresenter: ISettingsPresenter
 {
+	func touchLogoutButton(completion: @escaping (LogoutResult) -> Void) {
+		self.interactor.touchLogoutButton { result in
+			switch result {
+			case .success(let string):
+				completion(.success(string))
+				DispatchQueue.main.async {
+					self.router.touchLogoutButton()
+				}
+			case .failure(let error):
+				completion(.failure(error))
+			}
+		}
+	}
 }

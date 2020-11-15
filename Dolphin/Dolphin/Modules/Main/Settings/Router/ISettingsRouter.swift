@@ -9,4 +9,5 @@ import UIKit
 
 protocol ISettingsRouter: AnyObject
 {
+	func touchLogoutButton()
 }

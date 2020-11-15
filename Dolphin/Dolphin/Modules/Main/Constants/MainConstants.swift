@@ -19,4 +19,7 @@ enum MainConstants
 	static let messageTimeOffset: CGFloat = 16
 	static let messageAndNameTrailingOffset: CGFloat = 64
 	static let highlightedCellColor = UIColor(red: 52 / 255, green: 70 / 255, blue: 93 / 255, alpha: 1)
+	static let settingsSectionSpacer: CGFloat = 16
+	static let separatorColor = UIColor(red: 220 / 255, green: 220 / 255, blue: 220 / 255, alpha: 1)
+	static let activityViewColor = UIColor(red: 52 / 255, green: 70 / 255, blue: 93 / 255, alpha: 0.9)
 }
