@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KeychainSwift
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate
 {
@@ -19,7 +20,12 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate
 		guard let window = window else { return }
 		window.windowScene = windowScene
 		let factory = Factory(window: window)
-		factory.createAuthNavigationController()
+		if KeychainSwift().get("token") != nil {
+			factory.createChatTabBarController()
+		}
+		else {
+			factory.createAuthNavigationController()
+		}
 		window.makeKeyAndVisible()
 	}
 
