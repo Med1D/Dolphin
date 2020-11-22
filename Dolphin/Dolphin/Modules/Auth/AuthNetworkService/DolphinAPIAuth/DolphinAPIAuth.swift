@@ -6,7 +6,7 @@
 //
 
 typealias RegisterResult = Result<String, Error>
-typealias AuthResult = Result<(token: String, userId: Int), Error>
+typealias AuthResult = Result<AuthResponse, Error>
 
 import Foundation
 
@@ -90,7 +90,7 @@ final class DolphinAPIAuth
 				case 200:
 					do {
 						let dataJSON = try JSONDecoder().decode(AuthResponse.self, from: data)
-						completion(.success((dataJSON.token, dataJSON.userId)))
+						completion(.success(dataJSON))
 					}
 					catch {
 						completion(.failure(AuthNetworkErrors.dataTaskError))

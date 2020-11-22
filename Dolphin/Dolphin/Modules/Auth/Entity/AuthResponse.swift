@@ -7,8 +7,22 @@
 
 import Foundation
 
-struct AuthResponse: Codable
+struct AuthResponse: Decodable
 {
-	let userId: Int
+	let token: AuthToken
+	let user: AuthUser
+}
+
+struct AuthToken: Decodable
+{
 	let token: String
+	let userId: Int
+}
+
+struct AuthUser: Decodable
+{
+	let id: Int
+	let username: String
+	let email: String
+	let encodedImage: String?
 }
