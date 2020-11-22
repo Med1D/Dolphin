@@ -32,10 +32,15 @@ extension LoginInteractor: ILoginInteractor
 	func auth(user: User, completion: @escaping (AuthResult) -> Void) {
 		self.authNetworkService.auth(user: user) { result in
 			switch result {
-			case .success((let token, let userId)):
-				self.keychainSwift.set(token, forKey: "token")
-				self.keychainSwift.set("\(userId)", forKey: "userId")
-				completion(.success((token, userId)))
+			case .success(let authResult):
+				self.keychainSwift.set(authResult.token.token, forKey: "token")
+				self.keychainSwift.set("\(authResult.user.id)", forKey: "userId")
+				self.keychainSwift.set(authResult.user.username, forKey: "username")
+				self.keychainSwift.set(authResult.user.email, forKey: "email")
+				if let encodedImage = authResult.user.encodedImage {
+					self.keychainSwift.set(encodedImage, forKey: "encodedImage")
+				}
+				completion(.success(authResult))
 			case .failure(let error):
 				completion(.failure(error))
 			}
