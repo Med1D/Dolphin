@@ -14,10 +14,10 @@ final class ChatRoomCell: UITableViewCell
 	static let cellReuseIdentifier = "cell"
 	var chatRoom: ChatRoom? {
 		didSet {
-			self.chatRoomImageView.image = chatRoom?.image ?? UIImage(named: "Message")
-			self.chatRoomName.text = chatRoom?.name
-			self.lastMessage.text = chatRoom?.lastMessage
-			self.lastMessageTime.text = chatRoom?.lastMessageTime
+			self.setImage()
+			self.chatRoomName.text = chatRoom?.chatRoomData.title
+			self.setLastMessageWithHighlightedSenderName()
+			self.setLastMessageTime()
 		}
 	}
 
@@ -109,6 +109,65 @@ private extension ChatRoomCell
 	}
 }
 
+// MARK: - Private Methods
+private extension ChatRoomCell
+{
+	func setImage() {
+		if let encodedImage = chatRoom?.chatRoomData.encodedImage,
+		   encodedImage.isEmpty == false,
+		   let imageData = Data(base64Encoded: encodedImage) {
+			let image = UIImage(data: imageData)
+			self.chatRoomImageView.image = image
+		}
+		else {
+			self.chatRoomImageView.image = MainConstants.chatRoomDefaultImage
+		}
+	}
+
+	func setLastMessageWithHighlightedSenderName() {
+		if let senderName = chatRoom?.lastMessage?.sender.username,
+		   let text = chatRoom?.lastMessage?.messageData.text {
+			if chatRoom?.lastMessage?.messageData.messageType == "text" {
+				let attrubutedText = NSMutableAttributedString(string: senderName + ": " + text)
+				attrubutedText.addAttribute(.foregroundColor,
+											value: UIColor.black,
+											range: NSRange(location: 0,
+														   length: senderName.count + 1))
+				self.lastMessage.attributedText = attrubutedText
+			}
+			else if chatRoom?.lastMessage?.messageData.messageType == "photo" {
+				let attrubutedText = NSMutableAttributedString(string: senderName + ": photo")
+				attrubutedText.addAttribute(.foregroundColor,
+											value: UIColor.black,
+											range: NSRange(location: 0,
+														   length: senderName.count + 1))
+				self.lastMessage.attributedText = attrubutedText
+			}
+			else {
+				self.lastMessage.text = ""
+			}
+		}
+	}
+
+	func setLastMessageTime() {
+		if let timestamp = chatRoom?.lastMessage?.messageData.sendTimestamp {
+			let timeInterval = TimeInterval(timestamp)
+			let sendTimeDate = Date(timeIntervalSince1970: timeInterval)
+			let dateFormatter = DateFormatter()
+			let calendar = Calendar.current
+			dateFormatter.locale = .current
+			if calendar.isDateInToday(sendTimeDate) {
+				dateFormatter.setLocalizedDateFormatFromTemplate("HHmm")
+			}
+			else {
+				dateFormatter.setLocalizedDateFormatFromTemplate("MMdd")
+			}
+			let sendTimeString = dateFormatter.string(from: sendTimeDate)
+			self.lastMessageTime.text = sendTimeString
+		}
+	}
+}
+
 // MARK: - Methods
 extension ChatRoomCell
 {
@@ -123,6 +182,7 @@ extension ChatRoomCell
 			self.backgroundColor = .white
 			self.chatRoomName.textColor = .black
 			self.lastMessage.textColor = .lightGray
+			self.setLastMessageWithHighlightedSenderName()
 			self.lastMessageTime.textColor = .black
 		}
 	}

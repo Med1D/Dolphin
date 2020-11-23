@@ -9,4 +9,5 @@ import Foundation
 
 protocol IChatNetworkService
 {
+	func getChatRooms(token: String, completion: @escaping (ChatRoomsResult) -> Void)
 }

@@ -73,6 +73,8 @@
 		72DB0CBC2561617400DB5472 /* LogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DB0CBB2561617400DB5472 /* LogoutCell.swift */; };
 		72DB0CBE25618B2A00DB5472 /* SettingsNetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DB0CBD25618B2A00DB5472 /* SettingsNetworkErrors.swift */; };
 		72DB0CC125618B5200DB5472 /* DolphinAPISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DB0CC025618B5200DB5472 /* DolphinAPISettings.swift */; };
+		72DB0CC4256A98F900DB5472 /* DolphinAPIChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DB0CC3256A98F800DB5472 /* DolphinAPIChat.swift */; };
+		72DB0CC6256A9A4700DB5472 /* ChatNetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DB0CC5256A9A4700DB5472 /* ChatNetworkErrors.swift */; };
 		72DB10A9252E58900043875E /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10A8252E58900043875E /* Starscream.framework */; };
 		72DB10AA252E58900043875E /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10A8252E58900043875E /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72DB10AD252E58940043875E /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DB10AC252E58940043875E /* InputBarAccessoryView.framework */; };
@@ -179,6 +181,8 @@
 		72DB0CBB2561617400DB5472 /* LogoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutCell.swift; sourceTree = "<group>"; };
 		72DB0CBD25618B2A00DB5472 /* SettingsNetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNetworkErrors.swift; sourceTree = "<group>"; };
 		72DB0CC025618B5200DB5472 /* DolphinAPISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolphinAPISettings.swift; sourceTree = "<group>"; };
+		72DB0CC3256A98F800DB5472 /* DolphinAPIChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolphinAPIChat.swift; sourceTree = "<group>"; };
+		72DB0CC5256A9A4700DB5472 /* ChatNetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNetworkErrors.swift; sourceTree = "<group>"; };
 		72DB10A8252E58900043875E /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		72DB10AC252E58940043875E /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
 		72DB10AF252E58990043875E /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
@@ -430,8 +434,10 @@
 		728AB986253C5CEC003294EC /* ChatNetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				72DB0CC2256A98DE00DB5472 /* DolphinAPIChat */,
 				728AB989253C5D0C003294EC /* IChatNetworkService.swift */,
 				728AB987253C5D02003294EC /* ChatNetworkService.swift */,
+				72DB0CC5256A9A4700DB5472 /* ChatNetworkErrors.swift */,
 			);
 			path = ChatNetworkService;
 			sourceTree = "<group>";
@@ -617,6 +623,14 @@
 			path = DolphinAPISettings;
 			sourceTree = "<group>";
 		};
+		72DB0CC2256A98DE00DB5472 /* DolphinAPIChat */ = {
+			isa = PBXGroup;
+			children = (
+				72DB0CC3256A98F800DB5472 /* DolphinAPIChat.swift */,
+			);
+			path = DolphinAPIChat;
+			sourceTree = "<group>";
+		};
 		72DB10A7252E58900043875E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -766,6 +780,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 72A3A16C252CB2EF0083F88F;
 			productRefGroup = 72A3A176252CB2EF0083F88F /* Products */;
@@ -881,6 +896,7 @@
 				7291AEBB25437A6300919840 /* SettingsViewController.swift in Sources */,
 				72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */,
 				72C12816254389730090F182 /* IChatViewController.swift in Sources */,
+				72DB0CC4256A98F900DB5472 /* DolphinAPIChat.swift in Sources */,
 				72C12822254389C30090F182 /* IChatRouter.swift in Sources */,
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
 				728AB97F253C571F003294EC /* IChatListPresenter.swift in Sources */,
@@ -893,6 +909,7 @@
 				72C1281E254389A60090F182 /* IChatPresenter.swift in Sources */,
 				72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
+				72DB0CC6256A9A4700DB5472 /* ChatNetworkErrors.swift in Sources */,
 				72FB2284253CADD100E61D59 /* ChatRoom.swift in Sources */,
 				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
 				72C12820254389AE0090F182 /* ChatPresenter.swift in Sources */,
