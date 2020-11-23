@@ -13,7 +13,8 @@ final class ChatListViewController: UIViewController
 	private let presenter: IChatListPresenter
 
 // MARK: - UI properties
-	private let tableView = UITableView()
+	private let tableView = UITableView(frame: .zero, style: .grouped)
+	private let searchController = UISearchController(searchResultsController: nil)
 
 // MARK: - Init
 	init(presenter: IChatListPresenter) {
@@ -33,6 +34,7 @@ final class ChatListViewController: UIViewController
 		self.title = "Chat rooms"
 		self.setupNavigationController()
 		self.setupTableView()
+		self.setupSearchController()
 		self.presenter.getChatRooms()
 	}
 
@@ -63,8 +65,16 @@ private extension ChatListViewController
 		self.tableView.delegate = self
 		self.tableView.separatorInset.left = MainConstants.imageLeadingOffset +
 			MainConstants.imageSize + MainConstants.imageLeadingOffset
-		self.tableView.tableFooterView = UIView()
+		self.tableView.backgroundColor = .white
 		self.tableView.register(ChatRoomCell.self, forCellReuseIdentifier: ChatRoomCell.cellReuseIdentifier)
+	}
+
+	func setupSearchController() {
+		self.searchController.searchResultsUpdater = self
+		self.searchController.obscuresBackgroundDuringPresentation = false
+		self.searchController.searchBar.placeholder = MainConstants.searchBarPlaceholder
+		self.navigationItem.searchController = self.searchController
+		self.definesPresentationContext = true
 	}
 }
 
@@ -90,6 +100,14 @@ extension ChatListViewController: UITableViewDataSource
 // MARK: - UITableViewDelegate
 extension ChatListViewController: UITableViewDelegate
 {
+	func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+		return nil
+	}
+
+	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+		return .leastNormalMagnitude
+	}
+
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return MainConstants.imageBottomOffset + MainConstants.imageTopOffset + MainConstants.imageSize
 	}
@@ -114,6 +132,13 @@ extension ChatListViewController: UITableViewDelegate
 	func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
 		let highlightedCell = self.tableView.cellForRow(at: indexPath) as? ChatRoomCell
 		highlightedCell?.setHighlighted(is: false)
+	}
+}
+
+// MARK: - UISearchResultsUpdating
+extension ChatListViewController: UISearchResultsUpdating
+{
+	func updateSearchResults(for searchController: UISearchController) {
 	}
 }
 
