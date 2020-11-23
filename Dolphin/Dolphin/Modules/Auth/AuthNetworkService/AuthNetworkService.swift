@@ -11,7 +11,7 @@ import Network
 final class AuthNetworkService
 {
 	private let dolphinAPIAuth = DolphinAPIAuth()
-	private let queue = DispatchQueue(label: "Monitor")
+	private let queue = DispatchQueue(label: "authNetworkMonitor")
 	private let monitor = NWPathMonitor()
 	private var connection = false
 

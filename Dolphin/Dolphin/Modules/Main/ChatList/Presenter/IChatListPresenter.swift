@@ -9,5 +9,8 @@ import UIKit
 
 protocol IChatListPresenter: AnyObject
 {
+	func getChatRooms()
+	func getChatRoom(at index: Int) -> ChatRoom
+	func getChatRoomsCount() -> Int
 	func selectChatRoom(closure: (UIViewController) -> Void)
 }

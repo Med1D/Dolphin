@@ -9,4 +9,5 @@ import Foundation
 
 protocol IChatListInteractor: AnyObject
 {
+	func getChatRooms(completion: @escaping (ChatRoomsResult) -> Void)
 }

@@ -33,6 +33,7 @@ final class ChatListViewController: UIViewController
 		self.title = "Chat rooms"
 		self.setupNavigationController()
 		self.setupTableView()
+		self.presenter.getChatRooms()
 	}
 
 // MARK: - viewWillAppear
@@ -76,14 +77,12 @@ private extension ChatListViewController
 extension ChatListViewController: UITableViewDataSource
 {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+		return self.presenter.getChatRoomsCount()
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: ChatRoomCell.cellReuseIdentifier) as? ChatRoomCell
-		cell?.chatRoom = ChatRoom(image: nil, name: "ChatRoom №\(indexPath.row)",
-								  lastMessage: "Hello, World! This beautiful message is so big. And what you think about this? Yeah, big.",
-								  lastMessageTime: "20:1\(indexPath.row)")
+		cell?.chatRoom = self.presenter.getChatRoom(at: indexPath.row)
 		return cell ?? UITableViewCell(style: .default, reuseIdentifier: ChatRoomCell.cellReuseIdentifier)
 	}
 }
@@ -121,4 +120,9 @@ extension ChatListViewController: UITableViewDelegate
 // MARK: - IChatListViewController
 extension ChatListViewController: IChatListViewController
 {
+	func reloadChatRoomsList() {
+		DispatchQueue.main.async {
+			self.tableView.reloadData()
+		}
+	}
 }

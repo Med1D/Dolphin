@@ -9,4 +9,5 @@ import UIKit
 
 protocol IChatListViewController: AnyObject
 {
+	func reloadChatRoomsList()
 }

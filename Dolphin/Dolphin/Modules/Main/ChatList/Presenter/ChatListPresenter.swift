@@ -13,6 +13,7 @@ final class ChatListPresenter
 	private weak var viewController: IChatListViewController?
 	private let interactor: IChatListInteractor
 	private let router: IChatListRouter
+	private var chatRooms: [ChatRoom] = []
 
 // MARK: - Init
 	init(router: IChatListRouter, interactor: IChatListInteractor) {
@@ -29,6 +30,26 @@ final class ChatListPresenter
 // MARK: - IChatListPresenter
 extension ChatListPresenter: IChatListPresenter
 {
+	func getChatRooms() {
+		self.interactor.getChatRooms { result in
+			switch result {
+			case .success(let chatRooms):
+				self.chatRooms = chatRooms
+				self.viewController?.reloadChatRoomsList()
+			case .failure(let error):
+				print(error)
+			}
+		}
+	}
+
+	func getChatRoom(at index: Int) -> ChatRoom {
+		return self.chatRooms[index]
+	}
+
+	func getChatRoomsCount() -> Int {
+		return self.chatRooms.count
+	}
+
 	func selectChatRoom(closure: (UIViewController) -> Void) {
 		self.router.selectChatRoom { viewController in
 			closure(viewController)

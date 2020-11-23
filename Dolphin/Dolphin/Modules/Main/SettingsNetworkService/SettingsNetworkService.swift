@@ -11,7 +11,7 @@ import Network
 final class SettingsNetworkService
 {
 	private let dolphinAPISettings = DolphinAPISettings()
-	private let queue = DispatchQueue(label: "Monitor")
+	private let queue = DispatchQueue(label: "settingsNetworkMonitor")
 	private let monitor = NWPathMonitor()
 	private var connection = false
 
