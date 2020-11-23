@@ -14,11 +14,11 @@ final class ChatNetworkService
 	private let queue = DispatchQueue(label: "chatNetworkMonitor")
 	private let monitor = NWPathMonitor()
 	private var connection = false
-	private let backgroundQueue = DispatchQueue(label: "timerBackgroundQueue", qos: .background)
+	private let timerQueue = DispatchQueue(label: "timerQueue", qos: .userInteractive)
 	private let timer: DispatchSourceTimer
 
 	init() {
-		self.timer = DispatchSource.makeTimerSource(flags: [], queue: self.backgroundQueue)
+		self.timer = DispatchSource.makeTimerSource(flags: [], queue: self.timerQueue)
 		timer.schedule(deadline: .now(), repeating: .seconds(1), leeway: .seconds(1))
 		self.monitor.pathUpdateHandler = { path in
 			if path.status == .satisfied {
