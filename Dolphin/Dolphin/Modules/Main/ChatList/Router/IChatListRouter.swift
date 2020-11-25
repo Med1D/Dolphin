@@ -9,5 +9,5 @@ import UIKit
 
 protocol IChatListRouter: AnyObject
 {
-	func selectChatRoom(closure: (UIViewController) -> Void)
+	func selectChatRoom(chatRoomData: ChatRoomData, closure: (UIViewController) -> Void)
 }

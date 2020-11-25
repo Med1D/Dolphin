@@ -12,5 +12,5 @@ protocol IChatListPresenter: AnyObject
 	func getChatRooms()
 	func getChatRoom(at index: Int) -> ChatRoom
 	func getChatRoomsCount() -> Int
-	func selectChatRoom(closure: (UIViewController) -> Void)
+	func selectChatRoom(chatRoomData: ChatRoomData, closure: (UIViewController) -> Void)
 }

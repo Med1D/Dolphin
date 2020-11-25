@@ -50,8 +50,8 @@ extension ChatListPresenter: IChatListPresenter
 		return self.chatRooms.count
 	}
 
-	func selectChatRoom(closure: (UIViewController) -> Void) {
-		self.router.selectChatRoom { viewController in
+	func selectChatRoom(chatRoomData: ChatRoomData, closure: (UIViewController) -> Void) {
+		self.router.selectChatRoom(chatRoomData: chatRoomData) { viewController in
 			closure(viewController)
 		}
 	}

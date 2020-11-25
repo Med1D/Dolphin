@@ -119,7 +119,8 @@ extension ChatListViewController: UITableViewDelegate
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let selectedCell = self.tableView.cellForRow(at: indexPath) as? ChatRoomCell
 		selectedCell?.setHighlighted(is: true)
-		self.presenter.selectChatRoom { viewController in
+		guard let chatRoomData = selectedCell?.chatRoom?.chatRoomData else { return }
+		self.presenter.selectChatRoom(chatRoomData: chatRoomData) { viewController in
 			self.navigationController?.pushViewController(viewController, animated: true)
 		}
 	}
