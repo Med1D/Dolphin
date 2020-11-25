@@ -23,5 +23,22 @@ enum MainConstants
 	static let separatorColor = UIColor(red: 220 / 255, green: 220 / 255, blue: 220 / 255, alpha: 1)
 	static let activityViewColor = UIColor(red: 52 / 255, green: 70 / 255, blue: 93 / 255, alpha: 0.9)
 	static let chatRoomDefaultImage = UIImage(named: "ChatRoomDefaultImage")
+	static let sendButtonImage = UIImage(systemName: "arrow.up.circle.fill",
+										 withConfiguration: UIImage.SymbolConfiguration(pointSize: 36))
+	static let sendButtonSize: CGFloat = 36
+	static let clipButtonImage = UIImage(systemName: "paperclip",
+										 withConfiguration: UIImage.SymbolConfiguration(pointSize: 28))
+	static let clipButtonSize: CGFloat = 28
+	static let sendButtonTintColor = UIColor(red: 76 / 255, green: 117 / 255, blue: 163 / 255, alpha: 1)
+	static let sendButtonTintColorDisabled = UIColor(red: 76 / 255, green: 117 / 255, blue: 163 / 255, alpha: 0.85)
+	static let inputTextViewBackgroundColor = UIColor(red: 245 / 255,
+													  green: 245 / 255,
+													  blue: 245 / 255,
+													  alpha: 1)
+	static let inputTextViewBorderColor = UIColor(red: 200 / 255,
+												  green: 200 / 255,
+												  blue: 200 / 255,
+												  alpha: 1).cgColor
+	static let inputTextViewPlaceholderText = "Message..."
 	static let searchBarPlaceholder = "Search"
 }
