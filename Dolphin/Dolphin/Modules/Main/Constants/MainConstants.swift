@@ -12,6 +12,8 @@ enum MainConstants
 	static let helveticaNeue14 = UIFont(name: "HelveticaNeue", size: 14)
 	static let helveticaNeueLight14 = UIFont(name: "HelveticaNeue-Light", size: 14)
 	static let helveticaNeueMedium16 = UIFont(name: "HelveticaNeue-Medium", size: 16)
+	static let helveticaNeueMedium20 = UIFont(name: "HelveticaNeue-Medium", size: 20)
+	static let helveticaNeue20 = UIFont(name: "HelveticaNeue", size: 20)
 	static let imageSize: CGFloat = 64
 	static let imageTopOffset: CGFloat = 8
 	static let imageBottomOffset: CGFloat = 8
@@ -39,6 +41,11 @@ enum MainConstants
 												  green: 200 / 255,
 												  blue: 200 / 255,
 												  alpha: 1).cgColor
+	static let profileDefaultImage = UIImage(systemName: "person.circle.fill")
+	static let profileImageViewTintColor = UIColor(red: 76 / 255, green: 117 / 255, blue: 163 / 255, alpha: 1)
+	static let spaceBetweenLabelAndTextField: CGFloat = 16
+	static let profileTextCellLeadingAndTrailingOffset: CGFloat = 16
 	static let inputTextViewPlaceholderText = "Message..."
 	static let searchBarPlaceholder = "Search"
+	static let saveBarButton = "Save"
 }

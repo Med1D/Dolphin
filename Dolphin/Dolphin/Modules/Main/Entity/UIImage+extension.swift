@@ -22,7 +22,7 @@ extension UIImage
 			return image
 		}
 		else {
-			return MainConstants.chatRoomDefaultImage
+			return nil
 		}
 	}
 }

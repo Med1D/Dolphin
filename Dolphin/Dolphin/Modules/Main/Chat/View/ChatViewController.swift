@@ -70,11 +70,15 @@ private extension ChatViewController
 	}
 
 	func setupChatImageButton() {
-		let image = UIImage.decodeImageFromBase64String(string: self.chatRoomData.encodedImage)
 		let frame = CGRect(x: 0, y: 0, width: 40, height: 40)
 		self.chatImageButtonView.frame = frame
 		let imageView = UIImageView(frame: frame)
-		imageView.image = image
+		if let image = UIImage.decodeImageFromBase64String(string: self.chatRoomData.encodedImage) {
+			imageView.image = image
+		}
+		else {
+			imageView.image = MainConstants.chatRoomDefaultImage
+		}
 		imageView.contentMode = .scaleAspectFill
 		imageView.layer.cornerRadius = frame.height / 2
 		imageView.clipsToBounds = true

@@ -37,6 +37,7 @@ extension LoginInteractor: ILoginInteractor
 				self.keychainSwift.set("\(authResult.user.id)", forKey: "userId")
 				self.keychainSwift.set(authResult.user.username, forKey: "username")
 				self.keychainSwift.set(authResult.user.email, forKey: "email")
+				self.keychainSwift.set(user.password, forKey: "password")
 				if let encodedImage = authResult.user.encodedImage {
 					self.keychainSwift.set(encodedImage, forKey: "encodedImage")
 				}

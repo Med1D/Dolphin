@@ -111,4 +111,15 @@ final class Factory
 		interactor.inject(presenter: presenter)
 		return viewController
 	}
+
+	func createEditProfileModule() -> UIViewController {
+		let settingsNetworkService: ISettingsNetworkService = SettingsNetworkService()
+		let router = EditProfileRouter(factory: self)
+		let interactor = EditProfileInteractor(settingsNetworkService: settingsNetworkService)
+		let presenter = EditProfilePresenter(router: router, interactor: interactor)
+		let viewController = EditProfileViewController(presenter: presenter)
+		presenter.inject(viewController: viewController)
+		interactor.inject(presenter: presenter)
+		return viewController
+	}
 }

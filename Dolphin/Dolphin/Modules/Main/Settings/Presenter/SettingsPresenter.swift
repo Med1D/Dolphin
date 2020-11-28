@@ -29,6 +29,12 @@ final class SettingsPresenter
 // MARK: - ISettingsPresenter
 extension SettingsPresenter: ISettingsPresenter
 {
+	func touchEditProfileButton(closure: (UIViewController) -> Void) {
+		self.router.touchEditProfileButton { viewController in
+			closure(viewController)
+		}
+	}
+
 	func touchLogoutButton(completion: @escaping (LogoutResult) -> Void) {
 		self.interactor.touchLogoutButton { result in
 			switch result {
