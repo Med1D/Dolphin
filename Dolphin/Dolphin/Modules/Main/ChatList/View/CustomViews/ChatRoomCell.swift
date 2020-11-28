@@ -113,7 +113,12 @@ private extension ChatRoomCell
 private extension ChatRoomCell
 {
 	func setImage() {
-		self.chatRoomImageView.image = UIImage.decodeImageFromBase64String(string: self.chatRoom?.chatRoomData.encodedImage)
+		if let image = UIImage.decodeImageFromBase64String(string: self.chatRoom?.chatRoomData.encodedImage) {
+			self.chatRoomImageView.image = image
+		}
+		else {
+			self.chatRoomImageView.image = MainConstants.chatRoomDefaultImage
+		}
 	}
 
 	func setLastMessageWithHighlightedSenderName() {

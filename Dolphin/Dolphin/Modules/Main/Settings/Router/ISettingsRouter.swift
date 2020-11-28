@@ -9,5 +9,6 @@ import UIKit
 
 protocol ISettingsRouter: AnyObject
 {
+	func touchEditProfileButton(closure: (UIViewController) -> Void)
 	func touchLogoutButton()
 }

@@ -29,6 +29,12 @@ final class SettingsViewController: UIViewController
 		fatalError("init(coder:) has not been implemented")
 	}
 
+// MARK: - Deinit
+	deinit {
+		self.activityIndicator.removeFromSuperview()
+		self.activityView.removeFromSuperview()
+	}
+
 // MARK: - viewDidLoad
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -158,12 +164,14 @@ private extension SettingsViewController
 extension SettingsViewController: UITableViewDataSource
 {
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return 1
+		return 2
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		switch section {
 		case 0:
+			return 1
+		case 1:
 			return 1
 		default:
 			return 0
@@ -173,6 +181,16 @@ extension SettingsViewController: UITableViewDataSource
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		switch indexPath.section {
 		case 0:
+			switch indexPath.row {
+			case 0:
+				let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+				cell.textLabel?.text = "Edit profile"
+				cell.accessoryType = .disclosureIndicator
+				return cell
+			default:
+				fatalError("Unknown cell")
+			}
+		case 1:
 			switch indexPath.row {
 			case 0:
 				return self.logoutCell
@@ -185,32 +203,40 @@ extension SettingsViewController: UITableViewDataSource
 	}
 
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		switch section {
-		case 0:
-			let view = UIView()
-			view.backgroundColor = .systemGroupedBackground
-			return view
-		default:
-			fatalError("Unknown section")
-		}
+		let view = UIView()
+		view.backgroundColor = .systemGroupedBackground
+		return view
 	}
 }
 
 // MARK: - UITableViewDelegate
 extension SettingsViewController: UITableViewDelegate
 {
+	func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+		return nil
+	}
+
+	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+		return .leastNormalMagnitude
+	}
+
 	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		switch section {
-		case 0:
-			return MainConstants.settingsSectionSpacer
-		default:
-			fatalError("Unknown section")
-		}
+		return MainConstants.settingsSectionSpacer
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		switch indexPath.section {
 		case 0:
+			switch indexPath.row {
+			case 0:
+				self.presenter.touchEditProfileButton { viewController in
+					self.navigationController?.pushViewController(viewController, animated: true)
+					self.tableView.deselectRow(at: indexPath, animated: true)
+				}
+			default:
+				fatalError("Unknown cell")
+			}
+		case 1:
 			switch indexPath.row {
 			case 0:
 				self.touchLogoutButton()

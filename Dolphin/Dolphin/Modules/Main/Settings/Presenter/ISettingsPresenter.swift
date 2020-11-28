@@ -9,5 +9,6 @@ import UIKit
 
 protocol ISettingsPresenter: AnyObject
 {
+	func touchEditProfileButton(closure: (UIViewController) -> Void)
 	func touchLogoutButton(completion: @escaping (LogoutResult) -> Void)
 }

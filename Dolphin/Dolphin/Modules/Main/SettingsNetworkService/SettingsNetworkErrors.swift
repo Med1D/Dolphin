@@ -9,5 +9,5 @@ import Foundation
 
 enum SettingsNetworkErrors: Error
 {
-	case wrongURL, badResponse, noConnection, dataTaskError
+	case wrongURL, badResponse, badProfileData, noConnection, dataTaskError
 }

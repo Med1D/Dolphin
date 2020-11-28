@@ -38,6 +38,7 @@ extension SettingsInteractor: ISettingsInteractor
 				self.keychainSwift.delete("userId")
 				self.keychainSwift.delete("username")
 				self.keychainSwift.delete("email")
+				self.keychainSwift.delete("password")
 				self.keychainSwift.delete("encodedImage")
 				completion(.success(string))
 			case .failure(let error):

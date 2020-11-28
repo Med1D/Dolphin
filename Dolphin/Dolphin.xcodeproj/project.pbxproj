@@ -31,6 +31,19 @@
 		727BFDC72534811E00507F50 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC62534811E00507F50 /* ForgotPasswordPresenter.swift */; };
 		727BFDC92534818200507F50 /* IForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDC82534818200507F50 /* IForgotPasswordRouter.swift */; };
 		727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BFDCA253481AE00507F50 /* ForgotPasswordRouter.swift */; };
+		7285DB27256EE1EB00C1513F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB26256EE1EB00C1513F /* EditProfileViewController.swift */; };
+		7285DB29256EE20100C1513F /* IEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB28256EE20100C1513F /* IEditProfileViewController.swift */; };
+		7285DB2B256EE35700C1513F /* IEditProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB2A256EE35700C1513F /* IEditProfileInteractor.swift */; };
+		7285DB2D256EE36800C1513F /* EditProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB2C256EE36800C1513F /* EditProfileInteractor.swift */; };
+		7285DB2F256EE41900C1513F /* IEditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB2E256EE41900C1513F /* IEditProfilePresenter.swift */; };
+		7285DB31256EE42A00C1513F /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB30256EE42A00C1513F /* EditProfilePresenter.swift */; };
+		7285DB33256EE4C900C1513F /* IEditProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB32256EE4C900C1513F /* IEditProfileRouter.swift */; };
+		7285DB35256EE4D600C1513F /* EditProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB34256EE4D600C1513F /* EditProfileRouter.swift */; };
+		7285DB38256FA74A00C1513F /* ProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB37256FA74A00C1513F /* ProfileImageCell.swift */; };
+		7285DB3F256FC7FE00C1513F /* ProfileImageCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB3E256FC7FE00C1513F /* ProfileImageCellDelegate.swift */; };
+		7285DB42256FE67600C1513F /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB41256FE67600C1513F /* UIAlertController+extension.swift */; };
+		7285DB462570183D00C1513F /* ProfileTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB452570183D00C1513F /* ProfileTextCell.swift */; };
+		7285DB482571548200C1513F /* NewProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB472571548100C1513F /* NewProfileData.swift */; };
 		728AB977253C568A003294EC /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB976253C568A003294EC /* ChatListViewController.swift */; };
 		728AB979253C5697003294EC /* IChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB978253C5697003294EC /* IChatListViewController.swift */; };
 		728AB97B253C56DF003294EC /* IChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB97A253C56DF003294EC /* IChatListInteractor.swift */; };
@@ -140,6 +153,19 @@
 		727BFDC62534811E00507F50 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		727BFDC82534818200507F50 /* IForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordRouter.swift; sourceTree = "<group>"; };
 		727BFDCA253481AE00507F50 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
+		7285DB26256EE1EB00C1513F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		7285DB28256EE20100C1513F /* IEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEditProfileViewController.swift; sourceTree = "<group>"; };
+		7285DB2A256EE35700C1513F /* IEditProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEditProfileInteractor.swift; sourceTree = "<group>"; };
+		7285DB2C256EE36800C1513F /* EditProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractor.swift; sourceTree = "<group>"; };
+		7285DB2E256EE41900C1513F /* IEditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEditProfilePresenter.swift; sourceTree = "<group>"; };
+		7285DB30256EE42A00C1513F /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
+		7285DB32256EE4C900C1513F /* IEditProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEditProfileRouter.swift; sourceTree = "<group>"; };
+		7285DB34256EE4D600C1513F /* EditProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRouter.swift; sourceTree = "<group>"; };
+		7285DB37256FA74A00C1513F /* ProfileImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageCell.swift; sourceTree = "<group>"; };
+		7285DB3E256FC7FE00C1513F /* ProfileImageCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageCellDelegate.swift; sourceTree = "<group>"; };
+		7285DB41256FE67600C1513F /* UIAlertController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
+		7285DB452570183D00C1513F /* ProfileTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextCell.swift; sourceTree = "<group>"; };
+		7285DB472571548100C1513F /* NewProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileData.swift; sourceTree = "<group>"; };
 		728AB976253C568A003294EC /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		728AB978253C5697003294EC /* IChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListViewController.swift; sourceTree = "<group>"; };
 		728AB97A253C56DF003294EC /* IChatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListInteractor.swift; sourceTree = "<group>"; };
@@ -371,6 +397,80 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		7285DB21256EE17F00C1513F /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB22256EE1A800C1513F /* View */,
+				7285DB23256EE1BB00C1513F /* Interactor */,
+				7285DB24256EE1C200C1513F /* Presenter */,
+				7285DB25256EE1C600C1513F /* Router */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		7285DB22256EE1A800C1513F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB36256FA72E00C1513F /* CustomViews */,
+				7285DB28256EE20100C1513F /* IEditProfileViewController.swift */,
+				7285DB26256EE1EB00C1513F /* EditProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7285DB23256EE1BB00C1513F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB2A256EE35700C1513F /* IEditProfileInteractor.swift */,
+				7285DB2C256EE36800C1513F /* EditProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7285DB24256EE1C200C1513F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB2E256EE41900C1513F /* IEditProfilePresenter.swift */,
+				7285DB30256EE42A00C1513F /* EditProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7285DB25256EE1C600C1513F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB32256EE4C900C1513F /* IEditProfileRouter.swift */,
+				7285DB34256EE4D600C1513F /* EditProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7285DB36256FA72E00C1513F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB442570182100C1513F /* ProfileTextCell */,
+				7285DB40256FCB1D00C1513F /* ProfileImageCell */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7285DB40256FCB1D00C1513F /* ProfileImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB3E256FC7FE00C1513F /* ProfileImageCellDelegate.swift */,
+				7285DB37256FA74A00C1513F /* ProfileImageCell.swift */,
+			);
+			path = ProfileImageCell;
+			sourceTree = "<group>";
+		};
+		7285DB442570182100C1513F /* ProfileTextCell */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB452570183D00C1513F /* ProfileTextCell.swift */,
+			);
+			path = ProfileTextCell;
+			sourceTree = "<group>";
+		};
 		728AB970253C55E8003294EC /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +479,7 @@
 				728AB971253C5609003294EC /* ChatList */,
 				72C12810254389370090F182 /* Chat */,
 				7291AEB32543798500919840 /* Settings */,
+				7285DB21256EE17F00C1513F /* EditProfile */,
 				728AB986253C5CEC003294EC /* ChatNetworkService */,
 				7291AEC825437E1A00919840 /* SettingsNetworkService */,
 			);
@@ -733,8 +834,10 @@
 		72FB2282253CADC400E61D59 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7285DB472571548100C1513F /* NewProfileData.swift */,
 				72FB2283253CADD100E61D59 /* ChatRoom.swift */,
 				72D74BBE256D5FED000CEB28 /* UIImage+extension.swift */,
+				7285DB41256FE67600C1513F /* UIAlertController+extension.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -855,9 +958,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7285DB482571548200C1513F /* NewProfileData.swift in Sources */,
 				72FB2281253CAC2500E61D59 /* MainConstants.swift in Sources */,
 				72FB227E253CA79D00E61D59 /* ChatRoomCell.swift in Sources */,
 				721A0FB32530F74D00234071 /* LoginViewController.swift in Sources */,
+				7285DB38256FA74A00C1513F /* ProfileImageCell.swift in Sources */,
 				721A0FB52530F77000234071 /* LoginInteractor.swift in Sources */,
 				728AB97B253C56DF003294EC /* IChatListInteractor.swift in Sources */,
 				7291AEC125437CB500919840 /* ISettingsPresenter.swift in Sources */,
@@ -867,6 +972,7 @@
 				727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */,
 				72123B042533486200DE67EC /* ISignUpRouter.swift in Sources */,
 				721A0FC12530F8A800234071 /* ILoginInteractor.swift in Sources */,
+				7285DB2F256EE41900C1513F /* IEditProfilePresenter.swift in Sources */,
 				727BFDC92534818200507F50 /* IForgotPasswordRouter.swift in Sources */,
 				72A3A179252CB2EF0083F88F /* AppDelegate.swift in Sources */,
 				72123AFA2533442500DE67EC /* ISignUpViewController.swift in Sources */,
@@ -883,25 +989,32 @@
 				727BFDC3253480CB00507F50 /* ForgotPasswordInteractor.swift in Sources */,
 				728AB981253C5728003294EC /* ChatListPresenter.swift in Sources */,
 				7291AEB925437A3100919840 /* ISettingsViewController.swift in Sources */,
+				7285DB27256EE1EB00C1513F /* EditProfileViewController.swift in Sources */,
 				72DB0CBE25618B2A00DB5472 /* SettingsNetworkErrors.swift in Sources */,
 				72C1281C254389980090F182 /* ChatInteractor.swift in Sources */,
 				727BFDBF2534800700507F50 /* ForgotPasswordViewController.swift in Sources */,
 				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
 				72DB0CC125618B5200DB5472 /* DolphinAPISettings.swift in Sources */,
 				7291AEC525437D5200919840 /* ISettingsRouter.swift in Sources */,
+				7285DB35256EE4D600C1513F /* EditProfileRouter.swift in Sources */,
 				721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */,
 				729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */,
 				7291AEC325437CD700919840 /* SettingsPresenter.swift in Sources */,
 				72C12818254389840090F182 /* ChatViewController.swift in Sources */,
 				72123B002533478700DE67EC /* ISignUpPresenter.swift in Sources */,
+				7285DB31256EE42A00C1513F /* EditProfilePresenter.swift in Sources */,
+				7285DB2D256EE36800C1513F /* EditProfileInteractor.swift in Sources */,
 				7291AECC25437E4D00919840 /* SettingsNetworkService.swift in Sources */,
 				72C12824254389CE0090F182 /* ChatRouter.swift in Sources */,
 				7291AEBB25437A6300919840 /* SettingsViewController.swift in Sources */,
 				72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */,
 				72D74BBF256D5FED000CEB28 /* UIImage+extension.swift in Sources */,
 				72C12816254389730090F182 /* IChatViewController.swift in Sources */,
+				7285DB2B256EE35700C1513F /* IEditProfileInteractor.swift in Sources */,
 				72DB0CC4256A98F900DB5472 /* DolphinAPIChat.swift in Sources */,
 				72C12822254389C30090F182 /* IChatRouter.swift in Sources */,
+				7285DB462570183D00C1513F /* ProfileTextCell.swift in Sources */,
+				7285DB33256EE4C900C1513F /* IEditProfileRouter.swift in Sources */,
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
 				728AB97F253C571F003294EC /* IChatListPresenter.swift in Sources */,
 				721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */,
@@ -909,6 +1022,8 @@
 				721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */,
 				72123B062533486A00DE67EC /* SignUpRouter.swift in Sources */,
 				72123AFC253346BB00DE67EC /* ISignUpInteractor.swift in Sources */,
+				7285DB42256FE67600C1513F /* UIAlertController+extension.swift in Sources */,
+				7285DB3F256FC7FE00C1513F /* ProfileImageCellDelegate.swift in Sources */,
 				72E1CCE525372CED00DAA664 /* User.swift in Sources */,
 				72C1281E254389A60090F182 /* IChatPresenter.swift in Sources */,
 				72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */,
@@ -916,6 +1031,7 @@
 				72DB0CC6256A9A4700DB5472 /* ChatNetworkErrors.swift in Sources */,
 				72FB2284253CADD100E61D59 /* ChatRoom.swift in Sources */,
 				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
+				7285DB29256EE20100C1513F /* IEditProfileViewController.swift in Sources */,
 				72C12820254389AE0090F182 /* ChatPresenter.swift in Sources */,
 				7291AEBF25437BA200919840 /* SettingsInteractor.swift in Sources */,
 				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,

@@ -46,4 +46,20 @@ extension SettingsNetworkService: ISettingsNetworkService
 			completion(.failure(SettingsNetworkErrors.noConnection))
 		}
 	}
+
+	func update(newProfileData: NewProfileData, token: String, completion: @escaping (UpdateResult) -> Void) {
+		if connection {
+			self.dolphinAPISettings.update(newProfileData: newProfileData, token: token) { result in
+				switch result {
+				case .success(let data):
+					completion(.success(data))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(SettingsNetworkErrors.noConnection))
+		}
+	}
 }

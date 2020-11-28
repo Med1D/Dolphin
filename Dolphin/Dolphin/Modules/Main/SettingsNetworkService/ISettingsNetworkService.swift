@@ -10,4 +10,5 @@ import Foundation
 protocol ISettingsNetworkService
 {
 	func logout(token: String, completion: @escaping (LogoutResult) -> Void)
+	func update(newProfileData: NewProfileData, token: String, completion: @escaping (UpdateResult) -> Void)
 }

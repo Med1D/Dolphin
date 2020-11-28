@@ -21,6 +21,11 @@ final class SettingsRouter
 // MARK: - ISettingsRouter
 extension SettingsRouter: ISettingsRouter
 {
+	func touchEditProfileButton(closure: (UIViewController) -> Void) {
+		let viewController = self.factory.createEditProfileModule()
+		closure(viewController)
+	}
+
 	func touchLogoutButton() {
 		self.factory.createAuthNavigationController()
 	}
