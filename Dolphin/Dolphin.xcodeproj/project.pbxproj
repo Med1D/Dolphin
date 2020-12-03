@@ -44,6 +44,23 @@
 		7285DB42256FE67600C1513F /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB41256FE67600C1513F /* UIAlertController+extension.swift */; };
 		7285DB462570183D00C1513F /* ProfileTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB452570183D00C1513F /* ProfileTextCell.swift */; };
 		7285DB482571548200C1513F /* NewProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB472571548100C1513F /* NewProfileData.swift */; };
+		7285DB4F2575121800C1513F /* IChatInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB4E2575121700C1513F /* IChatInfoRouter.swift */; };
+		7285DB512575122A00C1513F /* ChatInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB502575122A00C1513F /* ChatInfoRouter.swift */; };
+		7285DB532575128A00C1513F /* IChatInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB522575128A00C1513F /* IChatInfoInteractor.swift */; };
+		7285DB552575129800C1513F /* ChatInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB542575129800C1513F /* ChatInfoInteractor.swift */; };
+		7285DB572575133B00C1513F /* IChatInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB562575133B00C1513F /* IChatInfoPresenter.swift */; };
+		7285DB592575134300C1513F /* ChatInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB582575134300C1513F /* ChatInfoPresenter.swift */; };
+		7285DB5B257513C700C1513F /* IChatInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB5A257513C700C1513F /* IChatInfoViewController.swift */; };
+		7285DB5D257513D100C1513F /* ChatInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB5C257513D100C1513F /* ChatInfoViewController.swift */; };
+		7285DB602575398800C1513F /* ChatEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB5F2575398800C1513F /* ChatEditCell.swift */; };
+		7285DB62257676C900C1513F /* TextFieldWithInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB61257676C800C1513F /* TextFieldWithInsets.swift */; };
+		7285DB672576881400C1513F /* LeaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB662576881400C1513F /* LeaveCell.swift */; };
+		7285DB692576A6AC00C1513F /* ChatMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB682576A6AC00C1513F /* ChatMember.swift */; };
+		7285DB6B2576A9A900C1513F /* HeaderMembersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB6A2576A9A900C1513F /* HeaderMembersSection.swift */; };
+		7285DB6D2576CB6300C1513F /* ChatMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB6C2576CB6300C1513F /* ChatMemberCell.swift */; };
+		7285DB6F2576DEB400C1513F /* FooterMembersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB6E2576DEB400C1513F /* FooterMembersSection.swift */; };
+		7285DB7225792E0200C1513F /* ChatListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB7125792E0100C1513F /* ChatListDelegate.swift */; };
+		7285DB7525792E8500C1513F /* ChatDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB7425792E8500C1513F /* ChatDelegate.swift */; };
 		728AB977253C568A003294EC /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB976253C568A003294EC /* ChatListViewController.swift */; };
 		728AB979253C5697003294EC /* IChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB978253C5697003294EC /* IChatListViewController.swift */; };
 		728AB97B253C56DF003294EC /* IChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB97A253C56DF003294EC /* IChatListInteractor.swift */; };
@@ -166,6 +183,23 @@
 		7285DB41256FE67600C1513F /* UIAlertController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
 		7285DB452570183D00C1513F /* ProfileTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextCell.swift; sourceTree = "<group>"; };
 		7285DB472571548100C1513F /* NewProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileData.swift; sourceTree = "<group>"; };
+		7285DB4E2575121700C1513F /* IChatInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatInfoRouter.swift; sourceTree = "<group>"; };
+		7285DB502575122A00C1513F /* ChatInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInfoRouter.swift; sourceTree = "<group>"; };
+		7285DB522575128A00C1513F /* IChatInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatInfoInteractor.swift; sourceTree = "<group>"; };
+		7285DB542575129800C1513F /* ChatInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInfoInteractor.swift; sourceTree = "<group>"; };
+		7285DB562575133B00C1513F /* IChatInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatInfoPresenter.swift; sourceTree = "<group>"; };
+		7285DB582575134300C1513F /* ChatInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInfoPresenter.swift; sourceTree = "<group>"; };
+		7285DB5A257513C700C1513F /* IChatInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatInfoViewController.swift; sourceTree = "<group>"; };
+		7285DB5C257513D100C1513F /* ChatInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInfoViewController.swift; sourceTree = "<group>"; };
+		7285DB5F2575398800C1513F /* ChatEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEditCell.swift; sourceTree = "<group>"; };
+		7285DB61257676C800C1513F /* TextFieldWithInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithInsets.swift; sourceTree = "<group>"; };
+		7285DB662576881400C1513F /* LeaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCell.swift; sourceTree = "<group>"; };
+		7285DB682576A6AC00C1513F /* ChatMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMember.swift; sourceTree = "<group>"; };
+		7285DB6A2576A9A900C1513F /* HeaderMembersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMembersSection.swift; sourceTree = "<group>"; };
+		7285DB6C2576CB6300C1513F /* ChatMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMemberCell.swift; sourceTree = "<group>"; };
+		7285DB6E2576DEB400C1513F /* FooterMembersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterMembersSection.swift; sourceTree = "<group>"; };
+		7285DB7125792E0100C1513F /* ChatListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListDelegate.swift; sourceTree = "<group>"; };
+		7285DB7425792E8500C1513F /* ChatDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDelegate.swift; sourceTree = "<group>"; };
 		728AB976253C568A003294EC /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		728AB978253C5697003294EC /* IChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListViewController.swift; sourceTree = "<group>"; };
 		728AB97A253C56DF003294EC /* IChatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListInteractor.swift; sourceTree = "<group>"; };
@@ -471,6 +505,83 @@
 			path = ProfileTextCell;
 			sourceTree = "<group>";
 		};
+		7285DB4925750F9A00C1513F /* ChatInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB4D257511FA00C1513F /* View */,
+				7285DB4C257511F200C1513F /* Interactor */,
+				7285DB4B257511EA00C1513F /* Presenter */,
+				7285DB4A257511E300C1513F /* Router */,
+			);
+			path = ChatInfo;
+			sourceTree = "<group>";
+		};
+		7285DB4A257511E300C1513F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB4E2575121700C1513F /* IChatInfoRouter.swift */,
+				7285DB502575122A00C1513F /* ChatInfoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7285DB4B257511EA00C1513F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB562575133B00C1513F /* IChatInfoPresenter.swift */,
+				7285DB582575134300C1513F /* ChatInfoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7285DB4C257511F200C1513F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB522575128A00C1513F /* IChatInfoInteractor.swift */,
+				7285DB542575129800C1513F /* ChatInfoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7285DB4D257511FA00C1513F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB5E2575396600C1513F /* CustomViews */,
+				7285DB5A257513C700C1513F /* IChatInfoViewController.swift */,
+				7285DB5C257513D100C1513F /* ChatInfoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7285DB5E2575396600C1513F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB5F2575398800C1513F /* ChatEditCell.swift */,
+				7285DB662576881400C1513F /* LeaveCell.swift */,
+				7285DB61257676C800C1513F /* TextFieldWithInsets.swift */,
+				7285DB6A2576A9A900C1513F /* HeaderMembersSection.swift */,
+				7285DB6C2576CB6300C1513F /* ChatMemberCell.swift */,
+				7285DB6E2576DEB400C1513F /* FooterMembersSection.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7285DB7025792DE700C1513F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB7125792E0100C1513F /* ChatListDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		7285DB7325792E7200C1513F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7285DB7425792E8500C1513F /* ChatDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		728AB970253C55E8003294EC /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +589,7 @@
 				72FB227F253CABFA00E61D59 /* Constants */,
 				728AB971253C5609003294EC /* ChatList */,
 				72C12810254389370090F182 /* Chat */,
+				7285DB4925750F9A00C1513F /* ChatInfo */,
 				7291AEB32543798500919840 /* Settings */,
 				7285DB21256EE17F00C1513F /* EditProfile */,
 				728AB986253C5CEC003294EC /* ChatNetworkService */,
@@ -493,6 +605,7 @@
 				728AB974253C564E003294EC /* Interactor */,
 				728AB973253C5643003294EC /* Presenter */,
 				728AB972253C563A003294EC /* Router */,
+				7285DB7025792DE700C1513F /* Delegate */,
 			);
 			path = ChatList;
 			sourceTree = "<group>";
@@ -662,6 +775,7 @@
 				72C128132543895E0090F182 /* Interactor */,
 				72C12812254389560090F182 /* Presenter */,
 				72C12811254389510090F182 /* Router */,
+				7285DB7325792E7200C1513F /* Delegate */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -836,6 +950,7 @@
 			children = (
 				7285DB472571548100C1513F /* NewProfileData.swift */,
 				72FB2283253CADD100E61D59 /* ChatRoom.swift */,
+				7285DB682576A6AC00C1513F /* ChatMember.swift */,
 				72D74BBE256D5FED000CEB28 /* UIImage+extension.swift */,
 				7285DB41256FE67600C1513F /* UIAlertController+extension.swift */,
 			);
@@ -968,6 +1083,7 @@
 				7291AEC125437CB500919840 /* ISettingsPresenter.swift in Sources */,
 				728AB983253C5770003294EC /* IChatListRouter.swift in Sources */,
 				728AB98A253C5D0C003294EC /* IChatNetworkService.swift in Sources */,
+				7285DB6F2576DEB400C1513F /* FooterMembersSection.swift in Sources */,
 				72E1CCE225372BB800DAA664 /* DolphinAPIAuth.swift in Sources */,
 				727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */,
 				72123B042533486200DE67EC /* ISignUpRouter.swift in Sources */,
@@ -981,11 +1097,15 @@
 				72DB0CBC2561617400DB5472 /* LogoutCell.swift in Sources */,
 				72A3A17B252CB2EF0083F88F /* SceneDelegate.swift in Sources */,
 				72E1CCE725372E0700DAA664 /* AuthNetworkErrors.swift in Sources */,
+				7285DB7225792E0200C1513F /* ChatListDelegate.swift in Sources */,
 				721A0FB72530F78500234071 /* LoginPresenter.swift in Sources */,
 				72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */,
 				7291AEC725437DAF00919840 /* SettingsRouter.swift in Sources */,
 				72C1281A2543898F0090F182 /* IChatInteractor.swift in Sources */,
 				728AB979253C5697003294EC /* IChatListViewController.swift in Sources */,
+				7285DB552575129800C1513F /* ChatInfoInteractor.swift in Sources */,
+				7285DB692576A6AC00C1513F /* ChatMember.swift in Sources */,
+				7285DB512575122A00C1513F /* ChatInfoRouter.swift in Sources */,
 				727BFDC3253480CB00507F50 /* ForgotPasswordInteractor.swift in Sources */,
 				728AB981253C5728003294EC /* ChatListPresenter.swift in Sources */,
 				7291AEB925437A3100919840 /* ISettingsViewController.swift in Sources */,
@@ -994,17 +1114,22 @@
 				72C1281C254389980090F182 /* ChatInteractor.swift in Sources */,
 				727BFDBF2534800700507F50 /* ForgotPasswordViewController.swift in Sources */,
 				729B092C253339860055E50C /* AuthTextField.swift in Sources */,
+				7285DB5D257513D100C1513F /* ChatInfoViewController.swift in Sources */,
+				7285DB592575134300C1513F /* ChatInfoPresenter.swift in Sources */,
 				72DB0CC125618B5200DB5472 /* DolphinAPISettings.swift in Sources */,
+				7285DB5B257513C700C1513F /* IChatInfoViewController.swift in Sources */,
 				7291AEC525437D5200919840 /* ISettingsRouter.swift in Sources */,
 				7285DB35256EE4D600C1513F /* EditProfileRouter.swift in Sources */,
 				721A0FC32530F8C500234071 /* ILoginViewController.swift in Sources */,
 				729B092A253339600055E50C /* AuthTextFieldType.swift in Sources */,
 				7291AEC325437CD700919840 /* SettingsPresenter.swift in Sources */,
+				7285DB62257676C900C1513F /* TextFieldWithInsets.swift in Sources */,
 				72C12818254389840090F182 /* ChatViewController.swift in Sources */,
 				72123B002533478700DE67EC /* ISignUpPresenter.swift in Sources */,
 				7285DB31256EE42A00C1513F /* EditProfilePresenter.swift in Sources */,
 				7285DB2D256EE36800C1513F /* EditProfileInteractor.swift in Sources */,
 				7291AECC25437E4D00919840 /* SettingsNetworkService.swift in Sources */,
+				7285DB602575398800C1513F /* ChatEditCell.swift in Sources */,
 				72C12824254389CE0090F182 /* ChatRouter.swift in Sources */,
 				7291AEBB25437A6300919840 /* SettingsViewController.swift in Sources */,
 				72123AF82533441700DE67EC /* SignUpViewController.swift in Sources */,
@@ -1019,6 +1144,7 @@
 				728AB97F253C571F003294EC /* IChatListPresenter.swift in Sources */,
 				721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */,
 				72DBC64F253B841500F91A09 /* AuthResponse.swift in Sources */,
+				7285DB572575133B00C1513F /* IChatInfoPresenter.swift in Sources */,
 				721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */,
 				72123B062533486A00DE67EC /* SignUpRouter.swift in Sources */,
 				72123AFC253346BB00DE67EC /* ISignUpInteractor.swift in Sources */,
@@ -1026,16 +1152,22 @@
 				7285DB3F256FC7FE00C1513F /* ProfileImageCellDelegate.swift in Sources */,
 				72E1CCE525372CED00DAA664 /* User.swift in Sources */,
 				72C1281E254389A60090F182 /* IChatPresenter.swift in Sources */,
+				7285DB4F2575121800C1513F /* IChatInfoRouter.swift in Sources */,
 				72E1CCDD2537290900DAA664 /* AuthNetworkService.swift in Sources */,
+				7285DB672576881400C1513F /* LeaveCell.swift in Sources */,
 				72F586E92530A10900504B37 /* Factory.swift in Sources */,
+				7285DB7525792E8500C1513F /* ChatDelegate.swift in Sources */,
+				7285DB532575128A00C1513F /* IChatInfoInteractor.swift in Sources */,
 				72DB0CC6256A9A4700DB5472 /* ChatNetworkErrors.swift in Sources */,
 				72FB2284253CADD100E61D59 /* ChatRoom.swift in Sources */,
 				72123AFE253346C800DE67EC /* SignUpInteractor.swift in Sources */,
 				7285DB29256EE20100C1513F /* IEditProfileViewController.swift in Sources */,
 				72C12820254389AE0090F182 /* ChatPresenter.swift in Sources */,
+				7285DB6B2576A9A900C1513F /* HeaderMembersSection.swift in Sources */,
 				7291AEBF25437BA200919840 /* SettingsInteractor.swift in Sources */,
 				72123B022533479400DE67EC /* SignUpPresenter.swift in Sources */,
 				727BFDC52534810B00507F50 /* IForgotPasswordPresenter.swift in Sources */,
+				7285DB6D2576CB6300C1513F /* ChatMemberCell.swift in Sources */,
 				727BFDC72534811E00507F50 /* ForgotPasswordPresenter.swift in Sources */,
 				728AB988253C5D02003294EC /* ChatNetworkService.swift in Sources */,
 				728AB985253C5791003294EC /* ChatListRouter.swift in Sources */,

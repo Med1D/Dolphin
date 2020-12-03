@@ -28,10 +28,12 @@ final class Factory
 		chatNavigationController.tabBarItem = UITabBarItem(title: "Chat rooms",
 															 image: UIImage(systemName: "bubble.left.and.bubble.right"),
 															 tag: 0)
+		chatNavigationController.view.backgroundColor = .white
 		let settingsNavigationController = UINavigationController(rootViewController: settingsModule)
 		settingsNavigationController.tabBarItem = UITabBarItem(title: "Settings",
 															 image: UIImage(systemName: "gear"),
 															 tag: 0)
+		settingsNavigationController.view.backgroundColor = .white
 		let tabBarController = UITabBarController()
 		tabBarController.viewControllers = [chatNavigationController, settingsNavigationController]
 		self.changeRootViewController(viewController: tabBarController)
@@ -90,13 +92,26 @@ final class Factory
 		return viewController
 	}
 
-	func createChatModule(chatRoomData: ChatRoomData) -> UIViewController {
+	func createChatModule(chatRoomData: ChatRoomData, chatListDelegate: ChatListDelegate) -> UIViewController {
 		let chatNetworkService: IChatNetworkService = ChatNetworkService()
 		let router = ChatRouter(factory: self)
 		let interactor = ChatInteractor(chatNetworkService: chatNetworkService)
-		let presenter = ChatPresenter(router: router, interactor: interactor)
-		let viewController = ChatViewController(presenter: presenter, chatRoomData: chatRoomData)
+		let presenter = ChatPresenter(router: router, interactor: interactor, chatRoomData: chatRoomData)
+		let viewController = ChatViewController(presenter: presenter)
 		presenter.inject(viewController: viewController)
+		presenter.inject(chatListDelegate: chatListDelegate)
+		interactor.inject(presenter: presenter)
+		return viewController
+	}
+
+	func createChatInfoModule(chatRoomData: ChatRoomData, chatDelegate: ChatDelegate) -> UIViewController {
+		let chatNetworkService: IChatNetworkService = ChatNetworkService()
+		let router = ChatInfoRouter(factory: self)
+		let interactor = ChatInfoInteractor(chatNetworkService: chatNetworkService)
+		let presenter = ChatInfoPresenter(router: router, interactor: interactor, chatRoomData: chatRoomData)
+		let viewController = ChatInfoViewController(presenter: presenter)
+		presenter.inject(viewController: viewController)
+		presenter.inject(chatDelegate: chatDelegate)
 		interactor.inject(presenter: presenter)
 		return viewController
 	}

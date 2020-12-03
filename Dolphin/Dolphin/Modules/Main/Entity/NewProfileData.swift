@@ -12,10 +12,10 @@ struct NewProfileData: Codable
 	let username: String
 	let email: String
 	let password: String
-	let image: NewProfileImage
+	let image: NewImage
 }
 
-struct NewProfileImage: Codable
+struct NewImage: Codable
 {
 	let encodedImage: String?
 	let isDefaultImage: Bool?

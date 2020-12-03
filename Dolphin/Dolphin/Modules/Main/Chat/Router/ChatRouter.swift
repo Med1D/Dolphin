@@ -21,4 +21,8 @@ final class ChatRouter
 // MARK: - IChatRouter
 extension ChatRouter: IChatRouter
 {
+	func openChatInfo(chatRoomData: ChatRoomData, chatDelegate: ChatDelegate, closure: (UIViewController) -> Void) {
+		let viewController = self.factory.createChatInfoModule(chatRoomData: chatRoomData, chatDelegate: chatDelegate)
+		closure(viewController)
+	}
 }

@@ -9,4 +9,5 @@ import UIKit
 
 protocol IChatViewController: AnyObject
 {
+	func refreshChatRoomInfo()
 }

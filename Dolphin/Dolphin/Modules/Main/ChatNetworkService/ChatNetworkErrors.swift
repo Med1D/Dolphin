@@ -9,5 +9,5 @@ import Foundation
 
 enum ChatNetworkErrors: Error
 {
-	case wrongURL, badResponse, noConnection, dataTaskError
+	case wrongURL, badResponse, badData, noConnection, dataTaskError
 }

@@ -51,8 +51,29 @@ extension ChatListPresenter: IChatListPresenter
 	}
 
 	func selectChatRoom(chatRoomData: ChatRoomData, closure: (UIViewController) -> Void) {
-		self.router.selectChatRoom(chatRoomData: chatRoomData) { viewController in
+		self.router.selectChatRoom(chatRoomData: chatRoomData, chatListDelegate: self) { viewController in
 			closure(viewController)
 		}
+	}
+}
+
+// MARK: - ChatListDelegate
+extension ChatListPresenter: ChatListDelegate
+{
+	func refreshChatRoomInfo(chatRoomData: ChatRoomData) {
+		for (index, chatRoom) in self.chatRooms.enumerated() where chatRoom.chatRoomData.id == chatRoomData.id {
+			let newChatRoom = ChatRoom(chatRoomData: chatRoomData, lastMessage: self.chatRooms[index].lastMessage)
+			self.chatRooms[index] = newChatRoom
+			break
+		}
+		self.viewController?.reloadChatRoomsList()
+	}
+
+	func leaveChatRoom(id: Int) {
+		for (index, chatRoom) in self.chatRooms.enumerated() where chatRoom.chatRoomData.id == id {
+			self.chatRooms.remove(at: index)
+			break
+		}
+		self.viewController?.reloadChatRoomsList()
 	}
 }

@@ -14,16 +14,16 @@ final class ChatViewController: MessagesViewController
 {
 // MARK: - Properties
 	private let presenter: IChatPresenter
-	private let chatRoomData: ChatRoomData
 
 // MARK: - UI properties
 	private let chatImageButtonView = UIView()
+	private let chatImageView = UIImageView()
 	private let chatTitleView = UIView()
+	private let chatTitleLabel = UILabel()
 
 // MARK: - Init
-	init(presenter: IChatPresenter, chatRoomData: ChatRoomData) {
+	init(presenter: IChatPresenter) {
 		self.presenter = presenter
-		self.chatRoomData = chatRoomData
 		super.init(nibName: nil, bundle: nil)
 	}
 
@@ -35,6 +35,7 @@ final class ChatViewController: MessagesViewController
 // MARK: - viewDidLoad
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.setupNavigationController()
 		self.setupTitleView()
 		self.setupChatImageButton()
 		self.configureMessageInputBar()
@@ -44,8 +45,25 @@ final class ChatViewController: MessagesViewController
 // MARK: - Private methods (Setup UI)
 private extension ChatViewController
 {
+	func setupNavigationController() {
+		navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
+														   style: .plain,
+														   target: nil,
+														   action: nil)
+	}
+
 	func setupTitleView() {
-		let title = self.chatRoomData.title
+		self.chatTitleLabel.frame = CGRect(x: 0, y: 0, width: self.view.frame.width / 2, height: 44)
+		self.chatTitleLabel.numberOfLines = 2
+		self.chatTitleLabel.center = self.chatTitleView.center
+		self.chatTitleLabel.textAlignment = .center
+		self.setupTitle()
+		self.chatTitleView.addSubview(self.chatTitleLabel)
+		self.navigationItem.titleView = self.chatTitleView
+	}
+
+	func setupTitle() {
+		let title = self.presenter.getChatRoomData().title
 		let numberOfMembers = "5 members"
 		let attributedText = NSMutableAttributedString(string: title + "\n" + numberOfMembers)
 		attributedText.addAttribute(.foregroundColor,
@@ -60,37 +78,33 @@ private extension ChatViewController
 		attributedText.addAttribute(.font,
 									value: MainConstants.helveticaNeueLight14 ?? UIFont.systemFont(ofSize: 14),
 									range: NSRange(location: title.count + 1, length: numberOfMembers.count))
-		let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width / 2, height: 44))
-		label.numberOfLines = 2
-		label.attributedText = attributedText
-		label.center = self.chatTitleView.center
-		label.textAlignment = .center
-		self.chatTitleView.addSubview(label)
-		self.navigationItem.titleView = self.chatTitleView
+		self.chatTitleLabel.attributedText = attributedText
 	}
 
 	func setupChatImageButton() {
 		let frame = CGRect(x: 0, y: 0, width: 40, height: 40)
 		self.chatImageButtonView.frame = frame
-		let imageView = UIImageView(frame: frame)
-		if let image = UIImage.decodeImageFromBase64String(string: self.chatRoomData.encodedImage) {
-			imageView.image = image
-		}
-		else {
-			imageView.image = MainConstants.chatRoomDefaultImage
-		}
-		imageView.contentMode = .scaleAspectFill
-		imageView.layer.cornerRadius = frame.height / 2
-		imageView.clipsToBounds = true
-		self.chatImageButtonView.addSubview(imageView)
+		self.chatImageView.frame = frame
+		self.setupImage()
+		self.chatImageView.contentMode = .scaleAspectFill
+		self.chatImageView.layer.cornerRadius = frame.height / 2
+		self.chatImageView.clipsToBounds = true
+		self.chatImageButtonView.addSubview(self.chatImageView)
 		let button = UIButton(frame: frame)
-		button.addTarget(self, action: #selector(self.dragChatImageButton), for: [.touchDragInside, .touchDragOutside])
-		button.addTarget(self, action: #selector(self.touchCancelChatImageButton), for: .touchCancel)
-		button.addTarget(self, action: #selector(self.touchUpChatImageButton), for: [.touchUpInside, .touchUpOutside])
+		button.addTarget(self, action: #selector(self.touchChatImageButton), for: .touchUpInside)
 		button.backgroundColor = .clear
 		button.setTitle("", for: .normal)
 		self.chatImageButtonView.addSubview(button)
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: self.chatImageButtonView)
+	}
+
+	func setupImage() {
+		if let image = UIImage.decodeImageFromBase64String(string: self.presenter.getChatRoomData().encodedImage) {
+			self.chatImageView.image = image
+		}
+		else {
+			self.chatImageView.image = MainConstants.chatRoomDefaultImage
+		}
 	}
 
 	func configureMessageInputBar() {
@@ -142,38 +156,11 @@ private extension ChatViewController
 // MARK: - Private methods
 private extension ChatViewController
 {
-	func animateImageButton(closure: @escaping () -> Void) {
-		UIView.animate(withDuration: 0.25,
-					   delay: 0,
-					   options: .curveEaseInOut,
-					   animations: closure,
-					   completion: nil)
-	}
-
-	@objc func dragChatImageButton() {
-		if self.chatImageButtonView.alpha == 1 {
-			self.animateImageButton {
-				[weak self] in self?.chatImageButtonView.alpha = 0.5
-			}
+	@objc func touchChatImageButton() {
+		self.presenter.openChatInfo { viewController in
+			viewController.hidesBottomBarWhenPushed = true
+			self.navigationController?.pushViewController(viewController, animated: true)
 		}
-	}
-
-	@objc func touchCancelChatImageButton() {
-		self.animateImageButton {
-			[weak self] in self?.chatImageButtonView.alpha = 1
-		}
-	}
-
-	@objc func touchUpChatImageButton() {
-		if self.chatImageButtonView.alpha == 1 {
-			self.animateImageButton {
-				[weak self] in self?.chatImageButtonView.alpha = 0.5
-			}
-		}
-		self.animateImageButton {
-			[weak self] in self?.chatImageButtonView.alpha = 1
-		}
-		print("Open chat room info")
 	}
 }
 
@@ -189,4 +176,10 @@ extension ChatViewController: InputBarAccessoryViewDelegate
 // MARK: - IChatViewController
 extension ChatViewController: IChatViewController
 {
+	func refreshChatRoomInfo() {
+		DispatchQueue.main.async {
+			self.setupTitle()
+			self.setupImage()
+		}
+	}
 }

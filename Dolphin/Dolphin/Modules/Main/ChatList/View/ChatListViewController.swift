@@ -15,6 +15,7 @@ final class ChatListViewController: UIViewController
 // MARK: - UI properties
 	private let tableView = UITableView(frame: .zero, style: .grouped)
 	private let searchController = UISearchController(searchResultsController: nil)
+	private let activityIndicator = UIActivityIndicatorView(style: .medium)
 
 // MARK: - Init
 	init(presenter: IChatListPresenter) {
@@ -35,7 +36,10 @@ final class ChatListViewController: UIViewController
 		self.setupNavigationController()
 		self.setupTableView()
 		self.setupSearchController()
+		self.setupActivityIndicator()
+		self.setupConstraints()
 		self.presenter.getChatRooms()
+		self.startActivityIndicator()
 	}
 
 // MARK: - viewWillAppear
@@ -52,10 +56,10 @@ final class ChatListViewController: UIViewController
 private extension ChatListViewController
 {
 	func setupNavigationController() {
-		navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "",
-																						 style: .plain,
-																						 target: nil,
-																						 action: nil)
+		navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
+														   style: .plain,
+														   target: nil,
+														   action: nil)
 	}
 
 	func setupTableView() {
@@ -75,6 +79,26 @@ private extension ChatListViewController
 		self.searchController.searchBar.placeholder = MainConstants.searchBarPlaceholder
 		self.navigationItem.searchController = self.searchController
 		self.definesPresentationContext = true
+	}
+
+	func setupActivityIndicator() {
+		self.view.addSubview(self.activityIndicator)
+	}
+
+	func setupConstraints() {
+		self.activityIndicator.snp.makeConstraints { make in
+			make.center.equalTo(self.view.snp.center)
+		}
+	}
+
+	func startActivityIndicator() {
+		self.activityIndicator.startAnimating()
+		self.activityIndicator.isHidden = false
+	}
+
+	func stopActivityIndicator() {
+		self.activityIndicator.isHidden = true
+		self.activityIndicator.stopAnimating()
 	}
 }
 
@@ -148,6 +172,11 @@ extension ChatListViewController: IChatListViewController
 {
 	func reloadChatRoomsList() {
 		DispatchQueue.main.async {
+			self.stopActivityIndicator()
+			if let indexPath = self.tableView.indexPathForSelectedRow {
+				let selectedCell = self.tableView.cellForRow(at: indexPath) as? ChatRoomCell
+				selectedCell?.setHighlighted(is: false)
+			}
 			self.tableView.reloadData()
 		}
 	}

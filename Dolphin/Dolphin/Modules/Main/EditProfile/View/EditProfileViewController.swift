@@ -197,7 +197,7 @@ private extension EditProfileViewController
 	@objc func touchSaveButton() {
 		self.startActivityIndicator()
 		let encodedImage = UIImage.encodeImageToBase64String(image: self.profileImageCell.profileImageView.image)
-		let newProfileImage = NewProfileImage(encodedImage: encodedImage, isDefaultImage: self.isDefaultImage)
+		let newProfileImage = NewImage(encodedImage: encodedImage, isDefaultImage: self.isDefaultImage)
 		guard let username = self.profileNameCell.textField.text,
 			  let email = self.profileEmailCell.textField.text,
 			  let password = self.profilePasswordCell.textField.text else {
