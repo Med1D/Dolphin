@@ -9,4 +9,5 @@ import UIKit
 
 protocol IChatRouter: AnyObject
 {
+	func openChatInfo(chatRoomData: ChatRoomData, chatDelegate: ChatDelegate, closure: (UIViewController) -> Void)
 }

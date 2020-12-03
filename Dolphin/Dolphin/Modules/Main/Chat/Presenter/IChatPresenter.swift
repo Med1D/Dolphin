@@ -9,4 +9,6 @@ import UIKit
 
 protocol IChatPresenter: AnyObject
 {
+	func getChatRoomData() -> ChatRoomData
+	func openChatInfo(closure: (UIViewController) -> Void)
 }

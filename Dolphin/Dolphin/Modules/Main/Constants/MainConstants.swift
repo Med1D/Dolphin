@@ -12,6 +12,7 @@ enum MainConstants
 	static let helveticaNeue14 = UIFont(name: "HelveticaNeue", size: 14)
 	static let helveticaNeueLight14 = UIFont(name: "HelveticaNeue-Light", size: 14)
 	static let helveticaNeueMedium16 = UIFont(name: "HelveticaNeue-Medium", size: 16)
+	static let helveticaNeue16 = UIFont(name: "HelveticaNeue", size: 16)
 	static let helveticaNeueMedium20 = UIFont(name: "HelveticaNeue-Medium", size: 20)
 	static let helveticaNeue20 = UIFont(name: "HelveticaNeue", size: 20)
 	static let imageSize: CGFloat = 64
@@ -23,6 +24,7 @@ enum MainConstants
 	static let highlightedCellColor = UIColor(red: 52 / 255, green: 70 / 255, blue: 93 / 255, alpha: 1)
 	static let settingsSectionSpacer: CGFloat = 16
 	static let separatorColor = UIColor(red: 220 / 255, green: 220 / 255, blue: 220 / 255, alpha: 1)
+	static let chatTitleTextFieldColor = UIColor(red: 235 / 255, green: 235 / 255, blue: 235 / 255, alpha: 1)
 	static let activityViewColor = UIColor(red: 52 / 255, green: 70 / 255, blue: 93 / 255, alpha: 0.9)
 	static let chatRoomDefaultImage = UIImage(named: "ChatRoomDefaultImage")
 	static let sendButtonImage = UIImage(systemName: "arrow.up.circle.fill",

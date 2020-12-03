@@ -50,4 +50,68 @@ extension ChatNetworkService: IChatNetworkService
 			completion(.failure(ChatNetworkErrors.noConnection))
 		}
 	}
+
+	func getChatMembers(token: String, roomId: Int, completion: @escaping (ChatMembersResult) -> Void) {
+		if connection {
+			self.dolphinAPIChat.getChatMembers(token: token, roomId: roomId) { result in
+				switch result {
+				case .success(let chatMembers):
+					completion(.success(chatMembers))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(ChatNetworkErrors.noConnection))
+		}
+	}
+
+	func updateChatRoomImage(newImage: NewImage, roomId: Int, completion: @escaping (ChatRoomImageResult) -> Void) {
+		if connection {
+			self.dolphinAPIChat.updateChatRoomImage(newImage: newImage, roomId: roomId) { result in
+				switch result {
+				case .success(let newImage):
+					completion(.success(newImage))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(ChatNetworkErrors.noConnection))
+		}
+	}
+
+	func updateChatRoomTitle(newTitle title: String, roomId: Int, completion: @escaping (ChatRoomTitleResult) -> Void) {
+		if connection {
+			self.dolphinAPIChat.updateChatRoomTitle(newTitle: title, roomId: roomId) { result in
+				switch result {
+				case .success(let newTitle):
+					completion(.success(newTitle))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(ChatNetworkErrors.noConnection))
+		}
+	}
+
+	func leaveChatRoom(token: String, roomId: Int, completion: @escaping (LeaveResult) -> Void) {
+		if connection {
+			self.dolphinAPIChat.leaveChatRoom(token: token, roomId: roomId) { result in
+				switch result {
+				case .success(let string):
+					completion(.success(string))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(ChatNetworkErrors.noConnection))
+		}
+	}
 }
