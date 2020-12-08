@@ -114,4 +114,52 @@ extension ChatNetworkService: IChatNetworkService
 			completion(.failure(ChatNetworkErrors.noConnection))
 		}
 	}
+
+	func getChatRoomMembersCount(roomId: Int, completion: @escaping (ChatRoomMembersCountResult) -> Void) {
+		if connection {
+			self.dolphinAPIChat.getChatRoomMembersCount(roomId: roomId) { result in
+				switch result {
+				case .success(let chatRoomMembersCount):
+					completion(.success(chatRoomMembersCount))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(ChatNetworkErrors.noConnection))
+		}
+	}
+
+	func getMessages(roomId: Int, page: Int, completion: @escaping (ChatRoomMessagesResult) -> Void) {
+		if connection {
+			self.dolphinAPIChat.getMessages(roomId: roomId, page: page) { result in
+				switch result {
+				case .success(let dolphinMessages):
+					completion(.success(dolphinMessages))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(ChatNetworkErrors.noConnection))
+		}
+	}
+
+	func getChatMember(withId id: Int, completion: @escaping (ChatMemberResult) -> Void) {
+		if connection {
+			self.dolphinAPIChat.getChatMember(withId: id) { result in
+				switch result {
+				case .success(let chatMember):
+					completion(.success(chatMember))
+				case .failure(let error):
+					completion(.failure(error))
+				}
+			}
+		}
+		else {
+			completion(.failure(ChatNetworkErrors.noConnection))
+		}
+	}
 }
