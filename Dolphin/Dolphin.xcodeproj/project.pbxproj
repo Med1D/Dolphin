@@ -61,6 +61,9 @@
 		7285DB6F2576DEB400C1513F /* FooterMembersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB6E2576DEB400C1513F /* FooterMembersSection.swift */; };
 		7285DB7225792E0200C1513F /* ChatListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB7125792E0100C1513F /* ChatListDelegate.swift */; };
 		7285DB7525792E8500C1513F /* ChatDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB7425792E8500C1513F /* ChatDelegate.swift */; };
+		7285DB77257D5F8600C1513F /* MessageKitEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB76257D5F8600C1513F /* MessageKitEntities.swift */; };
+		7285DB79257EB54600C1513F /* DolphinMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB78257EB54500C1513F /* DolphinMessage.swift */; };
+		7285DB7E257F6C0300C1513F /* ChatRoomMembersCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285DB7D257F6C0200C1513F /* ChatRoomMembersCount.swift */; };
 		728AB977253C568A003294EC /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB976253C568A003294EC /* ChatListViewController.swift */; };
 		728AB979253C5697003294EC /* IChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB978253C5697003294EC /* IChatListViewController.swift */; };
 		728AB97B253C56DF003294EC /* IChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728AB97A253C56DF003294EC /* IChatListInteractor.swift */; };
@@ -200,6 +203,9 @@
 		7285DB6E2576DEB400C1513F /* FooterMembersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterMembersSection.swift; sourceTree = "<group>"; };
 		7285DB7125792E0100C1513F /* ChatListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListDelegate.swift; sourceTree = "<group>"; };
 		7285DB7425792E8500C1513F /* ChatDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDelegate.swift; sourceTree = "<group>"; };
+		7285DB76257D5F8600C1513F /* MessageKitEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKitEntities.swift; sourceTree = "<group>"; };
+		7285DB78257EB54500C1513F /* DolphinMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolphinMessage.swift; sourceTree = "<group>"; };
+		7285DB7D257F6C0200C1513F /* ChatRoomMembersCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomMembersCount.swift; sourceTree = "<group>"; };
 		728AB976253C568A003294EC /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		728AB978253C5697003294EC /* IChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListViewController.swift; sourceTree = "<group>"; };
 		728AB97A253C56DF003294EC /* IChatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatListInteractor.swift; sourceTree = "<group>"; };
@@ -951,8 +957,11 @@
 				7285DB472571548100C1513F /* NewProfileData.swift */,
 				72FB2283253CADD100E61D59 /* ChatRoom.swift */,
 				7285DB682576A6AC00C1513F /* ChatMember.swift */,
+				7285DB7D257F6C0200C1513F /* ChatRoomMembersCount.swift */,
 				72D74BBE256D5FED000CEB28 /* UIImage+extension.swift */,
 				7285DB41256FE67600C1513F /* UIAlertController+extension.swift */,
+				7285DB76257D5F8600C1513F /* MessageKitEntities.swift */,
+				7285DB78257EB54500C1513F /* DolphinMessage.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1087,6 +1096,7 @@
 				72E1CCE225372BB800DAA664 /* DolphinAPIAuth.swift in Sources */,
 				727BFDCB253481AE00507F50 /* ForgotPasswordRouter.swift in Sources */,
 				72123B042533486200DE67EC /* ISignUpRouter.swift in Sources */,
+				7285DB7E257F6C0300C1513F /* ChatRoomMembersCount.swift in Sources */,
 				721A0FC12530F8A800234071 /* ILoginInteractor.swift in Sources */,
 				7285DB2F256EE41900C1513F /* IEditProfilePresenter.swift in Sources */,
 				727BFDC92534818200507F50 /* IForgotPasswordRouter.swift in Sources */,
@@ -1102,6 +1112,7 @@
 				72E1CCDF2537292000DAA664 /* IAuthNetworkService.swift in Sources */,
 				7291AEC725437DAF00919840 /* SettingsRouter.swift in Sources */,
 				72C1281A2543898F0090F182 /* IChatInteractor.swift in Sources */,
+				7285DB77257D5F8600C1513F /* MessageKitEntities.swift in Sources */,
 				728AB979253C5697003294EC /* IChatListViewController.swift in Sources */,
 				7285DB552575129800C1513F /* ChatInfoInteractor.swift in Sources */,
 				7285DB692576A6AC00C1513F /* ChatMember.swift in Sources */,
@@ -1143,6 +1154,7 @@
 				72D8C7BF2531FC2F008E44DC /* AuthConstants.swift in Sources */,
 				728AB97F253C571F003294EC /* IChatListPresenter.swift in Sources */,
 				721A0FBD2530F7F100234071 /* ILoginRouter.swift in Sources */,
+				7285DB79257EB54600C1513F /* DolphinMessage.swift in Sources */,
 				72DBC64F253B841500F91A09 /* AuthResponse.swift in Sources */,
 				7285DB572575133B00C1513F /* IChatInfoPresenter.swift in Sources */,
 				721A0FBF2530F89000234071 /* ILoginPresenter.swift in Sources */,

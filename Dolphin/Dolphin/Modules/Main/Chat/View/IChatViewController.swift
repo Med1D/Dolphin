@@ -10,4 +10,7 @@ import UIKit
 protocol IChatViewController: AnyObject
 {
 	func refreshChatRoomInfo()
+	func loadFirstMessages()
+	func loadMoreMessages()
+	func insertMessage()
 }

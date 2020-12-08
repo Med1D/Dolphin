@@ -10,6 +10,9 @@ typealias ChatMembersResult = Result<[ChatMember], Error>
 typealias ChatRoomImageResult = Result<NewImage, Error>
 typealias ChatRoomTitleResult = Result<String, Error>
 typealias LeaveResult = Result<String, Error>
+typealias ChatRoomMembersCountResult = Result<ChatRoomMembersCount, Error>
+typealias ChatRoomMessagesResult = Result<[DolphinMessage], Error>
+typealias ChatMemberResult = Result<ChatMember, Error>
 
 import Foundation
 
@@ -17,12 +20,14 @@ enum DolphinAPIConstantsChat
 {
 	static let baseURL = "https://dolphin-chat-backend.herokuapp.com/"
 	static let roomsList = "rooms/list"
+	static let user = "user/"
 	static let users = "rooms/list/users/"
 	static let roomImage = "rooms/image/"
 	static let roomTitle = "rooms/title/"
 	static let roomLeave = "rooms/leave/"
 }
 
+//swiftlint:disable type_body_length
 final class DolphinAPIChat
 {
 	private var task: URLSessionDataTask?
@@ -193,6 +198,113 @@ final class DolphinAPIChat
 				default:
 					print(response.statusCode)
 					completion(.failure(ChatNetworkErrors.badResponse))
+				}
+			}
+		}
+		task?.resume()
+	}
+
+	func getChatRoomMembersCount(roomId: Int, completion: @escaping (ChatRoomMembersCountResult) -> Void) {
+		guard let components = URLComponents(string: DolphinAPIConstantsChat.baseURL +
+												"room/\(roomId)/count") else {
+			completion(.failure(ChatNetworkErrors.wrongURL))
+			return
+		}
+		guard let url = components.url else {
+			completion(.failure(ChatNetworkErrors.wrongURL))
+			return
+		}
+		var request = URLRequest(url: url)
+		request.httpMethod = "GET"
+		task = URLSession.shared.dataTask(with: request) { data, response, error in
+			if error != nil {
+				completion(.failure(ChatNetworkErrors.dataTaskError))
+			}
+			if let response = response as? HTTPURLResponse, let data = data {
+				switch response.statusCode {
+				case 200:
+					do {
+						let chatRoomMembersCount = try JSONDecoder().decode(ChatRoomMembersCount.self, from: data)
+						completion(.success(chatRoomMembersCount))
+					}
+					catch {
+						completion(.failure(ChatNetworkErrors.dataTaskError))
+					}
+				default:
+					print(response.statusCode)
+					completion(.failure(ChatNetworkErrors.badResponse))
+				}
+			}
+		}
+		task?.resume()
+	}
+
+	func getMessages(roomId: Int, page: Int, completion: @escaping (ChatRoomMessagesResult) -> Void) {
+		guard var components = URLComponents(string: DolphinAPIConstantsChat.baseURL +
+												"room/\(roomId)/messages") else {
+			completion(.failure(ChatNetworkErrors.wrongURL))
+			return
+		}
+		let queryItemPage = URLQueryItem(name: "page", value: "\(page)")
+		components.queryItems = [queryItemPage]
+		guard let url = components.url else {
+			completion(.failure(ChatNetworkErrors.wrongURL))
+			return
+		}
+		var request = URLRequest(url: url)
+		request.httpMethod = "GET"
+		task = URLSession.shared.dataTask(with: request) { data, response, error in
+			if error != nil {
+				completion(.failure(ChatNetworkErrors.dataTaskError))
+			}
+			if let response = response as? HTTPURLResponse, let data = data {
+				switch response.statusCode {
+				case 200:
+					do {
+						let messages = try JSONDecoder().decode([DolphinMessage].self, from: data)
+						completion(.success(messages))
+					}
+					catch {
+						completion(.failure(ChatNetworkErrors.dataTaskError))
+					}
+				default:
+					print(response.statusCode)
+					completion(.failure(SettingsNetworkErrors.badResponse))
+				}
+			}
+		}
+		task?.resume()
+	}
+
+	func getChatMember(withId id: Int, completion: @escaping (ChatMemberResult) -> Void) {
+		guard let components = URLComponents(string: DolphinAPIConstantsChat.baseURL +
+												DolphinAPIConstantsChat.user + "\(id)") else {
+			completion(.failure(ChatNetworkErrors.wrongURL))
+			return
+		}
+		guard let url = components.url else {
+			completion(.failure(ChatNetworkErrors.wrongURL))
+			return
+		}
+		var request = URLRequest(url: url)
+		request.httpMethod = "GET"
+		task = URLSession.shared.dataTask(with: request) { data, response, error in
+			if error != nil {
+				completion(.failure(ChatNetworkErrors.dataTaskError))
+			}
+			if let response = response as? HTTPURLResponse, let data = data {
+				switch response.statusCode {
+				case 200:
+					do {
+						let chatMember = try JSONDecoder().decode(ChatMember.self, from: data)
+						completion(.success(chatMember))
+					}
+					catch {
+						completion(.failure(ChatNetworkErrors.dataTaskError))
+					}
+				default:
+					print(response.statusCode)
+					completion(.failure(SettingsNetworkErrors.badResponse))
 				}
 			}
 		}

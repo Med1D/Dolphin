@@ -47,6 +47,8 @@ enum MainConstants
 	static let profileImageViewTintColor = UIColor(red: 76 / 255, green: 117 / 255, blue: 163 / 255, alpha: 1)
 	static let spaceBetweenLabelAndTextField: CGFloat = 16
 	static let profileTextCellLeadingAndTrailingOffset: CGFloat = 16
+	static let messageBackgroundColorFromCurrentUser = UIColor(red: 205 / 255, green: 225 / 255, blue: 245 / 255, alpha: 1)
+	static let messageBackgroundColorFromOtherUsers = UIColor(red: 230 / 255, green: 230 / 255, blue: 230 / 255, alpha: 1)
 	static let inputTextViewPlaceholderText = "Message..."
 	static let searchBarPlaceholder = "Search"
 	static let saveBarButton = "Save"
